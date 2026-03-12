@@ -1,0 +1,21 @@
+{
+  "name": "materiale-ndertimi-lulja",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "npx @tailwindcss/cli -i src/input.css -o dist/output.css --minify",
+    "build:js": "esbuild src/main.js --bundle --minify --outfile=dist/bundle.js",
+    "watch": "npm run watch:css & npm run watch:js",
+    "watch:css": "npx @tailwindcss/cli -i src/input.css -o dist/output.css --watch",
+    "watch:js": "esbuild src/main.js --bundle --outfile=dist/bundle.js --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "esbuild": "^0.24.0",
+    "tailwindcss": "^4.2.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.0"
+  }
+}

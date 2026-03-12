@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materiale Ndertimi Lulja – Materiale ndërtimi dhe vegla në Shqipëri</title>
+  <meta name="description" content="Materiale Ndertimi Lulja ofron tulla, çimento, bojë, materiale për ujë dhe elektrik, vegla ndërtimi. Tiranë, Shqipëri." />
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+</head>
+<body class="font-sans antialiased text-stone-800 bg-stone-50" style="font-family: 'DM Sans', system-ui, sans-serif;">
+  <!-- Header / Nav -->
+  <header
+    class="sticky top-0 z-50 bg-stone-900/98 backdrop-blur-md border-b border-orange-500/20 transition-shadow duration-200"
+    x-data="{ scrolled: false, mobileOpen: false }"
+    @scroll.window="scrolled = window.scrollY > 20"
+  >
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-18">
+        <a href="#kryefaqja" class="text-xl font-bold text-white tracking-tight hover:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em;">
+          Materiale Ndertimi Lulja
+        </a>
+        <button
+          type="button"
+          class="md:hidden p-2 rounded-lg text-stone-300 hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          aria-label="Hap menynë"
+          @click="mobileOpen = !mobileOpen"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="!mobileOpen"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="mobileOpen" x-cloak><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div
+          class="hidden md:flex md:flex-row md:items-center md:gap-8 md:relative md:top-0 md:border-0 md:shadow-none md:py-0 md:bg-transparent absolute top-16 left-0 right-0 bg-stone-900 border-b border-stone-700 py-4 gap-4 px-4 z-40"
+          :class="{ '!flex flex-col': mobileOpen }"
+          x-transition
+        >
+          <a href="#kryefaqja" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Kryefaqja</a>
+          <a href="#kategorite" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Kategoritë</a>
+          <a href="#sherbimet" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Shërbimet</a>
+          <a href="#rreth-nesh" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Rreth nesh</a>
+          <a href="#pse-ne" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Pse ne</a>
+          <a href="#si-punojme" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Si punojmë</a>
+          <a href="#deshmitë" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Dëshmitë</a>
+          <a href="#kontakt" class="text-orange-400 hover:text-orange-300 font-semibold" @click="mobileOpen = false">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Carousel - full bleed images -->
+    <section id="kryefaqja" class="relative overflow-hidden">
+      <div
+        class="relative h-[85vh] min-h-[500px]"
+        x-data="{
+          current: 0,
+          slideCount: 3,
+          interval: null,
+          next() { this.current = (this.current + 1) % this.slideCount; this.resetInterval(); },
+          prev() { this.current = (this.current - 1 + this.slideCount) % this.slideCount; this.resetInterval(); },
+          goTo(i) { this.current = i; this.resetInterval(); },
+          resetInterval() { clearInterval(this.interval); this.interval = setInterval(() => this.next(), 5500); }
+        }"
+        x-init="interval = setInterval(() => next(), 5500)"
+        x-cloak
+      >
+        <!-- Slide 1 - Construction -->
+        <div
+          x-cloak
+          x-show="current === 0"
+          x-transition:enter="transition ease-out duration-500"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="absolute inset-0"
+        >
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-stone-900/70"></div>
+          <div class="absolute inset-0 flex items-center justify-center px-4">
+            <div class="text-center text-white max-w-3xl">
+              <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Materiale Ndërtimi për çdo projekt</h1>
+              <p class="text-lg md:text-xl text-stone-200 mb-8">Tulla, çimento, bojë, materiale për ujë dhe elektrik – të gjitha në një vend.</p>
+              <a href="#kontakt" class="inline-block px-8 py-4 bg-orange-500 text-white font-bold rounded-sm hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-stone-900 uppercase tracking-wider">Na kontaktoni</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 - Tools -->
+        <div
+          x-cloak
+          x-show="current === 1"
+          x-transition:enter="transition ease-out duration-500"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="absolute inset-0"
+        >
+          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&q=85" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-stone-900/65"></div>
+          <div class="absolute inset-0 flex items-center justify-center px-4">
+            <div class="text-center text-white max-w-3xl">
+              <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Vegla dhe aksesorë profesionale</h2>
+              <p class="text-lg md:text-xl text-stone-200 mb-8">Mjete të cilësisë për punë uji, elektrike dhe ndërtimi.</p>
+              <a href="#kategorite" class="inline-block px-8 py-4 bg-white text-stone-900 font-bold rounded-sm hover:bg-stone-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-stone-900 uppercase tracking-wider">Shiko kategoritë</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 - Bricks / materials -->
+        <div
+          x-cloak
+          x-show="current === 2"
+          x-transition:enter="transition ease-out duration-500"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="absolute inset-0"
+        >
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=85" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-stone-900/70"></div>
+          <div class="absolute inset-0 flex items-center justify-center px-4">
+            <div class="text-center text-white max-w-3xl">
+              <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Cilësi dhe çmime të arsyeshme</h2>
+              <p class="text-lg md:text-xl text-stone-200 mb-8">Shërbim në Shqipëri – vizitoni dyqanin ose na telefononi.</p>
+              <a href="#kontakt" class="inline-block px-8 py-4 bg-orange-500 text-white font-bold rounded-sm hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-stone-900 uppercase tracking-wider">Vizitoni dyqanin</a>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Slide paraardhës" @click="prev()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button type="button" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Slide pasardhës" @click="next()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+          <template x-for="(_, i) in Array(slideCount).fill(0)" :key="i">
+            <button type="button" class="w-2.5 h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-orange-400" :class="current === i ? 'bg-orange-500 scale-125' : 'bg-white/60 hover:bg-white/80'" :aria-label="'Shfaq slide ' + (i + 1)" @click="goTo(i)"></button>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rreth nesh -->
+    <section id="rreth-nesh" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85" alt="Materiale ndërtimi" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-stone-900/30"></div>
+          </div>
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Rreth nesh</h2>
+            <p class="text-stone-600 mb-4 leading-relaxed"><strong class="text-stone-800">Materiale Ndertimi Lulja</strong> është partneri juaj për të gjitha nevojat e ndërtimit dhe rinovimit në Shqipëri. Me përvojë në treg dhe fokus në cilësi, ofrojmë një gamë të gjerë materialesh – nga tulla dhe çimento deri te bojëra, instalime uji dhe elektrike – si dhe vegla dhe aksesorë për profesionistë dhe amatorë.</p>
+            <p class="text-stone-600 mb-6 leading-relaxed">Synimi ynë është të jemi një dyqan i besueshëm ku mund të gjeni gjithçka për një projekt ndërtimi ose lyerjeje, me këshilla praktike dhe çmime të arsyeshme. Punojmë me klientë individualë, zyrtarë ndërtimi dhe biznese të vogla, duke u përshtatur nevojave të secilit.</p>
+            <ul class="space-y-2 text-stone-600">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> Gamë e gjerë produktesh në një vend</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> Këshilla dhe ndihmë nga stafi me përvojë</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> Cilësi të kontrolluar dhe marka të njohura</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kategoritë - with images -->
+    <section id="kategorite" class="py-20 md:py-28 bg-stone-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Kategoritë tona</h2>
+        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-14">Zgjidhni nga kategoritë e materialeve dhe veglave që ofrojmë – për ndërtim, lyerje, ujë, elektrik dhe më shumë.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div class="aspect-[4/3] relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Tulla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Tulla & materiale ndërtimi</h3>
+            </div>
+            <p class="p-4 text-stone-300 text-sm">Tulla, blloqe, gëlqere, rërë dhe materiale të tjera strukturore për themele, mure dhe çati.</p>
+          </a>
+          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div class="aspect-[4/3] relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&q=80" alt="Çimento" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Çimento & lidhës</h3>
+            </div>
+            <p class="p-4 text-stone-300 text-sm">Çimento, llaç, ngjitës, aditivë dhe materiale lidhëse për beton dhe punë muri.</p>
+          </a>
+          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div class="aspect-[4/3] relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80" alt="Bojë" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Bojë & lyerje</h3>
+            </div>
+            <p class="p-4 text-stone-300 text-sm">Bojëra brenda/jashtë, emulsions, llaç dekorativ, abetare, furça dhe rrula.</p>
+          </a>
+          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div class="aspect-[4/3] relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="Ujë" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Ujë & kanalizime</h3>
+            </div>
+            <p class="p-4 text-stone-300 text-sm">Tuba PPR/PVC, pajisje sanitare, valvula, sifona dhe aksesorë për ujësjellës.</p>
+          </a>
+          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div class="aspect-[4/3] relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Elektrik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Elektrik</h3>
+            </div>
+            <p class="p-4 text-stone-300 text-sm">Kabllo, priza, çelësa, ndriçim, kanalina dhe materiale instalimi elektrik.</p>
+          </a>
+          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div class="aspect-[4/3] relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80" alt="Vegla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Mjete & vegla</h3>
+            </div>
+            <p class="p-4 text-stone-300 text-sm">Vegla dore dhe elektrike, trapane, matrapik, çekiç, morseta dhe pajisje mbrojtëse.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shërbimet -->
+    <section id="sherbimet" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Çfarë ofrojmë</h2>
+        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-4">Ne furnizojmë materiale dhe vegla për ndërtim, lyerje dhe punë uji dhe elektrike – për profesionistë, amatorë dhe shtëpi.</p>
+        <p class="text-center text-stone-500 text-sm max-w-xl mx-auto mb-14">Stafi ynë ju ndihmon me këshilla për zgjedhjen e materialeve të duhura dhe sasinë e nevojshme për projektin tuaj.</p>
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
+            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">🧱</div>
+            <div>
+              <h3 class="text-lg font-bold text-stone-900 mb-2">Materiale ndërtimi</h3>
+              <p class="text-stone-600 mb-3">Tulla, blloqe, çimento, gëlqere, rërë dhe të gjitha materialet e nevojshme për ndërtim dhe rinovim. Cilësi të kontrolluar dhe çmime konkurruese.</p>
+              <ul class="text-stone-500 text-sm space-y-1">
+                <li>· Tulla dhe blloqe për mure</li>
+                <li>· Çimento, llaç, gëlqere</li>
+                <li>· Rërë, gurë, inerte</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
+            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">🎨</div>
+            <div>
+              <h3 class="text-lg font-bold text-stone-900 mb-2">Materiale lyerjeje</h3>
+              <p class="text-stone-600 mb-3">Bojëra të brendshme dhe të jashtme, emulsions, llaç dekorativ, abetare. Zgjedhje e gjerë ngjyrash dhe markash.</p>
+              <ul class="text-stone-500 text-sm space-y-1">
+                <li>· Bojëra mure dhe tavani</li>
+                <li>· Abetare, llaç dekorativ</li>
+                <li>· Furça, rrula, aksesorë</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
+            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">💧</div>
+            <div>
+              <h3 class="text-lg font-bold text-stone-900 mb-2">Punë uji dhe elektrike</h3>
+              <p class="text-stone-600 mb-3">Tuba, pajisje uji, kabllo, priza, çelësa, ndriçim dhe materiale për instalime. Gjithçka për ujësjellës dhe instalime elektrike.</p>
+              <ul class="text-stone-500 text-sm space-y-1">
+                <li>· Tuba PPR, PVC, pajisje sanitare</li>
+                <li>· Kabllo, priza, çelësa, ndriçim</li>
+                <li>· Kanalina, aksesorë montimi</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
+            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">🔧</div>
+            <div>
+              <h3 class="text-lg font-bold text-stone-900 mb-2">Vegla dhe aksesorë</h3>
+              <p class="text-stone-600 mb-3">Vegla dore dhe elektrike, mjete për ndërtim dhe lyerje, pajisje mbrojtëse. Për zanatin dhe për shtëpi.</p>
+              <ul class="text-stone-500 text-sm space-y-1">
+                <li>· Trapane, matrapik, vidatorë</li>
+                <li>· Çekiç, dalta, kaçavida</li>
+                <li>· Syze, doreza, mbrojtje</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-xl bg-stone-900 text-white p-8 md:p-10">
+          <h3 class="text-2xl font-bold mb-4" style="font-family: 'Bebas Neue', sans-serif;">Shërbime plotësuese</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-stone-300 text-sm">
+            <div class="flex gap-3">
+              <span class="text-orange-400 font-bold">✓</span>
+              <span>Këshilla teknike për zgjedhjen e materialeve</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-orange-400 font-bold">✓</span>
+              <span>Informacion për sasi dhe llogaritje</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-orange-400 font-bold">✓</span>
+              <span>Produkte me garanci nga furnizues të njohur</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-orange-400 font-bold">✓</span>
+              <span>Shërbim personalizuar për çdo klient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pse ne -->
+    <section id="pse-ne" class="py-20 md:py-28 bg-stone-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Pse ne</h2>
+        <p class="text-center text-stone-400 max-w-2xl mx-auto mb-6">Na zgjidhni për materiale dhe vegla të cilësisë në Shqipëri – me besueshmëri, përvojë dhe çmime të arsyeshme.</p>
+        <p class="text-center text-stone-500 text-sm max-w-xl mx-auto mb-14">Ne nuk jemi thjesht një dyqan: ofrojmë këshilla praktike dhe ndihmojmë që të zgjidhni produktet e duhura për çdo projekt.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">✓</div>
+            <h3 class="text-lg font-bold mb-2">Cilësi</h3>
+            <p class="text-stone-400 text-sm">Materiale dhe vegla të provuara, me garanci dhe nga furnizues të besuar.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4">⏱</div>
+            <h3 class="text-lg font-bold mb-2">Përvoja</h3>
+            <p class="text-stone-400 text-sm">Përvojë në sektor për të këshilluar dhe ofruar çfarë ju nevojitet.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4">💰</div>
+            <h3 class="text-lg font-bold mb-2">Çmime të arsyeshme</h3>
+            <p class="text-stone-400 text-sm">Çmime konkurruese pa sakrifikuar cilësinë.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4">🇦🇱</div>
+            <h3 class="text-lg font-bold mb-2">Shërbim në Shqipëri</h3>
+            <p class="text-stone-400 text-sm">Operojmë në Shqipëri – vizitoni dyqanin ose na telefononi.</p>
+          </div>
+        </div>
+        <div class="mt-16 pt-16 border-t border-stone-700">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">+</p>
+              <p class="text-stone-400 text-sm mt-1">Vite përvoje në treg</p>
+            </div>
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">6+</p>
+              <p class="text-stone-400 text-sm mt-1">Kategoritë e produkteve</p>
+            </div>
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">100%</p>
+              <p class="text-stone-400 text-sm mt-1">Fokus në cilësi</p>
+            </div>
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">Shqipëri</p>
+              <p class="text-stone-400 text-sm mt-1">Shërbim lokal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Si punojmë -->
+    <section id="si-punojme" class="py-20 md:py-28 bg-stone-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Si punojmë</h2>
+        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-14">Tre hapa të thjeshtë për të marrë materialet dhe veglat që ju nevojiten – nga pyetja deri te porosia.</p>
+        <div class="grid md:grid-cols-3 gap-8 md:gap-10">
+          <div class="relative text-center">
+            <div class="w-20 h-20 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-5">1</div>
+            <h3 class="text-xl font-bold text-stone-900 mb-2">Na kontaktoni</h3>
+            <p class="text-stone-600 text-sm">Telefononi, vizitoni dyqanin ose na shkruani. Na tregoni çfarë kërkoni – ndërtim, lyerje, ujë, elektrik apo vegla.</p>
+            <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-orange-300/50"></div>
+          </div>
+          <div class="relative text-center">
+            <div class="w-20 h-20 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-5">2</div>
+            <h3 class="text-xl font-bold text-stone-900 mb-2">Këshillim dhe zgjedhje</h3>
+            <p class="text-stone-600 text-sm">Ju ndihmojmë të zgjidhni materialet e duhura dhe sasinë e nevojshme. Ju japim çmime dhe opsione për çdo buxhet.</p>
+            <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-orange-300/50"></div>
+          </div>
+          <div class="text-center">
+            <div class="w-20 h-20 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-5">3</div>
+            <h3 class="text-xl font-bold text-stone-900 mb-2">Porosi dhe marrje</h3>
+            <p class="text-stone-600 text-sm">Përfundoni porosinë në dyqan ose me telefon. Materialet janë gati për t’u marrë – sipas rregullave tona të shitjes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dëshmitë -->
+    <section id="deshmitë" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Klientët thonë</h2>
+        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-14">Përvoja e klientëve tanë – nga zanatinjët deri te familjet që rinovojnë shtëpinë.</p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <blockquote class="p-6 rounded-xl bg-stone-100 border border-stone-200">
+            <p class="text-stone-600 italic mb-4">“Gjithçka që na duhej për ndërtimin e shtëpisë e gjetëm këtu. Stafi dinte çfarë të na sugjerojë dhe çmimet ishin të arsyeshme.”</p>
+            <footer class="text-stone-500 text-sm font-medium">— Klient, ndërtim banese</footer>
+          </blockquote>
+          <blockquote class="p-6 rounded-xl bg-stone-100 border border-stone-200">
+            <p class="text-stone-600 italic mb-4">“Punoj si hidraulik dhe blej rregullisht materiale nga Lulja. Cilësi e mirë dhe shërbim i shpejtë.”</p>
+            <footer class="text-stone-500 text-sm font-medium">— Artizan, punë uji</footer>
+          </blockquote>
+          <blockquote class="p-6 rounded-xl bg-stone-100 border border-stone-200">
+            <p class="text-stone-600 italic mb-4">“Këshilluan me bojëra dhe sasi për lyerjen e apartamentit. Rezultati doli shumë mirë, faleminderit.”</p>
+            <footer class="text-stone-500 text-sm font-medium">— Klient, rinovim</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-16 md:py-20 bg-orange-500">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Gati për të filluar projektin?</h2>
+        <p class="text-orange-100 mb-6">Na kontaktoni sot për këshilla, çmime ose porosi. Jemi këtu për ju.</p>
+        <a href="#kontakt" class="inline-block px-8 py-4 bg-white text-orange-600 font-bold rounded-sm hover:bg-stone-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange-500 uppercase tracking-wider">Kontaktoni tani</a>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-20 md:py-28 bg-stone-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Kontakt</h2>
+        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-4">Na kontaktoni për porosi, çmime ose këshilla. Jemi këtu për të ju ndihmuar.</p>
+        <p class="text-center text-stone-500 text-sm max-w-xl mx-auto mb-14">Vizitoni dyqanin tonë, na telefononi ose na ndiqni në rrjetet sociale për të mësuar më shumë dhe për të parë ofertat.</p>
+        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto items-start">
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl">📍</span>
+              <div>
+                <h3 class="font-bold text-stone-900">Adresa</h3>
+                <p class="text-stone-600">Tiranë, Shqipëri</p>
+                <p class="text-stone-500 text-sm mt-1">Vizitoni dyqanin për të parë produktet dhe për të bërë porosi në vend.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="text-2xl">📞</span>
+              <div>
+                <h3 class="font-bold text-stone-900">Telefon</h3>
+                <a href="tel:+355XXXXXXXX" class="text-orange-600 hover:text-orange-700 font-semibold text-lg">+355 XX XXX XXXX</a>
+                <p class="text-stone-500 text-sm mt-1">Na telefononi për pyetje, çmime ose porosi.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="text-2xl">🕐</span>
+              <div>
+                <h3 class="font-bold text-stone-900">Orari i punës</h3>
+                <p class="text-stone-600">Hënë – Shtunë: 08:00 – 18:00</p>
+                <p class="text-stone-500 text-sm mt-1">(Mund të ndryshojë – na telefononi për të konfirmuar)</p>
+              </div>
+            </div>
+            <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-stone-600 hover:text-pink-600 transition-colors font-medium">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>@lulja_08 – na ndiqni në Instagram</span>
+            </a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <a href="tel:+355XXXXXXXX" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-orange-500 text-white font-bold rounded-sm hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 uppercase tracking-wider">Na telefononi</a>
+            <a href="#kryefaqja" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-stone-800 text-white font-bold rounded-sm hover:bg-stone-700 transition-colors focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2 uppercase tracking-wider">Vizitoni dyqanin</a>
+            <p class="text-stone-500 text-sm text-center mt-2">Na gjeni në dyqan për të parë produktet me sy dhe për këshilla nga stafi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <p class="font-bold text-white text-lg" style="font-family: 'Bebas Neue', sans-serif;">Materiale Ndertimi Lulja</p>
+          <p class="text-sm mt-1"><a href="tel:+355XXXXXXXX" class="hover:text-orange-400 transition-colors">+355 XX XXX XXXX</a></p>
+          <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-2 text-stone-500 hover:text-pink-500 transition-colors text-sm">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+        </div>
+        <p class="text-sm text-stone-500">© 2025 Materiale Ndertimi Lulja. Të gjitha të drejtat e rezervuara.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div x-data="{ show: false }" x-show="show" x-cloak x-transition @scroll.window="show = window.scrollY > 400" class="fixed bottom-6 right-6 z-40">
+    <a href="#kryefaqja" class="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition-colors" aria-label="Kthehu në krye">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </a>
+  </div>
+
+  <script defer src="dist/bundle.js"></script>
+</body>
+</html>
