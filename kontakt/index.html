@@ -15,20 +15,20 @@
 <header class="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur-xl border-b border-white/5" x-data="{ mobileOpen: false }">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-18">
-        <a href="/" class="flex items-center gap-2.5 group">
+        <a href="/materialelulja/" class="flex items-center gap-2.5 group">
           <div class="w-9 h-9 rounded-lg bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/20">
             <span class="text-white font-bold text-sm" style="font-family: 'Bebas Neue', sans-serif;">L08</span>
           </div>
           <span class="text-lg font-bold text-white tracking-tight group-hover:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em;">Lulja 08</span>
         </a>
         <div class="hidden md:flex items-center gap-1">
-          <a href="/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Kryefaqja</a>
-          <a href="/#rreth-nesh" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Rreth nesh</a>
-          <a href="/produkte/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Produkte</a>
-          <a href="/makita/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Makita</a>
-          <a href="/#markat" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Markat</a>
+          <a href="/materialelulja/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Kryefaqja</a>
+          <a href="/materialelulja/#rreth-nesh" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Rreth nesh</a>
+          <a href="/materialelulja/produkte/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Produkte</a>
+          <a href="/materialelulja/makita/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Makita</a>
+          <a href="/materialelulja/#markat" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Markat</a>
         </div>
-        <a href="/kontakt/" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500 text-white text-sm font-bold rounded-lg hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20" aria-current="page">
+        <a href="/materialelulja/kontakt/" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500 text-white text-sm font-bold rounded-lg hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20" aria-current="page">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           Kontakt
         </a>
@@ -45,12 +45,12 @@
           <button @click="mobileOpen = false" class="p-2.5 -mr-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition-colors" aria-label="Mbyll menyne"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
         </div>
         <nav class="flex-1 flex flex-col justify-center px-6 gap-1">
-          <a href="/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Kryefaqja</a>
-          <a href="/#rreth-nesh" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Rreth nesh</a>
-          <a href="/produkte/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Produkte</a>
-          <a href="/makita/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Makita</a>
-          <a href="/#markat" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Markat</a>
-          <a href="/kontakt/" class="py-4 text-2xl text-orange-400 font-bold tracking-tight active:text-orange-300 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Kontakt</a>
+          <a href="/materialelulja/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Kryefaqja</a>
+          <a href="/materialelulja/#rreth-nesh" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Rreth nesh</a>
+          <a href="/materialelulja/produkte/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Produkte</a>
+          <a href="/materialelulja/makita/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Makita</a>
+          <a href="/materialelulja/#markat" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Markat</a>
+          <a href="/materialelulja/kontakt/" class="py-4 text-2xl text-orange-400 font-bold tracking-tight active:text-orange-300 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Kontakt</a>
         </nav>
         <div class="px-6 pb-8 space-y-3 border-t border-zinc-800/50 pt-6">
           <a href="tel:+355675188700" class="flex items-center justify-center gap-2 py-3.5 bg-orange-500 text-white font-bold rounded-xl hover:bg-orange-600 transition-colors text-sm"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>+355 67 518 8700</a>
@@ -125,7 +125,7 @@
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               Na ndiqni ne Instagram
             </a>
-            <a href="/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-zinc-800 text-white font-bold rounded-sm hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 uppercase tracking-wider">Kryefaqja</a>
+            <a href="/materialelulja/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-zinc-800 text-white font-bold rounded-sm hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 uppercase tracking-wider">Kryefaqja</a>
             <p class="text-zinc-500 text-sm text-center mt-2">Na gjeni ne dyqan per te pare produktet dhe per keshilla nga stafi.</p>
           </div>
         </div>
@@ -159,10 +159,10 @@
         <div>
           <h3 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Faqet</h3>
           <ul class="space-y-2.5">
-            <li><a href="/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Kryefaqja</a></li>
-            <li><a href="/produkte/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Produkte</a></li>
-            <li><a href="/makita/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Makita Professional</a></li>
-            <li><a href="/kontakt/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Kontakt</a></li>
+            <li><a href="/materialelulja/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Kryefaqja</a></li>
+            <li><a href="/materialelulja/produkte/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Produkte</a></li>
+            <li><a href="/materialelulja/makita/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Makita Professional</a></li>
+            <li><a href="/materialelulja/kontakt/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Kontakt</a></li>
           </ul>
         </div>
         <!-- Contact -->
