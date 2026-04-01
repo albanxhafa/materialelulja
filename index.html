@@ -3,57 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Materiale Ndertimi Lulja – Materiale ndërtimi dhe vegla në Shqipëri</title>
-  <meta name="description" content="Materiale Ndertimi Lulja ofron tulla, çimento, bojë, materiale për ujë dhe elektrik, vegla ndërtimi. Tiranë, Shqipëri." />
-  <link rel="stylesheet" href="dist/output.css" />
+  <title>Materiale Ndertimi Lulja 08 – Materiale ndertimi, bojera, vegla pune ne Tirane</title>
+  <meta name="description" content="Materiale Ndertimi Lulja 08 - dyqan i specializuar per materiale ndertimi, bojera profesionale, vegla pune, instalime elektrike e hidraulike, ndricim dhe termoizolim ne Tirane. Makita, Knipex, Gewiss, ABB, Horoz." />
+  <meta name="keywords" content="materiale ndertimi tirane, bojera profesionale, vegla pune, Makita Tirana, Makita tools Albania, instalime elektrike, hidraulike, ndricim, termoizolim, Lulja 08" />
+  <link rel="stylesheet" href="/src/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
 </head>
-<body class="font-sans antialiased text-stone-800 bg-stone-50" style="font-family: 'DM Sans', system-ui, sans-serif;">
-  <!-- Header / Nav -->
-  <header
-    class="sticky top-0 z-50 bg-stone-900/98 backdrop-blur-md border-b border-orange-500/20 transition-shadow duration-200"
-    x-data="{ scrolled: false, mobileOpen: false }"
-    @scroll.window="scrolled = window.scrollY > 20"
-  >
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 md:h-18">
-        <a href="#kryefaqja" class="text-xl font-bold text-white tracking-tight hover:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em;">
-          Materiale Ndertimi Lulja
+<body class="font-sans antialiased text-zinc-800 bg-white" style="font-family: 'DM Sans', system-ui, sans-serif;">
+
+  <!-- Top Info Bar (desktop only) -->
+  <div class="hidden md:block bg-zinc-950 text-zinc-400 text-xs border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-9">
+      <div class="flex items-center gap-5">
+        <a href="tel:+355675188700" class="hover:text-orange-400 flex items-center gap-1.5 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +355 67 518 8700
         </a>
-        <button
-          type="button"
-          class="md:hidden p-2 rounded-lg text-stone-300 hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
-          aria-label="Hap menynë"
-          @click="mobileOpen = !mobileOpen"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="!mobileOpen"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="mobileOpen" x-cloak><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-        <div
-          class="hidden md:flex md:flex-row md:items-center md:gap-8 md:relative md:top-0 md:border-0 md:shadow-none md:py-0 md:bg-transparent absolute top-16 left-0 right-0 bg-stone-900 border-b border-stone-700 py-4 gap-4 px-4 z-40"
-          :class="{ '!flex flex-col': mobileOpen }"
-          x-transition
-        >
-          <a href="#kryefaqja" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Kryefaqja</a>
-          <a href="#kategorite" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Kategoritë</a>
-          <a href="#sherbimet" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Shërbimet</a>
-          <a href="#rreth-nesh" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Rreth nesh</a>
-          <a href="#pse-ne" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Pse ne</a>
-          <a href="#si-punojme" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Si punojmë</a>
-          <a href="#deshmitë" class="text-stone-300 hover:text-orange-400 font-medium transition-colors" @click="mobileOpen = false">Dëshmitë</a>
-          <a href="#kontakt" class="text-orange-400 hover:text-orange-300 font-semibold" @click="mobileOpen = false">Kontakt</a>
+        <a href="tel:+355673156271" class="hover:text-orange-400 flex items-center gap-1.5 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +355 67 315 6271
+        </a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 flex items-center gap-1.5 transition-colors">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @lulja_08
+        </a>
+        <span class="text-zinc-600">|</span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Tirane, Shqiperi
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur-xl border-b border-white/5" x-data="{ mobileOpen: false }">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-18">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-lg bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/20">
+            <span class="text-white font-bold text-sm" style="font-family: 'Bebas Neue', sans-serif;">L08</span>
+          </div>
+          <span class="text-lg font-bold text-white tracking-tight group-hover:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em;">Lulja 08</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-1">
+          <a href="/" class="px-3 py-2 text-sm text-orange-400 font-semibold rounded-lg transition-colors" aria-current="page">Kryefaqja</a>
+          <a href="/#rreth-nesh" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Rreth nesh</a>
+          <a href="/produkte/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Produkte</a>
+          <a href="/makita/" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Makita</a>
+          <a href="/#markat" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Markat</a>
         </div>
+
+        <!-- Desktop CTA -->
+        <a href="/kontakt/" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500 text-white text-sm font-bold rounded-lg hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Kontakt
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button type="button" class="md:hidden p-2.5 -mr-2 rounded-lg text-zinc-300 hover:bg-white/10 active:bg-white/20 transition-colors" aria-label="Hap menyne" @click="mobileOpen = true">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      x-show="mobileOpen"
+      x-cloak
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="fixed inset-0 z-50 md:hidden"
+      @keydown.escape.window="mobileOpen = false"
+    >
+      <div class="absolute inset-0 bg-zinc-950/98 backdrop-blur-2xl"></div>
+      <div class="relative flex flex-col h-full">
+        <!-- Mobile Header -->
+        <div class="flex items-center justify-between px-6 h-16 border-b border-zinc-800/50">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center">
+              <span class="text-white font-bold text-xs" style="font-family: 'Bebas Neue', sans-serif;">L08</span>
+            </div>
+            <span class="text-lg font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Lulja 08</span>
+          </div>
+          <button @click="mobileOpen = false" class="p-2.5 -mr-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition-colors" aria-label="Mbyll menyne">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <!-- Mobile Nav Links -->
+        <nav class="flex-1 flex flex-col justify-center px-6 gap-1">
+          <a href="/" class="py-4 text-2xl text-white font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Kryefaqja</a>
+          <a href="/#rreth-nesh" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Rreth nesh</a>
+          <a href="/produkte/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Produkte</a>
+          <a href="/makita/" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Makita</a>
+          <a href="/#markat" class="py-4 text-2xl text-zinc-300 font-bold tracking-tight border-b border-zinc-800/50 active:text-orange-400 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Markat</a>
+          <a href="/kontakt/" class="py-4 text-2xl text-orange-400 font-bold tracking-tight active:text-orange-300 transition-colors" style="font-family: 'Bebas Neue', sans-serif;" @click="mobileOpen = false">Kontakt</a>
+        </nav>
+        <!-- Mobile Bottom Actions -->
+        <div class="px-6 pb-8 space-y-3 border-t border-zinc-800/50 pt-6">
+          <a href="tel:+355675188700" class="flex items-center justify-center gap-2 py-3.5 bg-orange-500 text-white font-bold rounded-xl hover:bg-orange-600 transition-colors text-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            +355 67 518 8700
+          </a>
+          <a href="https://wa.me/355675188700?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3.5 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition-colors text-sm">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Na shkruani ne WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <!-- Hero Carousel - full bleed images -->
+    <!-- Hero Carousel -->
     <section id="kryefaqja" class="relative overflow-hidden">
-      <div
-        class="relative h-[85vh] min-h-[500px]"
+      <div class="relative h-[85vh] min-h-[500px] md:h-[90vh] md:min-h-[550px]"
         x-data="{
           current: 0,
           slideCount: 3,
@@ -64,429 +139,446 @@
           resetInterval() { clearInterval(this.interval); this.interval = setInterval(() => this.next(), 5500); }
         }"
         x-init="interval = setInterval(() => next(), 5500)"
-        x-cloak
-      >
-        <!-- Slide 1 - Construction -->
-        <div
-          x-cloak
-          x-show="current === 0"
-          x-transition:enter="transition ease-out duration-500"
-          x-transition:enter-start="opacity-0"
-          x-transition:enter-end="opacity-100"
-          x-transition:leave="transition ease-in duration-300"
-          x-transition:leave-start="opacity-100"
-          x-transition:leave-end="opacity-0"
-          class="absolute inset-0"
-        >
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85" alt="" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-stone-900/70"></div>
+        x-cloak>
+        <!-- Slide 1 -->
+        <div x-cloak x-show="current === 0"
+          x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+          class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85" alt="Kantier ndertimi" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-900/60 to-zinc-900/30"></div>
           <div class="absolute inset-0 flex items-center justify-center px-4">
-            <div class="text-center text-white max-w-3xl">
-              <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Materiale Ndërtimi për çdo projekt</h1>
-              <p class="text-lg md:text-xl text-stone-200 mb-8">Tulla, çimento, bojë, materiale për ujë dhe elektrik – të gjitha në një vend.</p>
-              <a href="#kontakt" class="inline-block px-8 py-4 bg-orange-500 text-white font-bold rounded-sm hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-stone-900 uppercase tracking-wider">Na kontaktoni</a>
+            <div class="text-center text-white max-w-4xl">
+              <p class="text-orange-400 font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 md:mb-4">Lulja 08 - Tirane</p>
+              <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight leading-none" style="font-family: 'Bebas Neue', sans-serif;">Build Better. Paint Smarter. Work Stronger.</h1>
+              <p class="text-sm sm:text-base md:text-lg text-zinc-200 mb-6 md:mb-8 max-w-2xl mx-auto">Materiale Ndertimi dhe Vegla Profesionale ne Tirane</p>
+              <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="/kontakt/" class="px-6 py-3.5 sm:px-8 sm:py-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors uppercase tracking-wider text-sm">Na kontaktoni</a>
+                <a href="/produkte/" class="px-6 py-3.5 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors uppercase tracking-wider text-sm border border-white/20">Shiko produktet</a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Slide 2 - Tools -->
-        <div
-          x-cloak
-          x-show="current === 1"
-          x-transition:enter="transition ease-out duration-500"
-          x-transition:enter-start="opacity-0"
-          x-transition:enter-end="opacity-100"
-          x-transition:leave="transition ease-in duration-300"
-          x-transition:leave-start="opacity-100"
-          x-transition:leave-end="opacity-0"
-          class="absolute inset-0"
-        >
-          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&q=85" alt="" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-stone-900/65"></div>
+        <!-- Slide 2 -->
+        <div x-cloak x-show="current === 1"
+          x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+          class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&q=85" alt="Vegla profesionale" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-900/50 to-zinc-900/20"></div>
           <div class="absolute inset-0 flex items-center justify-center px-4">
             <div class="text-center text-white max-w-3xl">
-              <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Vegla dhe aksesorë profesionale</h2>
-              <p class="text-lg md:text-xl text-stone-200 mb-8">Mjete të cilësisë për punë uji, elektrike dhe ndërtimi.</p>
-              <a href="#kategorite" class="inline-block px-8 py-4 bg-white text-stone-900 font-bold rounded-sm hover:bg-stone-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-stone-900 uppercase tracking-wider">Shiko kategoritë</a>
+              <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Vegla Profesionale Makita</h2>
+              <p class="text-sm sm:text-base md:text-lg text-zinc-200 mb-6 md:mb-8">Cordless, Corded, Outdoor Equipment - te gjitha ne Lulja 08</p>
+              <a href="/makita/" class="inline-block px-6 py-3.5 sm:px-8 sm:py-4 bg-white text-zinc-900 font-bold rounded-lg hover:bg-zinc-100 transition-colors uppercase tracking-wider text-sm">Shiko Makita</a>
             </div>
           </div>
         </div>
-        <!-- Slide 3 - Bricks / materials -->
-        <div
-          x-cloak
-          x-show="current === 2"
-          x-transition:enter="transition ease-out duration-500"
-          x-transition:enter-start="opacity-0"
-          x-transition:enter-end="opacity-100"
-          x-transition:leave="transition ease-in duration-300"
-          x-transition:leave-start="opacity-100"
-          x-transition:leave-end="opacity-0"
-          class="absolute inset-0"
-        >
-          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=85" alt="" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-stone-900/70"></div>
+        <!-- Slide 3 -->
+        <div x-cloak x-show="current === 2"
+          x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+          class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1920&q=85" alt="Bojera profesionale" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-900/60 to-zinc-900/30"></div>
           <div class="absolute inset-0 flex items-center justify-center px-4">
             <div class="text-center text-white max-w-3xl">
-              <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Cilësi dhe çmime të arsyeshme</h2>
-              <p class="text-lg md:text-xl text-stone-200 mb-8">Shërbim në Shqipëri – vizitoni dyqanin ose na telefononi.</p>
-              <a href="#kontakt" class="inline-block px-8 py-4 bg-orange-500 text-white font-bold rounded-sm hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-stone-900 uppercase tracking-wider">Vizitoni dyqanin</a>
+              <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Nga projekti i vogel deri te ndertimi profesional</h2>
+              <p class="text-sm sm:text-base md:text-lg text-zinc-200 mb-6 md:mb-8">Tek Lulja 08 gjeni gjithcka qe ju nevojitet per te ndertuar, rinovuar dhe perfunduar cdo pune me cilesi.</p>
+              <a href="/produkte/" class="inline-block px-6 py-3.5 sm:px-8 sm:py-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors uppercase tracking-wider text-sm">Shiko produktet</a>
             </div>
           </div>
         </div>
 
-        <button type="button" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Slide paraardhës" @click="prev()">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        <!-- Carousel Controls -->
+        <button type="button" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-colors active:scale-95" aria-label="Slide paraardh&euml;s" @click="prev()">
+          <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
         </button>
-        <button type="button" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Slide pasardhës" @click="next()">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <button type="button" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-colors active:scale-95" aria-label="Slide pasardh&euml;s" @click="next()">
+          <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </button>
 
-        <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+        <!-- Dots -->
+        <div class="absolute bottom-20 md:bottom-8 left-0 right-0 flex justify-center gap-2.5">
           <template x-for="(_, i) in Array(slideCount).fill(0)" :key="i">
-            <button type="button" class="w-2.5 h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-orange-400" :class="current === i ? 'bg-orange-500 scale-125' : 'bg-white/60 hover:bg-white/80'" :aria-label="'Shfaq slide ' + (i + 1)" @click="goTo(i)"></button>
+            <button type="button" class="w-2.5 h-2.5 rounded-full transition-all" :class="current === i ? 'bg-orange-500 scale-125' : 'bg-white/50 hover:bg-white/70'" :aria-label="'Shfaq slide ' + (i + 1)" @click="goTo(i)"></button>
           </template>
         </div>
       </div>
     </section>
 
-    <!-- Rreth nesh -->
-    <section id="rreth-nesh" class="py-20 md:py-28 bg-white">
+    <!-- Stats Bar -->
+    <section class="relative z-10 -mt-12 md:-mt-14 mb-8 md:mb-0">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 bg-white rounded-2xl shadow-xl shadow-zinc-900/10 border border-zinc-100 overflow-hidden">
+          <div class="p-5 md:p-6 text-center border-r border-b md:border-b-0 border-zinc-100">
+            <p class="text-2xl md:text-3xl font-bold text-orange-500" style="font-family: 'Bebas Neue', sans-serif;">14+</p>
+            <p class="text-zinc-500 text-xs mt-1">Marka Partnere</p>
+          </div>
+          <div class="p-5 md:p-6 text-center border-b md:border-b-0 md:border-r border-zinc-100">
+            <p class="text-2xl md:text-3xl font-bold text-orange-500" style="font-family: 'Bebas Neue', sans-serif;">7</p>
+            <p class="text-zinc-500 text-xs mt-1">Kategori Produktesh</p>
+          </div>
+          <div class="p-5 md:p-6 text-center border-r border-zinc-100">
+            <p class="text-2xl md:text-3xl font-bold text-orange-500" style="font-family: 'Bebas Neue', sans-serif;">1000+</p>
+            <p class="text-zinc-500 text-xs mt-1">Produkte ne Stok</p>
+          </div>
+          <div class="p-5 md:p-6 text-center">
+            <p class="text-2xl md:text-3xl font-bold text-orange-500" style="font-family: 'Bebas Neue', sans-serif;">Delivery</p>
+            <p class="text-zinc-500 text-xs mt-1">Ne gjithe Tiranen</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eksperienca Jone / Rreth nesh -->
+    <section id="rreth-nesh" class="py-16 md:py-28 bg-white scroll-mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div class="relative rounded-xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:min-h-[420px]">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85" alt="Materiale ndërtimi" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-stone-900/30"></div>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-zinc-900/10 aspect-4/3 lg:aspect-auto lg:min-h-[420px]">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85" alt="Kantier ndertimi profesional" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-zinc-900/30"></div>
           </div>
           <div>
-            <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Rreth nesh</h2>
-            <p class="text-stone-600 mb-4 leading-relaxed"><strong class="text-stone-800">Materiale Ndertimi Lulja</strong> është partneri juaj për të gjitha nevojat e ndërtimit dhe rinovimit në Shqipëri. Me përvojë në treg dhe fokus në cilësi, ofrojmë një gamë të gjerë materialesh – nga tulla dhe çimento deri te bojëra, instalime uji dhe elektrike – si dhe vegla dhe aksesorë për profesionistë dhe amatorë.</p>
-            <p class="text-stone-600 mb-6 leading-relaxed">Synimi ynë është të jemi një dyqan i besueshëm ku mund të gjeni gjithçka për një projekt ndërtimi ose lyerjeje, me këshilla praktike dhe çmime të arsyeshme. Punojmë me klientë individualë, zyrtarë ndërtimi dhe biznese të vogla, duke u përshtatur nevojave të secilit.</p>
-            <ul class="space-y-2 text-stone-600">
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> Gamë e gjerë produktesh në një vend</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> Këshilla dhe ndihmë nga stafi me përvojë</li>
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> Cilësi të kontrolluar dhe marka të njohura</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kategoritë - with images -->
-    <section id="kategorite" class="py-20 md:py-28 bg-stone-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Kategoritë tona</h2>
-        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-14">Zgjidhni nga kategoritë e materialeve dhe veglave që ofrojmë – për ndërtim, lyerje, ujë, elektrik dhe më shumë.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            <div class="aspect-[4/3] relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Tulla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
-              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Tulla & materiale ndërtimi</h3>
-            </div>
-            <p class="p-4 text-stone-300 text-sm">Tulla, blloqe, gëlqere, rërë dhe materiale të tjera strukturore për themele, mure dhe çati.</p>
-          </a>
-          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            <div class="aspect-[4/3] relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=600&q=80" alt="Çimento" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
-              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Çimento & lidhës</h3>
-            </div>
-            <p class="p-4 text-stone-300 text-sm">Çimento, llaç, ngjitës, aditivë dhe materiale lidhëse për beton dhe punë muri.</p>
-          </a>
-          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            <div class="aspect-[4/3] relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80" alt="Bojë" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
-              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Bojë & lyerje</h3>
-            </div>
-            <p class="p-4 text-stone-300 text-sm">Bojëra brenda/jashtë, emulsions, llaç dekorativ, abetare, furça dhe rrula.</p>
-          </a>
-          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            <div class="aspect-[4/3] relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="Ujë" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
-              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Ujë & kanalizime</h3>
-            </div>
-            <p class="p-4 text-stone-300 text-sm">Tuba PPR/PVC, pajisje sanitare, valvula, sifona dhe aksesorë për ujësjellës.</p>
-          </a>
-          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            <div class="aspect-[4/3] relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Elektrik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
-              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Elektrik</h3>
-            </div>
-            <p class="p-4 text-stone-300 text-sm">Kabllo, priza, çelësa, ndriçim, kanalina dhe materiale instalimi elektrik.</p>
-          </a>
-          <a href="#sherbimet" class="group block rounded-lg overflow-hidden bg-stone-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            <div class="aspect-[4/3] relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80" alt="Vegla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 to-transparent"></div>
-              <h3 class="absolute bottom-4 left-4 right-4 text-xl font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Mjete & vegla</h3>
-            </div>
-            <p class="p-4 text-stone-300 text-sm">Vegla dore dhe elektrike, trapane, matrapik, çekiç, morseta dhe pajisje mbrojtëse.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Shërbimet -->
-    <section id="sherbimet" class="py-20 md:py-28 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Çfarë ofrojmë</h2>
-        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-4">Ne furnizojmë materiale dhe vegla për ndërtim, lyerje dhe punë uji dhe elektrike – për profesionistë, amatorë dhe shtëpi.</p>
-        <p class="text-center text-stone-500 text-sm max-w-xl mx-auto mb-14">Stafi ynë ju ndihmon me këshilla për zgjedhjen e materialeve të duhura dhe sasinë e nevojshme për projektin tuaj.</p>
-        <div class="grid md:grid-cols-2 gap-8 mb-16">
-          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
-            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">🧱</div>
-            <div>
-              <h3 class="text-lg font-bold text-stone-900 mb-2">Materiale ndërtimi</h3>
-              <p class="text-stone-600 mb-3">Tulla, blloqe, çimento, gëlqere, rërë dhe të gjitha materialet e nevojshme për ndërtim dhe rinovim. Cilësi të kontrolluar dhe çmime konkurruese.</p>
-              <ul class="text-stone-500 text-sm space-y-1">
-                <li>· Tulla dhe blloqe për mure</li>
-                <li>· Çimento, llaç, gëlqere</li>
-                <li>· Rërë, gurë, inerte</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
-            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">🎨</div>
-            <div>
-              <h3 class="text-lg font-bold text-stone-900 mb-2">Materiale lyerjeje</h3>
-              <p class="text-stone-600 mb-3">Bojëra të brendshme dhe të jashtme, emulsions, llaç dekorativ, abetare. Zgjedhje e gjerë ngjyrash dhe markash.</p>
-              <ul class="text-stone-500 text-sm space-y-1">
-                <li>· Bojëra mure dhe tavani</li>
-                <li>· Abetare, llaç dekorativ</li>
-                <li>· Furça, rrula, aksesorë</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
-            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">💧</div>
-            <div>
-              <h3 class="text-lg font-bold text-stone-900 mb-2">Punë uji dhe elektrike</h3>
-              <p class="text-stone-600 mb-3">Tuba, pajisje uji, kabllo, priza, çelësa, ndriçim dhe materiale për instalime. Gjithçka për ujësjellës dhe instalime elektrike.</p>
-              <ul class="text-stone-500 text-sm space-y-1">
-                <li>· Tuba PPR, PVC, pajisje sanitare</li>
-                <li>· Kabllo, priza, çelësa, ndriçim</li>
-                <li>· Kanalina, aksesorë montimi</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex gap-5 p-6 rounded-xl bg-stone-100 border border-stone-200 hover:border-orange-300 transition-colors">
-            <div class="shrink-0 w-14 h-14 rounded-lg bg-orange-500/10 flex items-center justify-center text-2xl">🔧</div>
-            <div>
-              <h3 class="text-lg font-bold text-stone-900 mb-2">Vegla dhe aksesorë</h3>
-              <p class="text-stone-600 mb-3">Vegla dore dhe elektrike, mjete për ndërtim dhe lyerje, pajisje mbrojtëse. Për zanatin dhe për shtëpi.</p>
-              <ul class="text-stone-500 text-sm space-y-1">
-                <li>· Trapane, matrapik, vidatorë</li>
-                <li>· Çekiç, dalta, kaçavida</li>
-                <li>· Syze, doreza, mbrojtje</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-xl bg-stone-900 text-white p-8 md:p-10">
-          <h3 class="text-2xl font-bold mb-4" style="font-family: 'Bebas Neue', sans-serif;">Shërbime plotësuese</h3>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-stone-300 text-sm">
-            <div class="flex gap-3">
-              <span class="text-orange-400 font-bold">✓</span>
-              <span>Këshilla teknike për zgjedhjen e materialeve</span>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-orange-400 font-bold">✓</span>
-              <span>Informacion për sasi dhe llogaritje</span>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-orange-400 font-bold">✓</span>
-              <span>Produkte me garanci nga furnizues të njohur</span>
-            </div>
-            <div class="flex gap-3">
-              <span class="text-orange-400 font-bold">✓</span>
-              <span>Shërbim personalizuar për çdo klient</span>
+            <p class="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">Eksperienca Jone</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Partneri juaj per cdo projekt ndertimi</h2>
+            <p class="text-zinc-600 mb-4 leading-relaxed text-sm md:text-base"><strong class="text-zinc-800">Materiale Lulja 08</strong> eshte nje dyqan i specializuar ne furnizimin me materiale ndertimi, bojera profesionale, vegla pune dhe zgjidhje teknike per projekte ndertimi dhe rinovimi.</p>
+            <p class="text-zinc-600 mb-4 leading-relaxed text-sm md:text-base">Me nje perzgjedhje te kujdesshme te produkteve dhe bashkepunim me marka te njohura nderkombetare, Lulja 08 synon te ofroje produkte te besueshme dhe cilesore per profesionistet e ndertimit, instaluesit dhe cdo klient qe kerkon zgjidhje praktike.</p>
+            <p class="text-zinc-600 mb-6 leading-relaxed text-sm md:text-base">Ne dyqanin tone ne Tirane, klientet mund te gjejne produkte per cdo faze te projektit te tyre &mdash; nga pergatitja e siperfaqeve dhe instalimet teknike, deri te perfundimi dekorativ i ambienteve.</p>
+            <div class="grid grid-cols-2 gap-2.5">
+              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span> Ndertim dhe rinovim</div>
+              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span> Instalime elektrike</div>
+              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span> Instalime hidraulike</div>
+              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span> Punime dekorative</div>
+              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span> Sisteme ndricimi</div>
+              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></span> Termoizolim</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pse ne -->
-    <section id="pse-ne" class="py-20 md:py-28 bg-stone-900 text-white">
+    <!-- Kategorite - Overview Cards -->
+    <section class="py-16 md:py-28 bg-zinc-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Pse ne</h2>
-        <p class="text-center text-stone-400 max-w-2xl mx-auto mb-6">Na zgjidhni për materiale dhe vegla të cilësisë në Shqipëri – me besueshmëri, përvojë dhe çmime të arsyeshme.</p>
-        <p class="text-center text-stone-500 text-sm max-w-xl mx-auto mb-14">Ne nuk jemi thjesht një dyqan: ofrojmë këshilla praktike dhe ndihmojmë që të zgjidhni produktet e duhura për çdo projekt.</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4 font-bold">✓</div>
-            <h3 class="text-lg font-bold mb-2">Cilësi</h3>
-            <p class="text-stone-400 text-sm">Materiale dhe vegla të provuara, me garanci dhe nga furnizues të besuar.</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4">⏱</div>
-            <h3 class="text-lg font-bold mb-2">Përvoja</h3>
-            <p class="text-stone-400 text-sm">Përvojë në sektor për të këshilluar dhe ofruar çfarë ju nevojitet.</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4">💰</div>
-            <h3 class="text-lg font-bold mb-2">Çmime të arsyeshme</h3>
-            <p class="text-stone-400 text-sm">Çmime konkurruese pa sakrifikuar cilësinë.</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mx-auto mb-4">🇦🇱</div>
-            <h3 class="text-lg font-bold mb-2">Shërbim në Shqipëri</h3>
-            <p class="text-stone-400 text-sm">Operojmë në Shqipëri – vizitoni dyqanin ose na telefononi.</p>
-          </div>
+        <div class="text-center mb-10 md:mb-14">
+          <p class="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">Cfare ofrojme</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Kategorite e Produkteve</h2>
+          <p class="text-zinc-600 max-w-2xl mx-auto text-sm md:text-base">Nga materialet baze te ndertimit deri te produktet per perfundim dekorativ dhe instalime teknike.</p>
         </div>
-        <div class="mt-16 pt-16 border-t border-stone-700">
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">+</p>
-              <p class="text-stone-400 text-sm mt-1">Vite përvoje në treg</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
+          <a href="/produkte/#bojera" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
+            <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&q=80" alt="Bojera profesionale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Bojera</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Per brendshme dhe jashtme</p>
             </div>
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">6+</p>
-              <p class="text-stone-400 text-sm mt-1">Kategoritë e produkteve</p>
+          </a>
+          <a href="/produkte/#vegla-pune" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
+            <img src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=400&q=80" alt="Vegla pune profesionale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Vegla Pune</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Makita, Wolfcraft, Knipex</p>
             </div>
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">100%</p>
-              <p class="text-stone-400 text-sm mt-1">Fokus në cilësi</p>
+          </a>
+          <a href="/produkte/#elektrike" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&q=80" alt="Instalime elektrike" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Elektrike</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Gewiss, ABB</p>
             </div>
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-orange-400" style="font-family: 'Bebas Neue', sans-serif;">Shqipëri</p>
-              <p class="text-stone-400 text-sm mt-1">Shërbim lokal</p>
+          </a>
+          <a href="/produkte/#hidraulike" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
+            <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&q=80" alt="Instalime hidraulike" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Hidraulike</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Pestan, APE, Cher Bros</p>
             </div>
+          </a>
+          <a href="/produkte/#ndricim" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
+            <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=400&q=80" alt="Ndricim modern" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Ndricim</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Horoz</p>
+            </div>
+          </a>
+          <a href="/produkte/#materiale-ndertimi" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80" alt="Materiale ndertimi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Materiale Ndertimi</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Dast</p>
+            </div>
+          </a>
+          <a href="/produkte/#termoizolim" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
+            <img src="https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=400&q=80" alt="Termoizolim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Termoizolim</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Polisterol, bitum, izolim</p>
+            </div>
+          </a>
+          <a href="/makita/" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10 ring-2 ring-orange-500/40">
+            <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&q=80" alt="Makita professional tools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
+              <h3 class="text-orange-400 font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Bebas Neue', sans-serif;">Makita</h3>
+              <p class="text-zinc-300 text-[10px] md:text-xs">Professional Power Tools</p>
+            </div>
+          </a>
+        </div>
+        <div class="text-center mt-8 md:mt-10">
+          <a href="/produkte/" class="inline-block px-6 py-3.5 md:px-8 md:py-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors uppercase tracking-wider text-sm shadow-lg shadow-orange-500/20">Shiko te gjitha produktet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Markat -->
+    <section id="markat" class="py-16 md:py-28 bg-white scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 md:mb-14">
+          <p class="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">Bashkepunimet tona</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">14+ Marka Nderkombetare</h2>
+          <p class="text-zinc-600 max-w-2xl mx-auto text-sm md:text-base">Cilesia fillon me zgjedhjen e duhur te markave. Ne punojme vetem me prodhues te besueshem.</p>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 md:gap-4">
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Makita</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Power Tools</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Wolfcraft</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Vegla</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Hoegert</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Vegla</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Ingco</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Vegla</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Tolsen</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Vegla</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Total</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Vegla</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Knipex</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Vegla</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Gewiss</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Elektrike</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">ABB</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Elektrike</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Horoz</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Ndricim</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Pestan</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Hidraulike</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">APE</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Hidraulike</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Cher Bros</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Hidraulike</span>
+          </div>
+          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-orange-600 transition-colors text-base md:text-xl" style="font-family: 'Bebas Neue', sans-serif;">Dast</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-orange-500/70 transition-colors">Ndertim</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Si punojmë -->
-    <section id="si-punojme" class="py-20 md:py-28 bg-stone-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Si punojmë</h2>
-        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-14">Tre hapa të thjeshtë për të marrë materialet dhe veglat që ju nevojiten – nga pyetja deri te porosia.</p>
-        <div class="grid md:grid-cols-3 gap-8 md:gap-10">
-          <div class="relative text-center">
-            <div class="w-20 h-20 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-5">1</div>
-            <h3 class="text-xl font-bold text-stone-900 mb-2">Na kontaktoni</h3>
-            <p class="text-stone-600 text-sm">Telefononi, vizitoni dyqanin ose na shkruani. Na tregoni çfarë kërkoni – ndërtim, lyerje, ujë, elektrik apo vegla.</p>
-            <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-orange-300/50"></div>
-          </div>
-          <div class="relative text-center">
-            <div class="w-20 h-20 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-5">2</div>
-            <h3 class="text-xl font-bold text-stone-900 mb-2">Këshillim dhe zgjedhje</h3>
-            <p class="text-stone-600 text-sm">Ju ndihmojmë të zgjidhni materialet e duhura dhe sasinë e nevojshme. Ju japim çmime dhe opsione për çdo buxhet.</p>
-            <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-orange-300/50"></div>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-5">3</div>
-            <h3 class="text-xl font-bold text-stone-900 mb-2">Porosi dhe marrje</h3>
-            <p class="text-stone-600 text-sm">Përfundoni porosinë në dyqan ose me telefon. Materialet janë gati për t’u marrë – sipas rregullave tona të shitjes.</p>
-          </div>
+    <!-- FAQs -->
+    <section class="py-16 md:py-28 bg-zinc-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 md:mb-14">
+          <p class="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">Pyetje te shpeshta</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Keni pyetje?</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- Dëshmitë -->
-    <section id="deshmitë" class="py-20 md:py-28 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Klientët thonë</h2>
-        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-14">Përvoja e klientëve tanë – nga zanatinjët deri te familjet që rinovojnë shtëpinë.</p>
-        <div class="grid md:grid-cols-3 gap-8">
-          <blockquote class="p-6 rounded-xl bg-stone-100 border border-stone-200">
-            <p class="text-stone-600 italic mb-4">“Gjithçka që na duhej për ndërtimin e shtëpisë e gjetëm këtu. Stafi dinte çfarë të na sugjerojë dhe çmimet ishin të arsyeshme.”</p>
-            <footer class="text-stone-500 text-sm font-medium">— Klient, ndërtim banese</footer>
-          </blockquote>
-          <blockquote class="p-6 rounded-xl bg-stone-100 border border-stone-200">
-            <p class="text-stone-600 italic mb-4">“Punoj si hidraulik dhe blej rregullisht materiale nga Lulja. Cilësi e mirë dhe shërbim i shpejtë.”</p>
-            <footer class="text-stone-500 text-sm font-medium">— Artizan, punë uji</footer>
-          </blockquote>
-          <blockquote class="p-6 rounded-xl bg-stone-100 border border-stone-200">
-            <p class="text-stone-600 italic mb-4">“Këshilluan me bojëra dhe sasi për lyerjen e apartamentit. Rezultati doli shumë mirë, faleminderit.”</p>
-            <footer class="text-stone-500 text-sm font-medium">— Klient, rinovim</footer>
-          </blockquote>
+        <div class="space-y-3" x-data="{ open: null }">
+          <!-- FAQ 1 -->
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
+            <button @click="open = open === 1 ? null : 1" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+              <span>A beni delivery ne Tirane?</span>
+              <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 1 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div x-show="open === 1" x-cloak
+              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, ofrojme sherbim delivery per te gjitha produktet ne zonen e Tiranes. Na kontaktoni me telefon per te organizuar dergesen e materialeve.</p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
+            <button @click="open = open === 2 ? null : 2" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+              <span>Si mund te porosis produkte?</span>
+              <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 2 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div x-show="open === 2" x-cloak
+              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Na kontaktoni me telefon ose na shkruani ne WhatsApp. Gjithashtu, mund te na vizitoni direkt ne dyqan. Stafi yne do t'ju ndihmoje me zgjedhjen e produkteve te duhura per projektin tuaj.</p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
+            <button @click="open = open === 3 ? null : 3" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+              <span>Cilat marka ofron Lulja 08?</span>
+              <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 3 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div x-show="open === 3" x-cloak
+              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Bashkepunojme me 14+ marka nderkombetare si Makita, Wolfcraft, Knipex, Gewiss, ABB, Horoz, Pestan, Ingco, Tolsen, Total, Hoegert, APE, Cher Bros dhe Dast. Secila marke eshte zgjedhur per cilesine dhe besueshmërine e produkteve.</p>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
+            <button @click="open = open === 4 ? null : 4" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+              <span>A ofroni keshilla profesionale?</span>
+              <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 4 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div x-show="open === 4" x-cloak
+              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, stafi yne ka eksperience ne fushen e materialeve te ndertimit dhe eshte gati t'ju keshilloje per produktet me te pershtatshme per projektin tuaj. Na vizitoni ne dyqan ose na kontaktoni me telefon.</p>
+            </div>
+          </div>
+          <!-- FAQ 5 -->
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
+            <button @click="open = open === 5 ? null : 5" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+              <span>A keni produkte Makita?</span>
+              <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 5 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div x-show="open === 5" x-cloak
+              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, jemi nje nga pikat kryesore te shitjes se produkteve Makita ne Tirane. Ofrojme vegla cordless (me bateri), corded (me kabllo), outdoor equipment, si dhe aksesore dhe bateri. <a href="/makita/" class="text-orange-500 hover:text-orange-600 font-medium">Shikoni faqen e dedikuar Makita &rarr;</a></p>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
+            <button @click="open = open === 6 ? null : 6" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+              <span>Cilat jane format e pageses?</span>
+              <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 6 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div x-show="open === 6" x-cloak
+              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Pranojme pagese me para ne dore. Per porosi te medha ose bashkepunime te vazhdueshme, na kontaktoni per te diskutuar kushtet e pageses.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Banner -->
-    <section class="py-16 md:py-20 bg-orange-500">
+    <section class="py-14 md:py-20 bg-linear-to-br from-orange-500 to-orange-600">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Gati për të filluar projektin?</h2>
-        <p class="text-orange-100 mb-6">Na kontaktoni sot për këshilla, çmime ose porosi. Jemi këtu për ju.</p>
-        <a href="#kontakt" class="inline-block px-8 py-4 bg-white text-orange-600 font-bold rounded-sm hover:bg-stone-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange-500 uppercase tracking-wider">Kontaktoni tani</a>
-      </div>
-    </section>
-
-    <!-- Kontakt -->
-    <section id="kontakt" class="py-20 md:py-28 bg-stone-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center text-stone-900 mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Kontakt</h2>
-        <p class="text-center text-stone-600 max-w-2xl mx-auto mb-4">Na kontaktoni për porosi, çmime ose këshilla. Jemi këtu për të ju ndihmuar.</p>
-        <p class="text-center text-stone-500 text-sm max-w-xl mx-auto mb-14">Vizitoni dyqanin tonë, na telefononi ose na ndiqni në rrjetet sociale për të mësuar më shumë dhe për të parë ofertat.</p>
-        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto items-start">
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">📍</span>
-              <div>
-                <h3 class="font-bold text-stone-900">Adresa</h3>
-                <p class="text-stone-600">Tiranë, Shqipëri</p>
-                <p class="text-stone-500 text-sm mt-1">Vizitoni dyqanin për të parë produktet dhe për të bërë porosi në vend.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">📞</span>
-              <div>
-                <h3 class="font-bold text-stone-900">Telefon</h3>
-                <a href="tel:+355XXXXXXXX" class="text-orange-600 hover:text-orange-700 font-semibold text-lg">+355 XX XXX XXXX</a>
-                <p class="text-stone-500 text-sm mt-1">Na telefononi për pyetje, çmime ose porosi.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">🕐</span>
-              <div>
-                <h3 class="font-bold text-stone-900">Orari i punës</h3>
-                <p class="text-stone-600">Hënë – Shtunë: 08:00 – 18:00</p>
-                <p class="text-stone-500 text-sm mt-1">(Mund të ndryshojë – na telefononi për të konfirmuar)</p>
-              </div>
-            </div>
-            <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-stone-600 hover:text-pink-600 transition-colors font-medium">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              <span>@lulja_08 – na ndiqni në Instagram</span>
-            </a>
-          </div>
-          <div class="flex flex-col gap-4">
-            <a href="tel:+355XXXXXXXX" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-orange-500 text-white font-bold rounded-sm hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 uppercase tracking-wider">Na telefononi</a>
-            <a href="#kryefaqja" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-stone-800 text-white font-bold rounded-sm hover:bg-stone-700 transition-colors focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2 uppercase tracking-wider">Vizitoni dyqanin</a>
-            <p class="text-stone-500 text-sm text-center mt-2">Na gjeni në dyqan për të parë produktet me sy dhe për këshilla nga stafi.</p>
-          </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight" style="font-family: 'Bebas Neue', sans-serif;">Gati per te filluar projektin?</h2>
+        <p class="text-orange-100 mb-6 text-sm md:text-base">Lulja 08 &mdash; Partneri juaj per cdo projekt ndertimi. Na kontaktoni sot.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="tel:+355675188700" class="px-6 py-3.5 md:px-8 md:py-4 bg-white text-orange-600 font-bold rounded-lg hover:bg-zinc-100 transition-colors uppercase tracking-wider text-sm">+355 67 518 8700</a>
+          <a href="/kontakt/" class="px-6 py-3.5 md:px-8 md:py-4 bg-zinc-900 text-white font-bold rounded-lg hover:bg-zinc-800 transition-colors uppercase tracking-wider text-sm">Na vizitoni</a>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-stone-900 text-stone-400 py-12">
+  <footer class="bg-zinc-950 text-zinc-400 pt-14 md:pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="text-center md:text-left">
-          <p class="font-bold text-white text-lg" style="font-family: 'Bebas Neue', sans-serif;">Materiale Ndertimi Lulja</p>
-          <p class="text-sm mt-1"><a href="tel:+355XXXXXXXX" class="hover:text-orange-400 transition-colors">+355 XX XXX XXXX</a></p>
-          <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-2 text-stone-500 hover:text-pink-500 transition-colors text-sm">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            Instagram
-          </a>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-zinc-800">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-orange-500 flex items-center justify-center">
+              <span class="text-white font-bold text-sm" style="font-family: 'Bebas Neue', sans-serif;">L08</span>
+            </div>
+            <span class="text-base font-bold text-white" style="font-family: 'Bebas Neue', sans-serif;">Materiale Ndertimi Lulja 08</span>
+          </div>
+          <p class="text-sm text-zinc-500 leading-relaxed mb-4">Dyqan i specializuar per materiale ndertimi, bojera profesionale dhe vegla pune ne Tirane.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-zinc-800 hover:bg-pink-600 flex items-center justify-center text-zinc-400 hover:text-white transition-all" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/355675188700" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-zinc-800 hover:bg-green-600 flex items-center justify-center text-zinc-400 hover:text-white transition-all" aria-label="WhatsApp">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
         </div>
-        <p class="text-sm text-stone-500">© 2025 Materiale Ndertimi Lulja. Të gjitha të drejtat e rezervuara.</p>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Faqet</h3>
+          <ul class="space-y-2.5">
+            <li><a href="/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Kryefaqja</a></li>
+            <li><a href="/produkte/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Produkte</a></li>
+            <li><a href="/makita/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Makita Professional</a></li>
+            <li><a href="/kontakt/" class="text-sm text-zinc-400 hover:text-orange-400 transition-colors">Kontakt</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Kontakt</h3>
+          <ul class="space-y-2.5">
+            <li>
+              <a href="tel:+355675188700" class="text-sm hover:text-orange-400 transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +355 67 518 8700
+              </a>
+            </li>
+            <li>
+              <a href="tel:+355673156271" class="text-sm hover:text-orange-400 transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +355 67 315 6271
+              </a>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Tirane, Shqiperi
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+              Delivery ne Tirane
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-zinc-600">&copy; 2025 Materiale Ndertimi Lulja 08. Te gjitha te drejtat e rezervuara.</p>
+        <p class="text-xs text-zinc-700">Tirane, Shqiperi</p>
       </div>
     </div>
   </footer>
 
-  <div x-data="{ show: false }" x-show="show" x-cloak x-transition @scroll.window="show = window.scrollY > 400" class="fixed bottom-6 right-6 z-40">
-    <a href="#kryefaqja" class="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition-colors" aria-label="Kthehu në krye">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
-    </a>
-  </div>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/355675188700?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-4 md:bottom-8 md:right-8 z-50 group" aria-label="Na shkruani ne WhatsApp">
+    <span class="absolute -inset-1 rounded-full bg-green-400/30 animate-ping"></span>
+    <span class="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-green-500 rounded-full shadow-lg shadow-green-500/30 group-hover:bg-green-600 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+      <svg class="w-7 h-7 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </span>
+  </a>
 
-  <script defer src="dist/bundle.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

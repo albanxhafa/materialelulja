@@ -1,37 +1,65 @@
-# Materiale Ndertimi Lulja – One-Pager
+# Materiale Ndertimi Lulja 08
 
-Faqja e vetme e promovimit për Materiale Ndertimi Lulja (Shqipëri): materiale ndërtimi, bojë, ujë, elektrik dhe vegla.
+Website per **Materiale Ndertimi Lulja 08** — dyqan i specializuar ne furnizimin me materiale ndertimi, bojera profesionale, vegla pune dhe zgjidhje teknike per projekte ndertimi dhe rinovimi ne Tirane.
 
-## Teknologjitë
+## Tech Stack
 
-- HTML5, Tailwind CSS, Alpine.js
-- NPM për varësitë dhe build
+- **Vite** — build tool dhe dev server
+- **Tailwind CSS v4** — via `@tailwindcss/vite` plugin
+- **Alpine.js** — interaktivitet (carousel, mobile menu, scroll-to-top)
+- Fontet: Bebas Neue + DM Sans (Google Fonts)
 
 ## Komandat
 
 ```bash
-# Instalimi i varësive
+# Instalimi
 npm install
 
-# Build (CSS + JS)
+# Dev server me HMR
+npm run dev
+
+# Build per prodhim
 npm run build
 
-# Shikimi me ndryshime të vazhdueshme
-npm run watch:css    # në një terminal
-npm run watch:js     # në një tjetër
-
-# Shërbyer lokal (pas build)
-npx serve .
+# Preview build-in
+npm run preview
 ```
 
-Hapni `http://localhost:3000` (ose porti që tregon `serve`) për të parë faqen.
+## Struktura
 
-## Përmbajtja e faqes
+```
+├── index.html          # Faqja kryesore (Vite entry point)
+├── vite.config.js      # Konfigurimi i Vite + Tailwind plugin
+├── package.json
+├── src/
+│   ├── main.js         # Alpine.js init
+│   └── style.css       # Tailwind imports + base styles
+└── dist/               # Build output (git-ignored)
+```
 
-- **Kryefaqja**: karusel hero me 3 rrëshqitje dhe CTA
-- **Kategoritë**: tulla, çimento, bojë, ujë/kanalizime, elektrik, vegla
-- **Shërbimet**: çfarë ofrojmë (produkte dhe shërbime)
-- **Pse ne**: cilësi, përvoja, çmime, shërbim në Shqipëri
-- **Kontakt**: adresë, telefon, butona “Na telefononi” / “Vizitoni dyqanin”
+## Seksionet e faqes
 
-Plotësoni adresën dhe numrin e telefonit në seksionin Kontakt dhe në footer.
+- **Hero** — carousel me 3 slide, tagline "Build Better. Paint Smarter. Work Stronger."
+- **Eksperienca Jone** — rreth dyqanit, fushat e aktivitetit
+- **Zgjidhje te Plota** — permbledhje e produkteve me foto grid
+- **Kategorite e Produkteve** — 7 kategori te detajuara:
+  - Bojera (+ Aksesore per Bojera)
+  - Vegla Pune
+  - Elektrike (Gewiss, ABB)
+  - Hidraulike (Pestan, APE, Cher Bros)
+  - Ndricim (Horoz)
+  - Materiale Ndertimi (Dast)
+  - Termoizolim
+- **Makita Professional Tools** — seksion i dedikuar per SEO
+- **Markat** — grid me 14 marka partnere
+- **Kontakt** — telefon, Instagram, delivery info
+
+## Kontaktet
+
+- Tel: +355 67 518 8700 / +355 67 315 6271
+- Instagram: [@lulja_08](https://www.instagram.com/lulja_08/)
+- Lokacioni: Tirane, Shqiperi
+
+## Markat partnere
+
+Makita, Wolfcraft, Hoegert, Ingco, Tolsen, Total, Knipex, Gewiss, ABB, Horoz, Pestan, APE, Cher Bros, Dast
