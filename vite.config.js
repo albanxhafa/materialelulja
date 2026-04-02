@@ -11,9 +11,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        produkte: resolve(__dirname, "produkte/index.html"),
-        makita: resolve(__dirname, "makita/index.html"),
-        kontakt: resolve(__dirname, "kontakt/index.html"),
       },
       output: {
         assetFileNames: "assets/[name]-[hash][extname]",
