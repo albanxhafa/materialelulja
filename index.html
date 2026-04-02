@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="/src/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body class="font-sans antialiased text-zinc-800 bg-white" style="font-family: 'Inter', system-ui, sans-serif;">
 
-  <!-- Top Info Bar (desktop only) -->
+  <!-- ==================== TOP INFO BAR (desktop) ==================== -->
   <div class="hidden md:block bg-zinc-950 text-zinc-400 text-xs border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-9">
       <div class="flex items-center gap-5">
@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
+  <!-- ==================== HEADER / NAV ==================== -->
   <div x-data="{ mobileOpen: false }">
   <header class="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur-xl border-b border-white/5">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,10 +53,11 @@
           <a href="#produkte" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Produkte</a>
           <a href="#makita" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Makita</a>
           <a href="#markat" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Markat</a>
+          <a href="#kontakt" class="px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 font-medium rounded-lg transition-colors">Kontakt</a>
         </div>
-        <a href="#kontakt" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 text-white text-sm font-bold rounded-lg hover:bg-brand-600 transition-colors shadow-lg shadow-brand-500/20">
+        <a href="tel:+355673156271" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 text-white text-sm font-bold rounded-lg hover:bg-brand-600 transition-colors shadow-lg shadow-brand-500/20">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          Kontakt
+          Na Telefononi
         </a>
         <button type="button" class="md:hidden p-2.5 -mr-2 rounded-lg text-zinc-300 hover:bg-white/10 active:bg-white/20 transition-colors" aria-label="Hap menyne" @click="mobileOpen = true">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -65,13 +66,12 @@
     </nav>
   </header>
 
-  <!-- Mobile Menu Overlay (outside header so backdrop-blur doesn't break fixed positioning) -->
+  <!-- Mobile Menu Overlay -->
   <div x-show="mobileOpen" x-cloak
       x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
       x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
       class="fixed inset-0 z-50 bg-zinc-950 md:hidden" @keydown.escape.window="mobileOpen = false">
       <div class="flex flex-col h-full">
-        <!-- Top bar -->
         <div class="flex items-center justify-between px-5 h-16 shrink-0">
           <div class="flex items-center gap-2.5">
             <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center">
@@ -83,8 +83,6 @@
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
         </div>
-
-        <!-- Nav links -->
         <nav class="flex-1 px-5 pt-4 overflow-y-auto">
           <a href="#kryefaqja" class="block py-3.5 text-xl text-white font-semibold border-b border-zinc-800" style="font-family: 'Space Grotesk', sans-serif;" @click="mobileOpen = false">Kryefaqja</a>
           <a href="#rreth-nesh" class="block py-3.5 text-xl text-zinc-300 font-semibold border-b border-zinc-800" style="font-family: 'Space Grotesk', sans-serif;" @click="mobileOpen = false">Rreth nesh</a>
@@ -93,18 +91,7 @@
           <a href="#markat" class="block py-3.5 text-xl text-zinc-300 font-semibold border-b border-zinc-800" style="font-family: 'Space Grotesk', sans-serif;" @click="mobileOpen = false">Markat</a>
           <a href="#kontakt" class="block py-3.5 text-xl text-brand-400 font-semibold" style="font-family: 'Space Grotesk', sans-serif;" @click="mobileOpen = false">Kontakt</a>
         </nav>
-
-        <!-- Contact info + buttons at bottom -->
-        <div class="shrink-0 px-5 pb-6 pt-4 border-t border-zinc-800 space-y-4">
-          <!-- Info row -->
-          <div class="flex items-center justify-between text-sm">
-            <div class="flex items-center gap-2 text-zinc-400">
-              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              Tiranë, Shqipëri
-            </div>
-            <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-pink-400 transition-colors">@lulja_08</a>
-          </div>
-          <!-- Buttons -->
+        <div class="shrink-0 px-5 pb-6 pt-4 border-t border-zinc-800 space-y-3">
           <a href="tel:+355673156271" class="flex items-center justify-center gap-2 w-full py-3.5 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors text-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             +355 67 315 6271
@@ -119,106 +106,75 @@
   </div>
 
   <main>
-    <!-- ==================== HERO CAROUSEL ==================== -->
-    <section id="kryefaqja" class="relative overflow-hidden">
-      <div class="relative h-[85vh] min-h-[500px] md:h-[90vh] md:min-h-[550px]"
-        x-data="{
-          current: 0,
-          slideCount: 3,
-          interval: null,
-          next() { this.current = (this.current + 1) % this.slideCount; this.resetInterval(); },
-          prev() { this.current = (this.current - 1 + this.slideCount) % this.slideCount; this.resetInterval(); },
-          goTo(i) { this.current = i; this.resetInterval(); },
-          resetInterval() { clearInterval(this.interval); this.interval = setInterval(() => this.next(), 5500); }
-        }"
-        x-init="interval = setInterval(() => next(), 5500)"
-        x-cloak>
-        <!-- Slide 1 -->
-        <div x-cloak x-show="current === 0"
-          x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-          x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-          class="absolute inset-0">
-          <img src="https://placehold.co/1920x900/1a1a2e/ffffff?text=HERO+1%0AKantier+Ndertimi" alt="Kantier ndërtimi" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-900/60 to-zinc-900/30"></div>
-          <div class="absolute inset-0 flex items-center justify-center px-4">
-            <div class="text-center text-white max-w-4xl">
-              <p class="text-brand-400 font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 md:mb-4">Lulja 08 - Tiranë</p>
-              <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight leading-none" style="font-family: 'Space Grotesk', sans-serif;">Build Better. Paint Smarter. Work Stronger.</h1>
-              <p class="text-sm sm:text-base md:text-lg text-zinc-200 mb-6 md:mb-8 max-w-2xl mx-auto">Materiale Ndertimi dhe Vegla Profesionale në Tiranë</p>
-              <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="#kontakt" class="px-6 py-3.5 sm:px-8 sm:py-4 bg-brand-500 text-white font-bold rounded-lg hover:bg-brand-600 transition-colors uppercase tracking-wider text-sm">Na kontaktoni</a>
-                <a href="#produkte" class="px-6 py-3.5 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors uppercase tracking-wider text-sm border border-white/20">Shiko produktet</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div x-cloak x-show="current === 1"
-          x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-          x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-          class="absolute inset-0">
-          <img src="https://placehold.co/1920x900/1a1a2e/ffffff?text=HERO+2%0AVegla+Profesionale+Makita" alt="Vegla profesionale" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-900/50 to-zinc-900/20"></div>
-          <div class="absolute inset-0 flex items-center justify-center px-4">
-            <div class="text-center text-white max-w-3xl">
-              <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Vegla Profesionale Makita</h2>
-              <p class="text-sm sm:text-base md:text-lg text-zinc-200 mb-6 md:mb-8">Cordless, Corded, Outdoor Equipment - të gjitha në Lulja 08</p>
-              <a href="#makita" class="inline-block px-6 py-3.5 sm:px-8 sm:py-4 bg-white text-zinc-900 font-bold rounded-lg hover:bg-zinc-100 transition-colors uppercase tracking-wider text-sm">Shiko Makita</a>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div x-cloak x-show="current === 2"
-          x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-          x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-          class="absolute inset-0">
-          <img src="https://placehold.co/1920x900/1a1a2e/ffffff?text=HERO+3%0ABojera+Profesionale" alt="Bojera profesionale" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-linear-to-t from-zinc-950/90 via-zinc-900/60 to-zinc-900/30"></div>
-          <div class="absolute inset-0 flex items-center justify-center px-4">
-            <div class="text-center text-white max-w-3xl">
-              <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Nga projekti i vogel deri të ndërtimi profesional</h2>
-              <p class="text-sm sm:text-base md:text-lg text-zinc-200 mb-6 md:mb-8">Tek Lulja 08 gjeni gjithcka që ju nevojitet për te ndërtuar, rinovuar dhe përfunduar çdo pune me cilësi.</p>
-              <a href="#produkte" class="inline-block px-6 py-3.5 sm:px-8 sm:py-4 bg-brand-500 text-white font-bold rounded-lg hover:bg-brand-600 transition-colors uppercase tracking-wider text-sm">Shiko produktet</a>
-            </div>
-          </div>
-        </div>
+    <!-- ==================== HERO ==================== -->
+    <section id="kryefaqja" class="relative min-h-[100svh] flex items-center overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="Kantier ndërtimi profesional" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/50 to-zinc-950/80"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/40 to-transparent"></div>
 
-        <!-- Carousel Controls -->
-        <button type="button" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-colors active:scale-95" aria-label="Slide paraardh&euml;s" @click="prev()">
-          <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <button type="button" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-colors active:scale-95" aria-label="Slide pasardh&euml;s" @click="next()">
-          <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </button>
+      <div class="relative w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-24 pb-32 md:pt-32 md:pb-40">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/15 border border-brand-500/25 mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+            <span class="text-brand-300 text-xs font-semibold uppercase tracking-wider">Lulja 08 &mdash; Tiranë</span>
+          </div>
 
-        <!-- Dots -->
-        <div class="absolute bottom-20 md:bottom-8 left-0 right-0 flex justify-center gap-2.5">
-          <template x-for="(_, i) in Array(slideCount).fill(0)" :key="i">
-            <button type="button" class="w-2.5 h-2.5 rounded-full transition-all" :class="current === i ? 'bg-brand-500 scale-125' : 'bg-white/50 hover:bg-white/70'" :aria-label="'Shfaq slide ' + (i + 1)" @click="goTo(i)"></button>
-          </template>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-5 tracking-tight leading-[1.05]" style="font-family: 'Space Grotesk', sans-serif;">
+            Materiale Ndërtimi<br class="hidden sm:block" /> &amp; Vegla Profesionale
+          </h1>
+
+          <p class="text-base sm:text-lg md:text-xl text-zinc-300 mb-8 max-w-xl leading-relaxed">
+            Nga bojerat profesionale te vegla pune Makita &mdash; gjithçka që ju nevojitet për çdo projekt ndërtimi e rinovimi.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#produkte" class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-all hover:shadow-lg hover:shadow-brand-500/25 text-sm uppercase tracking-wider">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+              Shiko Produktet
+            </a>
+            <a href="#kontakt" class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/20 transition-all text-sm uppercase tracking-wider border border-white/15">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Na Kontaktoni
+            </a>
+          </div>
         </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/50">
+        <span class="text-xs tracking-widest uppercase">Zbulo më shumë</span>
+        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
       </div>
     </section>
 
     <!-- ==================== STATS BAR ==================== -->
-    <section class="relative z-10 -mt-12 md:-mt-14 mb-8 md:mb-0">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 bg-white rounded-2xl shadow-xl shadow-zinc-900/10 border border-zinc-100 overflow-hidden">
-          <div class="p-5 md:p-6 text-center border-r border-b md:border-b-0 border-zinc-100">
-            <p class="text-2xl md:text-3xl font-bold text-brand-500" style="font-family: 'Space Grotesk', sans-serif;">14+</p>
-            <p class="text-zinc-500 text-xs mt-1">Marka Partnere</p>
+    <section class="relative z-10 -mt-16 md:-mt-20 pb-8">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+           x-data="{ shown: false }" x-intersect.once="shown = true">
+        <div class="grid grid-cols-2 md:grid-cols-4 bg-white rounded-2xl shadow-2xl shadow-zinc-950/10 border border-zinc-100 overflow-hidden">
+          <div class="p-5 md:p-7 text-center border-r border-b md:border-b-0 border-zinc-100">
+            <p class="text-2xl md:text-4xl font-extrabold text-brand-600" style="font-family: 'Space Grotesk', sans-serif;"
+               x-data="{ count: 0 }" x-effect="if (shown) { let i = 0; const step = () => { i++; count = i; if (i < 14) requestAnimationFrame(step); }; step(); }"
+               x-text="count + '+'">0+</p>
+            <p class="text-zinc-500 text-xs mt-1 font-medium">Marka Partnere</p>
           </div>
-          <div class="p-5 md:p-6 text-center border-b md:border-b-0 md:border-r border-zinc-100">
-            <p class="text-2xl md:text-3xl font-bold text-brand-500" style="font-family: 'Space Grotesk', sans-serif;">7</p>
-            <p class="text-zinc-500 text-xs mt-1">Kategori Produktesh</p>
+          <div class="p-5 md:p-7 text-center border-b md:border-b-0 md:border-r border-zinc-100">
+            <p class="text-2xl md:text-4xl font-extrabold text-brand-600" style="font-family: 'Space Grotesk', sans-serif;"
+               x-data="{ count: 0 }" x-effect="if (shown) { let i = 0; const step = () => { i++; count = i; if (i < 7) requestAnimationFrame(step); }; step(); }"
+               x-text="count">0</p>
+            <p class="text-zinc-500 text-xs mt-1 font-medium">Kategori Produktesh</p>
           </div>
-          <div class="p-5 md:p-6 text-center border-r border-zinc-100">
-            <p class="text-2xl md:text-3xl font-bold text-brand-500" style="font-family: 'Space Grotesk', sans-serif;">1000+</p>
-            <p class="text-zinc-500 text-xs mt-1">Produkte në Stok</p>
+          <div class="p-5 md:p-7 text-center border-r border-zinc-100">
+            <p class="text-2xl md:text-4xl font-extrabold text-brand-600" style="font-family: 'Space Grotesk', sans-serif;"
+               x-data="{ count: 0 }" x-effect="if (shown) { let i = 0; const step = () => { i += 50; if (i > 1000) i = 1000; count = i; if (i < 1000) requestAnimationFrame(step); }; step(); }"
+               x-text="count + '+'">0+</p>
+            <p class="text-zinc-500 text-xs mt-1 font-medium">Produkte në Stok</p>
           </div>
-          <div class="p-5 md:p-6 text-center">
-            <p class="text-2xl md:text-3xl font-bold text-brand-500" style="font-family: 'Space Grotesk', sans-serif;">Dërgesë</p>
-            <p class="text-zinc-500 text-xs mt-1">Ne gjithe Tiranën</p>
+          <div class="p-5 md:p-7 text-center">
+            <p class="text-2xl md:text-4xl font-extrabold text-brand-600" style="font-family: 'Space Grotesk', sans-serif;">
+              <svg class="w-7 h-7 md:w-9 md:h-9 mx-auto text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+            </p>
+            <p class="text-zinc-500 text-xs mt-1 font-medium">Dërgesë në Tiranë</p>
           </div>
         </div>
       </div>
@@ -226,335 +182,302 @@
 
     <!-- ==================== RRETH NESH ==================== -->
     <section id="rreth-nesh" class="py-16 md:py-28 bg-white scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-zinc-900/10 aspect-4/3 lg:aspect-auto lg:min-h-[420px]">
-            <img src="https://placehold.co/800x600/2d3748/ffffff?text=RRETH+NESH%0APunetor+ne+kantier+ndertimi" alt="Kantier ndërtimi profesional" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-zinc-900/30"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-zinc-900/10 aspect-[4/3]"
+               x-data x-intersect.once="$el.classList.add('visible')">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Kantier ndërtimi profesional" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-900/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/95 backdrop-blur-sm shadow-lg">
+                <div class="w-2 h-2 rounded-full bg-brand-500"></div>
+                <span class="text-zinc-800 text-xs font-bold">Tiranë, Shqipëri</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2">Eksperienca Jone</p>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Partneri juaj për çdo projekt ndërtimi</h2>
-            <p class="text-zinc-600 mb-4 leading-relaxed text-sm md:text-base"><strong class="text-zinc-800">Materiale Lulja 08</strong> është një dyqan i specializuar në furnizimin me materiale ndërtimi, bojera profesionale, vegla pune dhe zgjidhje teknike për projekte ndërtimi dhe rinovimi.</p>
-            <p class="text-zinc-600 mb-4 leading-relaxed text-sm md:text-base">Me një përzgjedhje të kujdesshme të produkteve dhe bashkëpunim me marka të njohura ndërkombëtare, Lulja 08 synon të ofrojë produkte të besueshmë dhe cilësore për profesionistët e ndërtimit, instaluesit dhe çdo klient që kërkon zgjidhje praktike.</p>
-            <p class="text-zinc-600 mb-6 leading-relaxed text-sm md:text-base">Në dyqanin tone në Tiranë, klientët mund të gjejnë produkte për çdo faze të projektit të tyre &mdash; nga përgatitja e sipërfaqeve dhe instalimet teknike, deri të përfundimi dekorativ i ambienteve.</p>
-            <div class="grid grid-cols-2 gap-2.5">
-              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Ndertim dhe rinovim</div>
-              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Instalime elektrike</div>
-              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Instalime hidraulike</div>
-              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Punime dekorative</div>
-              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Sisteme ndriçimi</div>
-              <div class="flex items-center gap-2 text-zinc-600 text-xs sm:text-sm"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Termoizolim</div>
+
+          <div x-data x-intersect.once="$el.classList.add('visible')" class="fade-up">
+            <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-3">Rreth Nesh</p>
+            <h2 class="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-zinc-900 mb-5 tracking-tight leading-tight" style="font-family: 'Space Grotesk', sans-serif;">Partneri juaj për çdo projekt ndërtimi</h2>
+            <p class="text-zinc-600 mb-4 leading-relaxed text-sm md:text-base"><strong class="text-zinc-800">Materiale Lulja 08</strong> është dyqan i specializuar në Tiranë për materiale ndërtimi, bojera profesionale dhe vegla pune. Bashkëpunojmë me marka ndërkombëtare për t'ju ofruar produkte të besueshmë për çdo fazë të projektit tuaj.</p>
+            <p class="text-zinc-600 mb-8 leading-relaxed text-sm md:text-base">Nga përgatitja e sipërfaqeve deri te përfundimi dekorativ &mdash; stafi ynë ju këshillon për zgjedhjen e duhur të produkteve.</p>
+
+            <!-- Service cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <span class="text-zinc-700 text-xs font-medium">Ndërtim & Rinovim</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <span class="text-zinc-700 text-xs font-medium">Instalime Elektrike</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </div>
+                <span class="text-zinc-700 text-xs font-medium">Instalime Hidraulike</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                </div>
+                <span class="text-zinc-700 text-xs font-medium">Bojera & Dekorim</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <span class="text-zinc-700 text-xs font-medium">Sisteme Ndriçimi</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                </div>
+                <span class="text-zinc-700 text-xs font-medium">Termoizolim</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== PRODUKTE ==================== -->
-    <section id="produkte" class="scroll-mt-20">
-      <!-- Category Overview Cards -->
-      <div class="py-16 md:py-28 bg-zinc-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-10 md:mb-14">
-            <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2">Çfarë ofrojmë</p>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Kategorite e Produkteve</h2>
-            <p class="text-zinc-600 max-w-2xl mx-auto text-sm md:text-base">Nga materialet baze të ndërtimit deri të produktet për përfundim dekorativ dhe instalime teknike.</p>
-          </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-            <a href="#bojera" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
-              <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0ABojera+%26+Lyerje" alt="Bojera profesionale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Bojera</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Për brendshme dhe jashtme</p>
-              </div>
-            </a>
-            <a href="#vegla-pune" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
-              <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0AVegla+Pune+Profesionale" alt="Vegla pune profesionale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Vegla Pune</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Makita, Wolfcraft, Knipex</p>
-              </div>
-            </a>
-            <a href="#elektrike" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
-              <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0AInstalime+Elektrike" alt="Instalime elektrike" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Elektrike</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Gewiss, ABB</p>
-              </div>
-            </a>
-            <a href="#hidraulike" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
-              <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0AInstalime+Hidraulike" alt="Instalime hidraulike" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Hidraulike</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Pestan, APE, Cher Bros</p>
-              </div>
-            </a>
-            <a href="#ndriçim" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
-              <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0ANdricim+LED+Modern" alt="Ndriçim modern" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Ndriçim</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Horoz</p>
-              </div>
-            </a>
-            <a href="#materiale-ndërtimi" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
-              <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0AMateriale+Ndertimi" alt="Materiale ndërtimi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Materiale Ndertimi</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Dast</p>
-              </div>
-            </a>
-            <a href="#termoizolim" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10">
-              <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0ATermoizolim+EPS" alt="Termoizolim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-white font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Termoizolim</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Polisterol, bitum, izolim</p>
-              </div>
-            </a>
-            <a href="#makita" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg shadow-zinc-900/10 ring-2 ring-brand-500/40">
-              <img src="https://placehold.co/400x533/064e3b/10b981?text=KATEGORI%0AMakita+Power+Tools" alt="Makita professional tools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-950/85 via-zinc-900/30 to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4">
-                <h3 class="text-brand-400 font-bold text-lg md:text-xl mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">Makita</h3>
-                <p class="text-zinc-300 text-[10px] md:text-xs">Professional Power Tools</p>
-              </div>
-            </a>
-          </div>
+    <!-- ==================== PRODUKTE (TABBED) ==================== -->
+    <section id="produkte" class="py-16 md:py-28 bg-zinc-50 scroll-mt-20"
+             x-data="{ activeTab: 'bojera' }">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-10 md:mb-14" x-data x-intersect.once="$el.classList.add('visible')">
+          <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2">Çfarë ofrojmë</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Kategorite e Produkteve</h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base">Nga materialet bazë të ndërtimit deri te vegla profesionale dhe përfundim dekorativ.</p>
         </div>
-      </div>
 
-      <!-- Category Quick Nav (sticky) -->
-      <nav class="bg-white border-b border-zinc-200 overflow-x-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-6 py-3 text-sm font-medium">
-          <a href="#bojera" class="text-zinc-500 hover:text-brand-500 whitespace-nowrap transition-colors">Bojera</a>
-          <a href="#vegla-pune" class="text-zinc-500 hover:text-brand-500 whitespace-nowrap transition-colors">Vegla Pune</a>
-          <a href="#elektrike" class="text-zinc-500 hover:text-brand-500 whitespace-nowrap transition-colors">Elektrike</a>
-          <a href="#hidraulike" class="text-zinc-500 hover:text-brand-500 whitespace-nowrap transition-colors">Hidraulike</a>
-          <a href="#ndriçim" class="text-zinc-500 hover:text-brand-500 whitespace-nowrap transition-colors">Ndriçim</a>
-          <a href="#materiale-ndërtimi" class="text-zinc-500 hover:text-brand-500 whitespace-nowrap transition-colors">Materiale Ndertimi</a>
-          <a href="#termoizolim" class="text-zinc-500 hover:text-brand-500 whitespace-nowrap transition-colors">Termoizolim</a>
+        <!-- Tab Navigation (horizontally scrollable on mobile) -->
+        <div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide md:flex-wrap md:justify-center md:pb-6">
+          <button @click="activeTab = 'bojera'" :class="activeTab === 'bojera' ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200'"
+                  class="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">Bojera</button>
+          <button @click="activeTab = 'vegla'" :class="activeTab === 'vegla' ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200'"
+                  class="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">Vegla Pune</button>
+          <button @click="activeTab = 'elektrike'" :class="activeTab === 'elektrike' ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200'"
+                  class="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">Elektrike</button>
+          <button @click="activeTab = 'hidraulike'" :class="activeTab === 'hidraulike' ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200'"
+                  class="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">Hidraulike</button>
+          <button @click="activeTab = 'ndricim'" :class="activeTab === 'ndricim' ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200'"
+                  class="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">Ndriçim</button>
+          <button @click="activeTab = 'materiale'" :class="activeTab === 'materiale' ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200'"
+                  class="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">Materiale Ndërtimi</button>
+          <button @click="activeTab = 'termoizolim'" :class="activeTab === 'termoizolim' ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200'"
+                  class="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200">Termoizolim</button>
         </div>
-      </nav>
 
-      <!-- Bojera -->
-      <div id="bojera" class="py-20 md:py-28 bg-white scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-2">Kategoria</p>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Bojera</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Në Materiale Lulja 08 ofrojmë një game të gjere bojerash profesionale për përdorim të brendshem dhe të jashtem, të përshtatshme për projekte ndërtimi, rinovimi dhe dekorimi.</p>
-              <p class="text-zinc-600 mb-6 leading-relaxed">Produktet që ofrojmë karakterizohen nga mbulim i mirë, aplikim i lehtë dhe rezistencë ndaj faktoreve të jashtem si lagështira, dielli dhe konsumimi.</p>
-              <ul class="space-y-2 text-zinc-600 text-sm mb-6">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera akrilike për fasada dhe ambiente të jashtme</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera plastike për ambiente të brendshme</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera hidromat për ambiente të brendshme</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera kunder lagështires dhe mykut</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera për sipërfaqe metalike (hekur)</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera për dru dhe mobilie</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera termoizoluese</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera decorative</li>
-              </ul>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              <div class="relative rounded-lg overflow-hidden aspect-square">
-                <img src="https://placehold.co/400x400/4a5568/ffffff?text=BOJERA%0ALiving+Room+Modern" alt="Bojera për mure - living room modern" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-linear-to-t from-zinc-900/60 to-transparent"></div>
-                <p class="absolute bottom-2 left-2 text-white text-xs font-medium">Për mure</p>
+        <!-- Tab Content Panels -->
+        <div class="bg-white rounded-2xl shadow-xl shadow-zinc-900/5 border border-zinc-100 overflow-hidden">
+
+          <!-- BOJERA -->
+          <div x-show="activeTab === 'bojera'" x-cloak class="tab-panel">
+            <div class="grid lg:grid-cols-2">
+              <div class="relative aspect-[4/3] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80" alt="Bojera profesionale" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
-              <div class="relative rounded-lg overflow-hidden aspect-square">
-                <img src="https://placehold.co/400x400/4a5568/ffffff?text=BOJERA%0AShtepi+Fasade+Moderne" alt="Bojera për fasada - shtepi moderne" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-linear-to-t from-zinc-900/60 to-transparent"></div>
-                <p class="absolute bottom-2 left-2 text-white text-xs font-medium">Për fasada</p>
-              </div>
-              <div class="relative rounded-lg overflow-hidden aspect-square">
-                <img src="https://placehold.co/400x400/4a5568/ffffff?text=BOJERA%0ABoje+per+Dru" alt="Bojera për dru" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-linear-to-t from-zinc-900/60 to-transparent"></div>
-                <p class="absolute bottom-2 left-2 text-white text-xs font-medium">Për dru</p>
-              </div>
-              <div class="relative rounded-lg overflow-hidden aspect-square">
-                <img src="https://placehold.co/400x533/374151/ffffff?text=KATEGORI%0ABojera+%26+Lyerje" alt="Bojera decorative" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-linear-to-t from-zinc-900/60 to-transparent"></div>
-                <p class="absolute bottom-2 left-2 text-white text-xs font-medium">Decorative</p>
+              <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Bojera Profesionale</h3>
+                <p class="text-zinc-600 mb-5 text-sm md:text-base leading-relaxed">Gamë e gjerë bojerash për brendshme dhe jashtme &mdash; me mbulim të mirë, aplikim të lehtë dhe rezistencë ndaj lagështirës e diellit.</p>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Akrilike për fasada</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Plastike për brendshme</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Hidromat</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Kundër lagështirës</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Për metal dhe dru</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Termoizoluese</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Dekorative</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Aksesorë lyerjeje</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-zinc-400 mb-5 pb-5 border-b border-zinc-100">
+                  <span class="font-medium text-zinc-500">Aksesorë:</span> Rula, furca, kodar, spatula, plasmas, silikona
+                </div>
+                <a href="#kontakt" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors group">
+                  Na kontaktoni për bojera
+                  <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
               </div>
             </div>
           </div>
-          <!-- Aksesor për Bojera -->
-          <div class="mt-10 p-6 md:p-8 rounded-xl bg-zinc-100 border border-zinc-200">
-            <h4 class="text-xl font-bold text-zinc-900 mb-3">Aksesor për Bojera</h4>
-            <p class="text-zinc-600 text-sm mb-4">Përveç bojerave, në Lulja 08 gjeni gjithashtu të gjithe aksesoret e nevojshëm për aplikimin profesional të tyre.</p>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-zinc-600 text-sm">
-              <div class="flex items-center gap-2"><span class="text-brand-500">&#10003;</span> Rula për lyerje</div>
-              <div class="flex items-center gap-2"><span class="text-brand-500">&#10003;</span> Furca profesionale</div>
-              <div class="flex items-center gap-2"><span class="text-brand-500">&#10003;</span> Kodar dhe spatula</div>
-              <div class="flex items-center gap-2"><span class="text-brand-500">&#10003;</span> Plasmas për mbrojtje sipërfaqesh</div>
-              <div class="flex items-center gap-2"><span class="text-brand-500">&#10003;</span> Silikona ngjites ose mbushës</div>
+
+          <!-- VEGLA PUNE -->
+          <div x-show="activeTab === 'vegla'" x-cloak class="tab-panel">
+            <div class="grid lg:grid-cols-2">
+              <div class="relative aspect-[4/3] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1530124566582-a45a7e3f2028?w=800&q=80" alt="Vegla pune profesionale" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Vegla Pune Profesionale</h3>
+                <p class="text-zinc-600 mb-3 text-sm md:text-base leading-relaxed">Përzgjedhje e gjerë veglash për ndërtim, montim, instalime dhe punime teknike nga marka të njohura.</p>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Makita</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Wolfcraft</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Hoegert</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Ingco</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Tolsen</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Total</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Knipex</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Vegla dore profesionale</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Vegla matëse precize</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Power tools elektrike</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Vegla për laminat</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Vegla për drywall</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Vegla kopshtarie</span>
+                </div>
+                <a href="#kontakt" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors group">
+                  Na kontaktoni për vegla pune
+                  <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Vegla Pune -->
-      <div id="vegla-pune" class="py-20 md:py-28 bg-zinc-100 scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div class="lg:order-2">
-              <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-2">Kategoria</p>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Vegla Pune</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Në Materiale Lulja 08 ofrojmë një përzgjedhje të gjere veglash pune profesionale për përdorim në ndërtim, montim, instalime dhe punime teknike.</p>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Dyqani yne ofron produkte nga marka të njohura ndërkombëtare si <strong class="text-zinc-800">Makita, Wolfcraft, Hoegert, Ingco, Tolsen, Total, Knipex</strong>.</p>
-              <ul class="space-y-2 text-zinc-600 text-sm">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Vegla dore profesionale (hand tools)</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Vegla matese për punime precize</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Aksesore për makineri dhe vegla elektrike</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Vegla për montimin e laminatit</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Vegla për drywall dhe instalime ndërtimi</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Pistoleta për silikon dhe aksesore</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Power tools dhe makineri elektrike</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Vegla për kopshtari dhe mirëmbajtje</li>
-              </ul>
-            </div>
-            <div class="lg:order-1 relative rounded-xl overflow-hidden aspect-4/3 shadow-xl">
-              <img src="https://placehold.co/800x600/2d3748/ffffff?text=VEGLA+PUNE%0AVegla+profesionale+mbi+tavoline" alt="Vegla pune profesionale mbi tavoline pune" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-900/40 to-transparent"></div>
+          <!-- ELEKTRIKE -->
+          <div x-show="activeTab === 'elektrike'" x-cloak class="tab-panel">
+            <div class="grid lg:grid-cols-2">
+              <div class="relative aspect-[4/3] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80" alt="Instalime elektrike" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Instalime Elektrike</h3>
+                <p class="text-zinc-600 mb-3 text-sm md:text-base leading-relaxed">Gamë e plotë produktesh për instalime elektrike rezidenciale, komerciale dhe industriale.</p>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Gewiss</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">ABB</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Kabllo dhe tela</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Priza dhe çelësa</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Automatë mbrojtëse</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Spina dhe lidhëse</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Kuti elektrike</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Tuba instalimi</span>
+                </div>
+                <a href="#kontakt" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors group">
+                  Na kontaktoni për elektrike
+                  <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Elektrike -->
-      <div id="elektrike" class="py-20 md:py-28 bg-white scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-2">Kategoria</p>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Elektrike</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Kategoria elektrike në Lulja 08 përfshin një game të plote produktesh për instalime elektrike në ndërtesa rezidenciale, komerciale dhe industriale.</p>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Ofrojmë produkte nga marka të njohura si <strong class="text-zinc-800">Gewiss</strong> dhe <strong class="text-zinc-800">ABB</strong>, të projektuara për te garantuar siguri, performance dhe jetëgjatësi.</p>
-              <ul class="space-y-2 text-zinc-600 text-sm">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Kabllo dhe tela elektrike</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Priza dhe celësa elektrike</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Automate dhe pajisje mbrojtese</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Spina dhe aksesore lidhes</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Kuti elektrike për instalim</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Tuba instalimi për kabllo</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Suporte dhe aksesore të ndryshëm</li>
-              </ul>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-4/3 shadow-xl">
-              <img src="https://placehold.co/800x600/2d3748/ffffff?text=ELEKTRIKE%0APanel+elektrik+me+automate" alt="Panel elektrik modern me kabllo dhe automate" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-900/40 to-transparent"></div>
+          <!-- HIDRAULIKE -->
+          <div x-show="activeTab === 'hidraulike'" x-cloak class="tab-panel">
+            <div class="grid lg:grid-cols-2">
+              <div class="relative aspect-[4/3] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80" alt="Instalime hidraulike" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Instalime Hidraulike</h3>
+                <p class="text-zinc-600 mb-3 text-sm md:text-base leading-relaxed">Produkte cilësore për instalime hidraulike dhe sisteme furnizimi me ujë.</p>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Pestan</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">APE</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Cher Bros</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Tuba shkarkimi</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Tuba presioni</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Tuba multistrat</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Tuba drenazhimi</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Brryla dhe aksesorë</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Grupe sanitarie</span>
+                </div>
+                <a href="#kontakt" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors group">
+                  Na kontaktoni për hidraulike
+                  <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Hidraulike -->
-      <div id="hidraulike" class="py-20 md:py-28 bg-zinc-100 scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div class="lg:order-2">
-              <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-2">Kategoria</p>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Hidraulike</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Në Materiale Lulja 08 gjeni produkte cilësore për instalime hidraulike dhe sisteme furnizimi me uje. Kjo kategori përfshin tuba dhe aksesore të ndryshëm për ndërtimin dhe mirëmbajtjen e sistemeve hidraulike.</p>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Markat që ofrojmë përfshijne <strong class="text-zinc-800">Pestan, APE, Cher Bros</strong>.</p>
-              <ul class="space-y-2 text-zinc-600 text-sm">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Tuba shkarkimi për ujerat e zeza</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Tuba presioni për furnizim me uje</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Tuba multistrat për instalime moderne</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Tuba drenazhimi për sistemet e kullimit</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Brryla, ti, reduksione dhe aksesore tubash</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Aksesore për tubat multistrat</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Sisteme vaditjeje për kopshte</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Grupe dushi, bide, lavaman dhe lavapjate</li>
-              </ul>
-            </div>
-            <div class="lg:order-1 relative rounded-xl overflow-hidden aspect-4/3 shadow-xl">
-              <img src="https://placehold.co/800x600/2d3748/ffffff?text=HIDRAULIKE%0AInstalim+tubash+profesional" alt="Instalim tubash hidraulike profesional" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-900/40 to-transparent"></div>
+          <!-- NDRIÇIM -->
+          <div x-show="activeTab === 'ndricim'" x-cloak class="tab-panel">
+            <div class="grid lg:grid-cols-2">
+              <div class="relative aspect-[4/3] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&q=80" alt="Ndriçim modern LED" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Ndriçim Modern</h3>
+                <p class="text-zinc-600 mb-3 text-sm md:text-base leading-relaxed">Produkte moderne për ndriçimin e ambienteve të brendshme dhe të jashtme.</p>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Horoz</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Spoté për tavane</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Shirita LED</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Ambazhure</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Platforma ndriçimi</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Ndriçim mural</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Ndriçim tokësor</span>
+                </div>
+                <a href="#kontakt" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors group">
+                  Na kontaktoni për ndriçim
+                  <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Ndriçim -->
-      <div id="ndriçim" class="py-20 md:py-28 bg-white scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-2">Kategoria</p>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Ndriçim</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Në kategorinë e ndriçimit, Lulja 08 ofron produkte moderne për ndriçimin e ambienteve të brendshme dhe të jashtme. Marka kryesore që ofrojmë është <strong class="text-zinc-800">Horoz</strong>.</p>
-              <ul class="space-y-2 text-zinc-600 text-sm">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Spote për tavane dhe ambiente të brendshme</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Shirita LED për ndriçim dekorativ</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Ambazhure dhe ndriçim ambienti</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Platforma ndriçimi</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Ndriçim mural për ambiente të jashtme</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Ndriçim tokesor për kopshte dhe oborre</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Aksesore për instalimin e ndriçimit</li>
-              </ul>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-4/3 shadow-xl">
-              <img src="https://placehold.co/800x600/2d3748/ffffff?text=NDRICIM%0AAmbient+me+LED+estetik" alt="Ambient modern me ndriçim LED estetik" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-900/40 to-transparent"></div>
+          <!-- MATERIALE NDËRTIMI -->
+          <div x-show="activeTab === 'materiale'" x-cloak class="tab-panel">
+            <div class="grid lg:grid-cols-2">
+              <div class="relative aspect-[4/3] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Materiale ndërtimi" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Materiale Ndërtimi</h3>
+                <p class="text-zinc-600 mb-3 text-sm md:text-base leading-relaxed">Produkte bazë për ndërtim dhe përfundim punimesh &mdash; për projekte ndërtimi, rinovimi dhe restaurimi.</p>
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-medium">Dast</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Koll për pllaka</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Teknofix ngjitëse</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Rrjetë izolimi</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Fino</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Çimento e bardhë</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Llaç mbushës</span>
+                </div>
+                <a href="#kontakt" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors group">
+                  Na kontaktoni për materiale
+                  <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Materiale Ndertimi -->
-      <div id="materiale-ndërtimi" class="py-20 md:py-28 bg-zinc-100 scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div class="lg:order-2">
-              <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-2">Kategoria</p>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Materiale Ndertimi</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Në këtë kategori gjeni produkte baze për ndërtim dhe përfundim të punimeve ndërtimore. Keto materiale përdoren gjerësisht në projekte ndërtimi, rinovimi dhe restaurimi. Marka kryesore: <strong class="text-zinc-800">Dast</strong>.</p>
-              <ul class="space-y-2 text-zinc-600 text-sm">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Koll për pllaka</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Teknofix dhe materiale ngjitëse</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Ngjites për rrjete izolimi</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Rrjet për izolim dhe suvatim</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Fino</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Çimento e bardhe</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Llaç mbushës</li>
-              </ul>
-            </div>
-            <div class="lg:order-1 relative rounded-xl overflow-hidden aspect-4/3 shadow-xl">
-              <img src="https://placehold.co/800x600/2d3748/ffffff?text=MATERIALE%0APunetor+vendos+pllaka" alt="Punetor duke vendosur pllaka me koll" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-900/40 to-transparent"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Termoizolim -->
-      <div id="termoizolim" class="py-20 md:py-28 bg-white scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-2">Kategoria</p>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Termoizolim</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Izolimi termik është një element thelbësor për kursimin e energjisë dhe përmirësimin e komfortit në ndërtesa. Në Lulja 08 ofrojmë produkte për termoizolim që ndihmojnë në mbrojtjen e ndërtesave nga temperaturat ekstreme dhe lagështira.</p>
-              <ul class="space-y-2 text-zinc-600 text-sm">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Komponent A+B për sisteme izolimi</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bojera termoizoluese</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Bitum dhe katrame për izolim catie</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Polisterol me dimensione të ndryshme (2, 3, 5, 8, 10 cm)</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Materiale termoizoluese pluhur</li>
-              </ul>
-            </div>
-            <div class="relative rounded-xl overflow-hidden aspect-4/3 shadow-xl">
-              <img src="https://placehold.co/800x600/2d3748/ffffff?text=TERMOIZOLIM%0AFasade+me+polisterol+EPS" alt="Fasade që po izolohet me polisterol EPS" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-900/40 to-transparent"></div>
+          <!-- TERMOIZOLIM -->
+          <div x-show="activeTab === 'termoizolim'" x-cloak class="tab-panel">
+            <div class="grid lg:grid-cols-2">
+              <div class="relative aspect-[4/3] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=800&q=80" alt="Termoizolim fasade" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Termoizolim</h3>
+                <p class="text-zinc-600 mb-5 text-sm md:text-base leading-relaxed">Produkte për mbrojtjen e ndërtesave nga temperaturat ekstreme dhe lagështira &mdash; kursim energjie dhe komfort.</p>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Komponent A+B</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Bojera termoizoluese</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Bitum dhe katrame</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Polisterol (2-10 cm)</span>
+                  <span class="flex items-center gap-2 text-zinc-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>Termoizolues pluhur</span>
+                </div>
+                <a href="#kontakt" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition-colors group">
+                  Na kontaktoni për termoizolim
+                  <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -564,100 +487,92 @@
     <!-- ==================== MAKITA ==================== -->
     <section id="makita" class="scroll-mt-20">
       <!-- Makita Hero -->
-      <div class="relative overflow-hidden bg-zinc-900 text-white">
+      <div class="relative overflow-hidden bg-zinc-900 text-white py-20 md:py-32">
         <div class="absolute inset-0">
-          <img src="https://placehold.co/1920x900/1a1a2e/10b981?text=MAKITA+HERO%0APower+Tools+Background" alt="Makita professional tools" class="w-full h-full object-cover opacity-30" />
+          <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=80" alt="Makita professional tools" class="w-full h-full object-cover opacity-20" loading="lazy" />
         </div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <p class="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-3">Available at Lulja 08 - Tiranë</p>
-          <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none mb-6" style="font-family: 'Space Grotesk', sans-serif;">Makita Professional Tools</h2>
-          <p class="text-zinc-300 text-lg md:text-xl max-w-2xl mb-8">Vegla profesionale për ndërtim, montim dhe mirëmbajtje &mdash; nga marka me e besuar në bote për power tools.</p>
-          <a href="#kontakt" class="inline-block px-8 py-4 bg-brand-500 text-white font-bold rounded-sm hover:bg-brand-600 transition-colors uppercase tracking-wider">Na kontaktoni për Makita</a>
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/80 to-zinc-900/40"></div>
+
+        <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8" x-data x-intersect.once="$el.classList.add('visible')">
+          <div class="max-w-3xl fade-up">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/15 border border-brand-500/25 mb-6">
+              <span class="text-brand-300 text-xs font-semibold uppercase tracking-wider">Gjendet në Lulja 08 &mdash; Tiranë</span>
+            </div>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none mb-5" style="font-family: 'Space Grotesk', sans-serif;">Vegla Profesionale<br/>Makita</h2>
+            <p class="text-zinc-300 text-base md:text-lg max-w-xl mb-8 leading-relaxed">Vegla elektrike profesionale për ndërtim, montim dhe mirëmbajtje &mdash; nga marka më e besuar në botë për vegla pune.</p>
+            <a href="#kontakt" class="inline-flex items-center gap-2 px-7 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-all hover:shadow-lg hover:shadow-brand-500/25 text-sm uppercase tracking-wider">
+              Na kontaktoni për Makita
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Makita Details -->
-      <div class="py-20 md:py-28 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <h3 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-6 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Pse Makita?</h3>
-              <p class="text-zinc-600 mb-4 leading-relaxed">Në Materiale Lulja 08 ofrojmë një game të gjere produktesh nga <strong class="text-zinc-800">Makita</strong>, një nga markat me të njohura në bote për vegla elektrike profesionale dhe pajisje për ndërtim, montim dhe mirëmbajtje.</p>
-              <p class="text-zinc-600 mb-6 leading-relaxed">Makita është e njohur për teknologjine e avancuar, performancen e larte dhe qendrueshmërine e produkteve të saj, duke e bere një nga zgjedhjet kryesore për profesionistët e ndërtimit.</p>
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div class="flex items-start gap-3">
-                  <span class="text-brand-500 font-bold mt-0.5">&#10003;</span>
-                  <div>
-                    <p class="font-semibold text-zinc-900 text-sm">Cordless (me bateri)</p>
-                    <p class="text-zinc-500 text-xs">Fleksibilitet dhe levizshmëri me të madhe</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="text-brand-500 font-bold mt-0.5">&#10003;</span>
-                  <div>
-                    <p class="font-semibold text-zinc-900 text-sm">Corded (me kabllo)</p>
-                    <p class="text-zinc-500 text-xs">Fuqi e larte dhe përdorim i vazhdueshëm</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="text-brand-500 font-bold mt-0.5">&#10003;</span>
-                  <div>
-                    <p class="font-semibold text-zinc-900 text-sm">Outdoor Power Equipment</p>
-                    <p class="text-zinc-500 text-xs">Për kopshte dhe hapësira të jashtme</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span class="text-brand-500 font-bold mt-0.5">&#10003;</span>
-                  <div>
-                    <p class="font-semibold text-zinc-900 text-sm">Aksesore dhe bateri</p>
-                    <p class="text-zinc-500 text-xs">Disqe prerëse, bit-e, karikues</p>
-                  </div>
-                </div>
+      <div class="py-16 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <!-- Why Makita -->
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 md:mb-20" x-data x-intersect.once="$el.classList.add('visible')">
+            <div class="fade-up p-5 rounded-2xl bg-zinc-50 border border-zinc-100">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
               </div>
+              <h4 class="font-bold text-zinc-900 text-sm mb-1">Me bateri (cordless)</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed">Fleksibilitet dhe lëvizshmëri maksimale</p>
             </div>
-            <div class="relative rounded-xl overflow-hidden aspect-square shadow-2xl">
-              <img src="https://placehold.co/800x800/064e3b/10b981?text=MAKITA%0AProfessional+Power+Tools" alt="Makita professional power tools" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-zinc-900/50 to-transparent"></div>
-              <div class="absolute bottom-6 left-6 right-6">
-                <p class="text-white text-2xl font-bold" style="font-family: 'Space Grotesk', sans-serif;">Makita - Rule the Outdoors</p>
-                <p class="text-zinc-300 text-sm">Efikasitet maksimal, siguri në përdorim dhe jetëgjatësi</p>
+            <div class="fade-up fade-up-delay-1 p-5 rounded-2xl bg-zinc-50 border border-zinc-100">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
               </div>
+              <h4 class="font-bold text-zinc-900 text-sm mb-1">Me kabllo (corded)</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed">Fuqi e lartë dhe përdorim i vazhdueshëm</p>
+            </div>
+            <div class="fade-up fade-up-delay-2 p-5 rounded-2xl bg-zinc-50 border border-zinc-100">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              </div>
+              <h4 class="font-bold text-zinc-900 text-sm mb-1">Pajisje për jashtë</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed">Për kopshte dhe hapësira të jashtme</p>
+            </div>
+            <div class="fade-up fade-up-delay-3 p-5 rounded-2xl bg-zinc-50 border border-zinc-100">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+              </div>
+              <h4 class="font-bold text-zinc-900 text-sm mb-1">Aksesore dhe Bateri</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed">Disqe prerëse, bit-e, karikues LXT 18V</p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Makita Product Types -->
-      <div class="py-20 md:py-28 bg-zinc-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-14">
-            <h3 class="text-4xl md:text-5xl font-bold text-zinc-900 mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Gama e Produkteve Makita</h3>
-            <p class="text-zinc-600 max-w-2xl mx-auto">Nga trapanot dhe smerigliatriçet deri të pajisjet për kopshte &mdash; Makita ofron zgjidhje për çdo pune profesionale.</p>
-          </div>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="p-6 rounded-xl bg-white border border-zinc-200 hover:border-brand-300 hover:shadow-md transition-all">
-              <h4 class="font-bold text-zinc-900 mb-2" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;">Trapano dhe Impact Driver</h4>
-              <p class="text-zinc-500 text-sm">Për shpime dhe vidhosje në material të ndryshëm, me bateri ose me kabllo.</p>
+          <!-- Makita Product Types -->
+          <div x-data x-intersect.once="$el.classList.add('visible')">
+            <div class="text-center mb-10 fade-up">
+              <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-2 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Gama e Produkteve</h3>
+              <p class="text-zinc-500 text-sm max-w-lg mx-auto">Nga trapanot deri te pajisjet për kopshte &mdash; Makita ofron zgjidhje për çdo punë profesionale.</p>
             </div>
-            <div class="p-6 rounded-xl bg-white border border-zinc-200 hover:border-brand-300 hover:shadow-md transition-all">
-              <h4 class="font-bold text-zinc-900 mb-2" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;">Smerigliatriçe dhe Frezuese</h4>
-              <p class="text-zinc-500 text-sm">Për punime mbiçmimi, prerje dhe formesim të materialeve.</p>
-            </div>
-            <div class="p-6 rounded-xl bg-white border border-zinc-200 hover:border-brand-300 hover:shadow-md transition-all">
-              <h4 class="font-bold text-zinc-900 mb-2" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;">Sharra Elektrike</h4>
-              <p class="text-zinc-500 text-sm">Sharra cirkulare, alternative dhe reciproke për prerje precize.</p>
-            </div>
-            <div class="p-6 rounded-xl bg-white border border-zinc-200 hover:border-brand-300 hover:shadow-md transition-all">
-              <h4 class="font-bold text-zinc-900 mb-2" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;">Çekiçe Demolues</h4>
-              <p class="text-zinc-500 text-sm">Për punime të renda demontimi dhe ndërtimi.</p>
-            </div>
-            <div class="p-6 rounded-xl bg-white border border-zinc-200 hover:border-brand-300 hover:shadow-md transition-all">
-              <h4 class="font-bold text-zinc-900 mb-2" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;">Pajisje Kopshtarie</h4>
-              <p class="text-zinc-500 text-sm">Krasitëse, fryrëse gjethesh dhe trimera për mirëmbajtje të jashtme.</p>
-            </div>
-            <div class="p-6 rounded-xl bg-white border border-zinc-200 hover:border-brand-300 hover:shadow-md transition-all">
-              <h4 class="font-bold text-zinc-900 mb-2" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem;">Bateri dhe Karikues</h4>
-              <p class="text-zinc-500 text-sm">Sistemi LXT 18V për kompatibilitet me të gjithe veglat cordless Makita.</p>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+              <div class="fade-up p-4 md:p-6 rounded-xl bg-zinc-50 border border-zinc-100 hover:border-brand-200 hover:shadow-md transition-all">
+              <h4 class="font-bold text-zinc-900 text-sm mb-1" style="font-family: 'Space Grotesk', sans-serif;">Trapano dhe Vidhosëse</h4>
+                <p class="text-zinc-500 text-xs">Për shpime dhe vidhosje, me bateri ose kabllo</p>
+              </div>
+              <div class="fade-up fade-up-delay-1 p-4 md:p-6 rounded-xl bg-zinc-50 border border-zinc-100 hover:border-brand-200 hover:shadow-md transition-all">
+                <h4 class="font-bold text-zinc-900 text-sm mb-1" style="font-family: 'Space Grotesk', sans-serif;">Smerigliatriçe</h4>
+                <p class="text-zinc-500 text-xs">Punime mbiçmimi, prerje dhe formësim</p>
+              </div>
+              <div class="fade-up fade-up-delay-2 p-4 md:p-6 rounded-xl bg-zinc-50 border border-zinc-100 hover:border-brand-200 hover:shadow-md transition-all">
+                <h4 class="font-bold text-zinc-900 text-sm mb-1" style="font-family: 'Space Grotesk', sans-serif;">Sharra Elektrike</h4>
+                <p class="text-zinc-500 text-xs">Cirkulare, alternative dhe reciproke</p>
+              </div>
+              <div class="fade-up p-4 md:p-6 rounded-xl bg-zinc-50 border border-zinc-100 hover:border-brand-200 hover:shadow-md transition-all">
+                <h4 class="font-bold text-zinc-900 text-sm mb-1" style="font-family: 'Space Grotesk', sans-serif;">Çekiçe Demolues</h4>
+                <p class="text-zinc-500 text-xs">Punime të rënda demontimi dhe ndërtimi</p>
+              </div>
+              <div class="fade-up fade-up-delay-1 p-4 md:p-6 rounded-xl bg-zinc-50 border border-zinc-100 hover:border-brand-200 hover:shadow-md transition-all">
+                <h4 class="font-bold text-zinc-900 text-sm mb-1" style="font-family: 'Space Grotesk', sans-serif;">Pajisje Kopshtarie</h4>
+                <p class="text-zinc-500 text-xs">Krasitëse, fryrëse gjethesh, trimera</p>
+              </div>
+              <div class="fade-up fade-up-delay-2 p-4 md:p-6 rounded-xl bg-zinc-50 border border-zinc-100 hover:border-brand-200 hover:shadow-md transition-all">
+                <h4 class="font-bold text-zinc-900 text-sm mb-1" style="font-family: 'Space Grotesk', sans-serif;">Bateri & Karikues</h4>
+                <p class="text-zinc-500 text-xs">Sistemi LXT 18V, për të gjitha veglat Makita</p>
+              </div>
             </div>
           </div>
         </div>
@@ -665,134 +580,134 @@
     </section>
 
     <!-- ==================== MARKAT ==================== -->
-    <section id="markat" class="py-16 md:py-28 bg-white scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10 md:mb-14">
-          <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2">Bashkepunimet tona</p>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">14+ Marka Nderkombetare</h2>
-          <p class="text-zinc-600 max-w-2xl mx-auto text-sm md:text-base">Cilësia fillon me zgjedhjen e duhur të markave. Ne punojmë vetem me prodhues të besueshem.</p>
+    <section id="markat" class="py-16 md:py-28 bg-zinc-50 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 md:mb-14" x-data x-intersect.once="$el.classList.add('visible')">
+          <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2 fade-up">Bashkëpunimet tona</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight fade-up fade-up-delay-1" style="font-family: 'Space Grotesk', sans-serif;">14+ Marka Ndërkombëtare</h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base fade-up fade-up-delay-2">Cilësia fillon me zgjedhjen e duhur të markave. Ne punojmë vetëm me prodhues të besueshem.</p>
         </div>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 md:gap-4">
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Makita</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Power Tools</span>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 md:gap-4" x-data x-intersect.once="$el.classList.add('visible')">
+          <div class="fade-up group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Makita</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Vegla Elektrike</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Wolfcraft</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Vegla</span>
+          <div class="fade-up fade-up-delay-1 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Wolfcraft</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Vegla</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Hoegert</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Vegla</span>
+          <div class="fade-up fade-up-delay-2 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Hoegert</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Vegla</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Ingco</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Vegla</span>
+          <div class="fade-up group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Ingco</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Vegla</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Tolsen</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Vegla</span>
+          <div class="fade-up fade-up-delay-1 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Tolsen</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Vegla</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Total</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Vegla</span>
+          <div class="fade-up fade-up-delay-2 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Total</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Vegla</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Knipex</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Vegla</span>
+          <div class="fade-up group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Knipex</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Vegla</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Gewiss</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Elektrike</span>
+          <div class="fade-up fade-up-delay-1 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Gewiss</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Elektrike</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">ABB</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Elektrike</span>
+          <div class="fade-up fade-up-delay-2 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">ABB</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Elektrike</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Horoz</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Ndriçim</span>
+          <div class="fade-up group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Horoz</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Ndriçim</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Pestan</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Hidraulike</span>
+          <div class="fade-up fade-up-delay-1 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Pestan</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Hidraulike</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">APE</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Hidraulike</span>
+          <div class="fade-up fade-up-delay-2 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">APE</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Hidraulike</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Cher Bros</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Hidraulike</span>
+          <div class="fade-up group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Cher Bros</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Hidraulike</span>
           </div>
-          <div class="group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
-            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-base md:text-xl" style="font-family: 'Space Grotesk', sans-serif;">Dast</span>
-            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5 group-hover:text-brand-500/70 transition-colors">Ndertim</span>
+          <div class="fade-up fade-up-delay-1 group flex flex-col items-center justify-center p-4 md:p-5 rounded-2xl bg-white border border-zinc-200 hover:border-brand-400 hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 cursor-default">
+            <span class="font-bold text-zinc-800 group-hover:text-brand-600 transition-colors text-sm md:text-lg" style="font-family: 'Space Grotesk', sans-serif;">Dast</span>
+            <span class="text-[9px] md:text-[10px] text-zinc-400 mt-0.5">Ndërtim</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==================== FAQ ==================== -->
-    <section class="py-16 md:py-28 bg-zinc-50">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-16 md:py-28 bg-white">
+      <div class="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
         <div class="text-center mb-10 md:mb-14">
           <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2">Pyetje të shpeshta</p>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Keni pyetje?</h2>
         </div>
         <div class="space-y-3" x-data="{ open: null }">
-          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
-            <button @click="open = open === 1 ? null : 1" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
-              <span>A beni dërgesë në Tiranë?</span>
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-zinc-50">
+            <button @click="open = open === 1 ? null : 1" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors text-sm md:text-base">
+              <span>A bëni dërgesë në Tiranë?</span>
               <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 1 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div x-show="open === 1" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, ofrojmë shërbim dërgesë për te gjitha produktet në zonen e Tiranës. Na kontaktoni me telefon për te organizuar dërgesën e materialeve.</p>
+            <div x-show="open === 1" x-cloak x-collapse>
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, ofrojmë shërbim dërgesë për të gjitha produktet në zonën e Tiranës. Na kontaktoni me telefon për të organizuar dërgesën e materialeve.</p>
             </div>
           </div>
-          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
-            <button @click="open = open === 2 ? null : 2" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-zinc-50">
+            <button @click="open = open === 2 ? null : 2" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors text-sm md:text-base">
               <span>Si mund të porosis produkte?</span>
               <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 2 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div x-show="open === 2" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Na kontaktoni me telefon ose na shkruani në WhatsApp. Gjithashtu, mund të na vizitoni direkt në dyqan. Stafi yne do t'ju ndihmoje me zgjedhjen e produkteve të duhura për projektin tuaj.</p>
+            <div x-show="open === 2" x-cloak x-collapse>
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Na kontaktoni me telefon ose na shkruani në WhatsApp. Gjithashtu, mund të na vizitoni direkt në dyqan. Stafi ynë do t'ju ndihmojë me zgjedhjen e produkteve të duhura.</p>
             </div>
           </div>
-          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
-            <button @click="open = open === 3 ? null : 3" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-zinc-50">
+            <button @click="open = open === 3 ? null : 3" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors text-sm md:text-base">
               <span>Cilat marka ofron Lulja 08?</span>
               <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 3 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div x-show="open === 3" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Bashkepunojmë me 14+ marka ndërkombëtare si Makita, Wolfcraft, Knipex, Gewiss, ABB, Horoz, Pestan, Ingco, Tolsen, Total, Hoegert, APE, Cher Bros dhe Dast. Secila marke është zgjedhur për cilësine dhe besueshmërinë e produkteve.</p>
+            <div x-show="open === 3" x-cloak x-collapse>
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Bashkëpunojmë me 14+ marka ndërkombëtare si Makita, Wolfcraft, Knipex, Gewiss, ABB, Horoz, Pestan, Ingco, Tolsen, Total, Hoegert, APE, Cher Bros dhe Dast.</p>
             </div>
           </div>
-          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
-            <button @click="open = open === 4 ? null : 4" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-zinc-50">
+            <button @click="open = open === 4 ? null : 4" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors text-sm md:text-base">
               <span>A ofroni këshilla profesionale?</span>
               <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 4 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div x-show="open === 4" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, stafi yne ka eksperiencë në fushen e materialeve të ndërtimit dhe është gati t'ju këshilloje për produktet me të përshtatshme për projektin tuaj. Na vizitoni në dyqan ose na kontaktoni me telefon.</p>
+            <div x-show="open === 4" x-cloak x-collapse>
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, stafi ynë ka eksperiencë në fushën e materialeve të ndërtimit dhe është gati t'ju këshillojë për produktet më të përshtatshme për projektin tuaj.</p>
             </div>
           </div>
-          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
-            <button @click="open = open === 5 ? null : 5" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-zinc-50">
+            <button @click="open = open === 5 ? null : 5" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors text-sm md:text-base">
               <span>A keni produkte Makita?</span>
               <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 5 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div x-show="open === 5" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, jemi një nga pikat kryesore të shitjes se produkteve Makita në Tiranë. Ofrojmë vegla cordless (me bateri), corded (me kabllo), outdoor equipment, si dhe aksesore dhe bateri. <a href="#makita" class="text-brand-500 hover:text-brand-600 font-medium">Shikoni seksionin Makita &rarr;</a></p>
+            <div x-show="open === 5" x-cloak x-collapse>
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Po, jemi një nga pikat kryesore të shitjes së produkteve Makita në Tiranë. Ofrojmë vegla cordless, corded, outdoor equipment, aksesore dhe bateri. <a href="#makita" class="text-brand-500 hover:text-brand-600 font-medium">Shikoni seksionin Makita &rarr;</a></p>
             </div>
           </div>
-          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white">
-            <button @click="open = open === 6 ? null : 6" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors text-sm md:text-base">
-              <span>Cilat jane format e pageses?</span>
+          <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-zinc-50">
+            <button @click="open = open === 6 ? null : 6" class="w-full flex items-center justify-between p-5 text-left font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors text-sm md:text-base">
+              <span>Cilat janë format e pagesës?</span>
               <svg class="w-5 h-5 text-zinc-400 shrink-0 ml-4 transition-transform duration-200" :class="open === 6 && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div x-show="open === 6" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Pranojmë pagese me para në dore. Per porosi të medha ose bashkëpunime të vazhdueshme, na kontaktoni për te diskutuar kushtet e pageses.</p>
+            <div x-show="open === 6" x-cloak x-collapse>
+              <p class="px-5 pb-5 text-zinc-600 text-sm leading-relaxed">Pranojmë pagesë me para në dorë. Për porosi të mëdha ose bashkëpunime të vazhdueshme, na kontaktoni për të diskutuar kushtet e pagesës.</p>
             </div>
           </div>
         </div>
@@ -801,18 +716,15 @@
 
     <!-- ==================== KONTAKT ==================== -->
     <section id="kontakt" class="scroll-mt-20">
-      <!-- Dark header -->
       <div class="bg-zinc-900 text-white py-14 md:py-18">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
           <p class="text-brand-400 font-semibold text-xs uppercase tracking-widest mb-2">Na Gjeni</p>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Kontakt &amp; Vendndodhja</h2>
         </div>
       </div>
-      <!-- Map + info grid -->
       <div class="bg-zinc-50">
         <div class="max-w-7xl mx-auto">
           <div class="grid lg:grid-cols-5">
-            <!-- Map -->
             <div class="lg:col-span-3 h-[300px] md:h-[420px] lg:h-auto lg:min-h-[500px] relative bg-zinc-200">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.5!2d19.8528153!3d41.2942032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031c84a9b8967%3A0xc9b01b56aedca650!2sBoj%C3%ABra%20Lulja!5e0!3m2!1ssq!2sal" class="absolute inset-0 w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lulja 08 - Vendndodhja"></iframe>
               <a href="https://maps.app.goo.gl/DhsKuC2dZ4fqobvdA" target="_blank" rel="noopener noreferrer" class="absolute bottom-4 left-4 inline-flex items-center gap-2 px-4 py-2.5 bg-white text-zinc-900 text-sm font-semibold rounded-lg shadow-lg hover:bg-zinc-50 transition-colors">
@@ -820,7 +732,6 @@
                 Hap në Google Maps
               </a>
             </div>
-            <!-- Info panel -->
             <div class="lg:col-span-2 p-8 md:p-10 lg:p-12 flex flex-col justify-center">
               <div class="space-y-6">
                 <div>
@@ -838,16 +749,16 @@
                 </div>
               </div>
               <div class="mt-8 space-y-3">
-                <a href="tel:+355673156271" class="flex items-center justify-center gap-2 w-full py-3.5 bg-brand-500 text-white font-bold rounded-lg hover:bg-brand-600 transition-colors text-sm">
+                <a href="tel:+355673156271" class="flex items-center justify-center gap-2 w-full py-3.5 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors text-sm">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                   Na Telefononi
                 </a>
                 <div class="grid grid-cols-2 gap-3">
-                  <a href="https://wa.me/355673156271?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-colors text-sm">
+                  <a href="https://wa.me/355673156271?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition-colors text-sm">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     WhatsApp
                   </a>
-                  <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition-colors text-sm">
+                  <a href="https://www.instagram.com/lulja_08/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 bg-zinc-800 text-white font-bold rounded-xl hover:bg-zinc-700 transition-colors text-sm">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     Instagram
                   </a>
@@ -860,21 +771,21 @@
     </section>
 
     <!-- ==================== CTA BANNER ==================== -->
-    <section class="py-14 md:py-20 bg-linear-to-br from-brand-500 to-brand-600">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Gati për te filluar projektin?</h2>
+    <section class="py-14 md:py-20 bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700">
+      <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Gati për të filluar projektin?</h2>
         <p class="text-brand-100 mb-6 text-sm md:text-base">Lulja 08 &mdash; Partneri juaj për çdo projekt ndërtimi. Na kontaktoni sot.</p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="tel:+355673156271" class="px-6 py-3.5 md:px-8 md:py-4 bg-white text-brand-600 font-bold rounded-lg hover:bg-zinc-100 transition-colors uppercase tracking-wider text-sm">+355 67 315 6271</a>
-          <a href="#kontakt" class="px-6 py-3.5 md:px-8 md:py-4 bg-zinc-900 text-white font-bold rounded-lg hover:bg-zinc-800 transition-colors uppercase tracking-wider text-sm">Na kontaktoni</a>
+          <a href="tel:+355673156271" class="px-6 py-3.5 md:px-8 md:py-4 bg-white text-brand-600 font-bold rounded-xl hover:bg-zinc-100 transition-colors text-sm uppercase tracking-wider">+355 67 315 6271</a>
+          <a href="https://wa.me/355673156271?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 md:px-8 md:py-4 bg-zinc-900 text-white font-bold rounded-xl hover:bg-zinc-800 transition-colors text-sm uppercase tracking-wider">Na shkruani në WhatsApp</a>
         </div>
       </div>
     </section>
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-zinc-950 text-zinc-400 pt-14 md:pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="bg-zinc-950 text-zinc-400 pt-14 md:pt-16 pb-24 md:pb-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-zinc-800">
         <div>
           <div class="flex items-center gap-2.5 mb-4">
@@ -900,6 +811,7 @@
             <li><a href="#rreth-nesh" class="text-sm text-zinc-400 hover:text-brand-400 transition-colors">Rreth nesh</a></li>
             <li><a href="#produkte" class="text-sm text-zinc-400 hover:text-brand-400 transition-colors">Produkte</a></li>
             <li><a href="#makita" class="text-sm text-zinc-400 hover:text-brand-400 transition-colors">Makita Professional</a></li>
+            <li><a href="#markat" class="text-sm text-zinc-400 hover:text-brand-400 transition-colors">Markat</a></li>
             <li><a href="#kontakt" class="text-sm text-zinc-400 hover:text-brand-400 transition-colors">Kontakt</a></li>
           </ul>
         </div>
@@ -924,17 +836,35 @@
         </div>
       </div>
       <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
-        <p class="text-xs text-zinc-600">&copy; 2025 Materiale Ndertimi Lulja 08. Te gjitha të drejtat e rezervuara.</p>
+        <p class="text-xs text-zinc-600">&copy; 2025 Materiale Ndertimi Lulja 08. Të gjitha të drejtat e rezervuara.</p>
         <p class="text-xs text-zinc-700">Tiranë, Shqipëri</p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/355673156271?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-4 md:bottom-8 md:right-8 z-50 group" aria-label="Na shkruani në WhatsApp">
-    <span class="absolute -inset-1 rounded-full bg-green-400/30 animate-ping"></span>
-    <span class="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-green-500 rounded-full shadow-lg shadow-green-500/30 group-hover:bg-green-600 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
-      <svg class="w-7 h-7 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <!-- ==================== MOBILE BOTTOM BAR ==================== -->
+  <div x-data="{ show: false }"
+       @scroll.window.throttle.100ms="show = window.scrollY > 600"
+       x-show="show" x-cloak
+       x-transition:enter="transition ease-out duration-300" x-transition:enter-start="translate-y-full" x-transition:enter-end="translate-y-0"
+       x-transition:leave="transition ease-in duration-200" x-transition:leave-start="translate-y-0" x-transition:leave-end="translate-y-full"
+       class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-xl border-t border-zinc-200 px-4 pt-3 safe-bottom shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+    <div class="flex gap-2.5">
+      <a href="tel:+355673156271" class="flex-1 flex items-center justify-center gap-2 py-3 bg-brand-500 text-white font-bold rounded-xl text-sm active:scale-[0.98] transition-transform">
+        <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        Telefono
+      </a>
+      <a href="https://wa.me/355673156271?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 bg-green-500 text-white font-bold rounded-xl text-sm active:scale-[0.98] transition-transform">
+        <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- WhatsApp Float (desktop only) -->
+  <a href="https://wa.me/355673156271?text=Pershendetje%2C%20jam%20i%20interesuar%20per%20produktet%20tuaja." target="_blank" rel="noopener noreferrer" class="hidden md:flex fixed bottom-8 right-8 z-50 group" aria-label="Na shkruani në WhatsApp">
+    <span class="relative flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg shadow-green-500/30 group-hover:bg-green-600 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 whatsapp-pulse">
+      <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </span>
   </a>
 
