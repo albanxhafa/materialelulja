@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-50:  #ecfdf5;
-  --color-brand-100: #d1fae5;
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
-  --color-brand-800: #065f46;
-  --color-brand-900: #064e3b;
-  --color-brand-950: #022c22;
+  --color-brand-50:  #f4f5f1;
+  --color-brand-100: #e6e9df;
+  --color-brand-200: #cdd3c1;
+  --color-brand-300: #a8b194;
+  --color-brand-400: #7f8a6b;
+  --color-brand-500: #606a4e;
+  --color-brand-600: #535c42;
+  --color-brand-700: #474e3a;
+  --color-brand-800: #3a4030;
+  --color-brand-900: #2d3225;
+  --color-brand-950: #1a1e16;
 }
 
 @layer base {
@@ -77,8 +77,8 @@
 
 /* Pulse animation for WhatsApp */
 @keyframes gentlePulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(71, 78, 58, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(71, 78, 58, 0); }
 }
 .whatsapp-pulse {
   animation: gentlePulse 2.5s ease-in-out infinite;
