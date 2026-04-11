@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Materiale Ndërtimi Lulja 08",
+  "name_for_model": "materiale_lulja_08",
+  "description_for_human": "Dyqan materialesh ndërtimi, bojerash profesionale dhe veglash pune në Tiranë, Shqipëri.",
+  "description_for_model": "Materiale Ndërtimi Lulja 08 is a specialized construction materials, professional paints, and power tools store in Tirana, Albania. They carry 14+ international brands including Makita, Wolfcraft, Knipex, Gewiss, ABB, Horoz, Ingco, Tolsen, Total, Hoegert, Pestan, APE, Cher Bros, and Dast. Product categories: professional paints, hand/power tools, electrical installations, plumbing, lighting, construction materials, and thermal insulation. They offer delivery in Tirana. Contact: +355 67 315 6271, WhatsApp, Instagram @lulja_08.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none"
+  },
+  "logo_url": "https://materialelulja.com/assets/logo_square.png",
+  "contact_email": "",
+  "legal_info_url": "https://materialelulja.com/#kontakt"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Materiale Ndërtimi Lulja 08",
+  "short_name": "Lulja 08",
+  "description": "Dyqan i specializuar për materiale ndërtimi, bojera profesionale dhe vegla pune në Tiranë.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "lang": "sq",
+  "icons": [
+    {
+      "src": "/assets/logo_square.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logo_circle.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["shopping", "business"]
+}

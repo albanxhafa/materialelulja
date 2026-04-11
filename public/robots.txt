@@ -1,0 +1,13 @@
+# Materiale Ndertimi Lulja 08
+# https://materialelulja.com
+
+User-agent: *
+Allow: /
+Disallow: /assets/.DS_Store
+
+# Sitemaps
+Sitemap: https://materialelulja.com/sitemap.xml
+
+# LLMs.txt - AI/LLM discoverability
+# See: https://materialelulja.com/llms.txt
+# See: https://materialelulja.com/llms-full.txt
