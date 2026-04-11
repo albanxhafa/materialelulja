@@ -6,6 +6,9 @@
   <title>Materiale Ndertimi Lulja 08 – Materiale ndërtimi, bojera, vegla pune në Tiranë</title>
   <meta name="description" content="Materiale Ndertimi Lulja 08 - dyqan i specializuar për materiale ndërtimi, bojera profesionale, vegla pune, instalime elektrike e hidraulike, ndriçim dhe termoizolim në Tiranë. Makita, Knipex, Gewiss, ABB, Horoz." />
   <meta name="keywords" content="materiale ndërtimi tiranë, bojera profesionale, vegla pune, Makita Tirana, Makita tools Albania, Makita cordless drill Tirana, instalime elektrike, hidraulike, ndriçim, termoizolim, Lulja 08, Makita distributor Albania" />
+  <link rel="icon" type="image/png" href="/assets/logo_square.png" />
+  <link rel="apple-touch-icon" href="/assets/logo_circle.png" />
+  <meta property="og:image" content="/assets/logo_square.png" />
   <link rel="stylesheet" href="/src/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,9 +45,7 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-18">
         <a href="#kryefaqja" class="flex items-center gap-2.5 group">
-          <div class="w-9 h-9 rounded-lg bg-brand-500 flex items-center justify-center shadow-lg shadow-brand-500/20">
-            <span class="text-white font-bold text-sm" style="font-family: 'Space Grotesk', sans-serif;">L08</span>
-          </div>
+          <img src="/assets/logo_circle.png" alt="Lulja 08" class="w-9 h-9 rounded-full shadow-lg shadow-brand-500/20" />
           <span class="text-lg font-bold text-white tracking-tight group-hover:text-brand-400 transition-colors" style="font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.05em;">Lulja 08</span>
         </a>
         <div class="hidden md:flex items-center gap-1">
@@ -74,9 +75,7 @@
       <div class="flex flex-col h-full">
         <div class="flex items-center justify-between px-5 h-16 shrink-0">
           <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center">
-              <span class="text-white font-bold text-xs" style="font-family: 'Space Grotesk', sans-serif;">L08</span>
-            </div>
+            <img src="/assets/logo_circle.png" alt="Lulja 08" class="w-8 h-8 rounded-full" />
             <span class="text-lg font-bold text-white" style="font-family: 'Space Grotesk', sans-serif;">Lulja 08</span>
           </div>
           <button @click="mobileOpen = false" class="p-2 rounded-lg text-zinc-400 hover:text-white transition-colors" aria-label="Mbyll menyne">
@@ -108,7 +107,7 @@
   <main>
     <!-- ==================== HERO ==================== -->
     <section id="kryefaqja" class="relative min-h-[100svh] flex items-center overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="Kantier ndërtimi profesional" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+      <img src="/assets/images/kantier-ndertimi.jpg" alt="Kantier ndërtimi profesional - Materiale Ndertimi Lulja 08 Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
       <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/50 to-zinc-950/80"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/40 to-transparent"></div>
 
@@ -186,7 +185,7 @@
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-zinc-900/10 aspect-[4/3]"
                x-data x-intersect.once="$el.classList.add('visible')">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Kantier ndërtimi profesional" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <img src="/assets/images/punetor-ndertimi-profesionist.jpg" alt="Punonjës ndërtimi profesionist - Lulja 08 Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-tr from-brand-900/40 to-transparent"></div>
             <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6">
               <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/95 backdrop-blur-sm shadow-lg">
@@ -282,7 +281,7 @@
           <div x-show="activeTab === 'bojera'" x-cloak class="tab-panel">
             <div class="grid lg:grid-cols-2">
               <div class="relative aspect-[4/3] lg:aspect-auto">
-                <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80" alt="Bojera profesionale" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src="/assets/images/bojra-mur.jpg" alt="Bojëra profesionale për mure - materiale ndërtimi Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
                 <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Bojera Profesionale</h3>
@@ -306,13 +305,27 @@
                 </a>
               </div>
             </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-1 border-t border-zinc-100">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/bojra-interior.jpg" alt="Bojëra për brendshme - bojëra interieri Tiranë" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/bojra-kuti.jpg" alt="Kuti bojërash profesionale - ngjyra ndërtimi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/set-rrul-bojatisje.jpg" alt="Set rrul bojatisje dhe aksesorë lyerjeje" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/vegla-bojatisje-penela.png" alt="Vegla bojatisje dhe penela profesionale" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+            </div>
           </div>
 
           <!-- VEGLA PUNE -->
           <div x-show="activeTab === 'vegla'" x-cloak class="tab-panel">
             <div class="grid lg:grid-cols-2">
               <div class="relative aspect-[4/3] lg:aspect-auto">
-                <img src="https://images.unsplash.com/photo-1530124566582-a45a7e3f2028?w=800&q=80" alt="Vegla pune profesionale" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src="/assets/images/vegla-pune-profesionale.png" alt="Vegla pune profesionale - dyqan veglash Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
                 <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Vegla Pune Profesionale</h3>
@@ -340,13 +353,27 @@
                 </a>
               </div>
             </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-1 border-t border-zinc-100">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/vegla-dore-ingco.jpg" alt="Vegla dore INGCO profesionale - Tiranë" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/vegla-elektrike-ingco.jpg" alt="Vegla elektrike INGCO - power tools Tiranë" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/vegla-pune-total.jpg" alt="Vegla pune TOTAL profesionale" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/vegla-dore-total.jpg" alt="Vegla dore TOTAL - dyqan veglash Tiranë" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+            </div>
           </div>
 
           <!-- ELEKTRIKE -->
           <div x-show="activeTab === 'elektrike'" x-cloak class="tab-panel">
             <div class="grid lg:grid-cols-2">
               <div class="relative aspect-[4/3] lg:aspect-auto">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80" alt="Instalime elektrike" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src="/assets/images/automat-elektrik.jpg" alt="Automatë elektrike dhe instalime - materiale elektrike Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
                 <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Instalime Elektrike</h3>
@@ -375,7 +402,7 @@
           <div x-show="activeTab === 'hidraulike'" x-cloak class="tab-panel">
             <div class="grid lg:grid-cols-2">
               <div class="relative aspect-[4/3] lg:aspect-auto">
-                <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&q=80" alt="Instalime hidraulike" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src="/assets/images/tuba-hidraulike.jpg" alt="Tuba hidraulike dhe instalime - materiale hidraulike Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
                 <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Instalime Hidraulike</h3>
@@ -399,13 +426,21 @@
                 </a>
               </div>
             </div>
+            <div class="grid grid-cols-2 gap-1 border-t border-zinc-100">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/planifikim-hidraulik.jpg" alt="Planifikim hidraulik dhe skema instalimi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="/assets/images/riparim-hidraulik.jpg" alt="Riparim instalimesh hidraulike profesionale" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+            </div>
           </div>
 
           <!-- NDRIÇIM -->
           <div x-show="activeTab === 'ndricim'" x-cloak class="tab-panel">
             <div class="grid lg:grid-cols-2">
               <div class="relative aspect-[4/3] lg:aspect-auto">
-                <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&q=80" alt="Ndriçim modern LED" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src="/assets/images/llamba-ndricim-led.jpg" alt="Llamba ndriçimi LED moderne - ndriçim Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
                 <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Ndriçim Modern</h3>
@@ -433,7 +468,7 @@
           <div x-show="activeTab === 'materiale'" x-cloak class="tab-panel">
             <div class="grid lg:grid-cols-2">
               <div class="relative aspect-[4/3] lg:aspect-auto">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Materiale ndërtimi" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src="/assets/images/celsa-te-ndryshem-bullona.jpg" alt="Vida bullona dhe materiale ndërtimi - Lulja 08 Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
                 <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Materiale Ndërtimi</h3>
@@ -461,7 +496,7 @@
           <div x-show="activeTab === 'termoizolim'" x-cloak class="tab-panel">
             <div class="grid lg:grid-cols-2">
               <div class="relative aspect-[4/3] lg:aspect-auto">
-                <img src="https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=800&q=80" alt="Termoizolim fasade" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src="/assets/images/bojra-fasadash-lyerje.jpg" alt="Bojëra fasade dhe termoizolim - lyerje profesionale Tiranë" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6 md:p-10 lg:p-12 flex flex-col justify-center">
                 <h3 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">Termoizolim</h3>
@@ -489,7 +524,7 @@
       <!-- Makita Hero -->
       <div class="relative overflow-hidden bg-zinc-900 text-white py-20 md:py-32">
         <div class="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=80" alt="Makita professional tools" class="w-full h-full object-cover opacity-20" loading="lazy" />
+          <img src="/assets/images/trapano-elektrik.png" alt="Trapano elektrik Makita profesional - vegla Makita Tiranë" class="w-full h-full object-cover opacity-20" loading="lazy" />
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/80 to-zinc-900/40"></div>
 
@@ -574,6 +609,67 @@
                 <p class="text-zinc-500 text-xs">Sistemi LXT 18V, për të gjitha veglat Makita</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WOLFCRAFT PRODUKTE ==================== -->
+    <section class="py-16 md:py-24 bg-zinc-50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 md:mb-14" x-data x-intersect.once="$el.classList.add('visible')">
+          <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2 fade-up">Wolfcraft</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight fade-up fade-up-delay-1" style="font-family: 'Space Grotesk', sans-serif;">Produkte Wolfcraft</h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base fade-up fade-up-delay-2">Vegla dhe aksesorë cilësore gjermane për çdo projekt &mdash; nga kapëset te veglat e lyerjes.</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4" x-data x-intersect.once="$el.classList.add('visible')">
+          <div class="fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-multivegel-pince.jpeg" alt="Wolfcraft multivegel pincë profesionale" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Multivegel Pincë</p></div>
+          </div>
+          <div class="fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-pistole-mberthimi.jpeg" alt="Wolfcraft pistolë mbërthimi profesionale" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Pistolë Mbërthimi</p></div>
+          </div>
+          <div class="fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-kapese-kendi-es22.jpeg" alt="Wolfcraft kapëse këndi ES22" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Kapëse Këndi ES22</p></div>
+          </div>
+          <div class="fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-bllok-zmerile-dore.jpeg" alt="Wolfcraft bllok zmerilje dore 93x230mm" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Bllok Zmerilje Dore</p></div>
+          </div>
+          <div class="fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-punta-shkallezuar-hss.jpeg" alt="Wolfcraft punta shkallëzuar HSS" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Punta Shkallëzuar HSS</p></div>
+          </div>
+          <div class="fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-set-fugash-silikoni.jpeg" alt="Wolfcraft set fugash silikoni" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Set Fugash Silikoni</p></div>
+          </div>
+          <div class="fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-kaciavide-fleksibel.jpeg" alt="Wolfcraft kaçavidë fleksibël" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Kaçavidë Fleksibël</p></div>
+          </div>
+          <div class="fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/wolfcraft-freza-gdhendje-set.jpeg" alt="Wolfcraft set frezash gdhëndjeje" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Set Frezash Gdhëndjeje</p></div>
           </div>
         </div>
       </div>
@@ -789,9 +885,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-zinc-800">
         <div>
           <div class="flex items-center gap-2.5 mb-4">
-            <div class="w-9 h-9 rounded-lg bg-brand-500 flex items-center justify-center">
-              <span class="text-white font-bold text-sm" style="font-family: 'Space Grotesk', sans-serif;">L08</span>
-            </div>
+            <img src="/assets/logo_circle.png" alt="Lulja 08" class="w-9 h-9 rounded-full" />
             <span class="text-base font-bold text-white" style="font-family: 'Space Grotesk', sans-serif;">Materiale Ndertimi Lulja 08</span>
           </div>
           <p class="text-sm text-zinc-500 leading-relaxed mb-4">Dyqan i specializuar për materiale ndërtimi, bojera profesionale dhe vegla pune në Tiranë.</p>
