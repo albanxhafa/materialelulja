@@ -103,3 +103,12 @@
   .makita-grid:not(.is-expanded) .makita-item:nth-child(n+7) { display: block; }
   .makita-grid:not(.is-expanded) .makita-item:nth-child(n+9) { display: none; }
 }
+
+/* Category product thumbnails — fixed cell size across every tab so the
+   layout never shifts when switching categories. Fewer images stay the same
+   size and the row is centered (2 per row mobile, 4 per row from sm up). */
+.cat-thumbs { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 4px; }
+.cat-thumbs > * { width: calc(50% - 2px); }
+@media (min-width: 640px) {
+  .cat-thumbs > * { width: calc(25% - 3px); }
+}
