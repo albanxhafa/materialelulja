@@ -90,3 +90,16 @@
     padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
   }
 }
+
+/* Makita products — progressive reveal when collapsed.
+   Collapsed shows 2 rows per breakpoint: 4 on mobile (2 cols),
+   6 on tablet (3 cols), 8 on desktop (4 cols). Expanded shows all. */
+.makita-grid:not(.is-expanded) .makita-item:nth-child(n+5) { display: none; }
+@media (min-width: 640px) {
+  .makita-grid:not(.is-expanded) .makita-item:nth-child(n+5) { display: block; }
+  .makita-grid:not(.is-expanded) .makita-item:nth-child(n+7) { display: none; }
+}
+@media (min-width: 1024px) {
+  .makita-grid:not(.is-expanded) .makita-item:nth-child(n+7) { display: block; }
+  .makita-grid:not(.is-expanded) .makita-item:nth-child(n+9) { display: none; }
+}

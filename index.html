@@ -816,7 +816,7 @@
       <div class="py-16 md:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <!-- Why Makita -->
-          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 md:mb-20" x-data x-intersect.once="$el.classList.add('visible')">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16 md:mb-20" x-data x-intersect.once="$el.classList.add('visible')">
             <div class="fade-up p-5 rounded-2xl bg-zinc-50 border border-zinc-100">
               <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-3">
                 <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
@@ -880,6 +880,164 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUKTE MAKITA ==================== -->
+    <section x-data="{ expanded: false }" class="py-16 md:py-24 bg-zinc-50">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 md:mb-14" x-data x-intersect.once="$el.classList.add('visible')">
+          <p class="text-brand-500 font-semibold text-xs uppercase tracking-widest mb-2 fade-up">Makita</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-3 tracking-tight fade-up fade-up-delay-1" style="font-family: 'Space Grotesk', sans-serif;">Produkte Makita</h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base fade-up fade-up-delay-2">Vegla elektrike profesionale Makita me bateri dhe me kabllo, të disponueshme në Tiranë &mdash; nga trapanot dhe smerigliatriçet te çekiçët demolues, sharrat dhe pajisjet për kopshte.</p>
+        </div>
+        <div class="makita-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4" :class="{ 'is-expanded': expanded }" x-data x-intersect.once="$el.classList.add('visible')">
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-combi-drill-xgt-hp002g.png" alt="Makita Combi Drill XGT HP002G 40Vmax pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Combi XGT HP002G</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-drill-driver-brushless-18v-lxt-ddf490.png" alt="Makita Drill Driver Brushless 18V LXT DDF490 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Vidhosëse Brushless DDF490</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-angle-grinder-lxt-dga463.jpg" alt="Makita Angle Grinder 18V LXT DGA463 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Smerigliatriçe Këndore DGA463</p></div>
+          </div>
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-rotary-hammer-lxt-dhr165.jpg" alt="Makita Rotary Hammer 18V LXT DHR165 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Çekiç Rrotullues LXT DHR165</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-demolition-hammer-hm0870c.png" alt="Makita Demolition Hammer HM0870C me kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Çekiç Demolues HM0870C</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-jigsaw-cxt-jv101d.png" alt="Makita Jigsaw CXT JV101D pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Sharrë Dekupazhi CXT JV101D</p></div>
+          </div>
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-chainsaw-lxt-duc405.png" alt="Makita Chainsaw 18V LXT DUC405 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Sharrë me Zinxhir LXT DUC405</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-cross-line-laser-cxt-sk106gd.png" alt="Makita Cross Line Laser CXT SK106GD rreze e gjelbër" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Lazer Nivelimi CXT SK106GD</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-combi-drill-g-series-hp488d.png" alt="Makita Combi Drill HP488D 18V G-Series pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Combi HP488D</p></div>
+          </div>
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-drill-driver-lxt-ddf482.png" alt="Makita Drill Driver 18V LXT DDF482 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Vidhosëse LXT DDF482</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-drill-driver-lxt-ddf484.png" alt="Makita Drill Driver 18V LXT DDF484 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Vidhosëse LXT DDF484</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-drill-driver-cxt.png" alt="Makita Drill Driver 12V CXT pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Vidhosëse CXT</p></div>
+          </div>
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-drill-driver-df0300.png" alt="Makita Drill Driver DF0300 me kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Vidhosëse DF0300</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-angle-drill-lxt-dda351.png" alt="Makita Angle Drill 18V LXT DDA351 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano Këndore LXT DDA351</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-impact-driver-xgt-40vmax-td003g.png" alt="Makita Impact Driver XGT 40Vmax TD003G pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Vidhosëse me Goditje XGT TD003G</p></div>
+          </div>
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-percussion-drill-hp1631.png" alt="Makita Percussion Drill HP1631 me kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano me Goditje HP1631</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-rotary-drill-dp4700.png" alt="Makita Rotary Drill DP4700 me kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Trapano DP4700</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-angle-grinder-lxt-dga901.jpg" alt="Makita Angle Grinder 18Vx2 36V LXT DGA901 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Smerigliatriçe Këndore DGA901</p></div>
+          </div>
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-rotary-hammer-cxt-hr140d.png" alt="Makita Rotary Hammer CXT HR140D pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Çekiç Rrotullues CXT HR140D</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-demolition-hammer-hm0871c.png" alt="Makita Demolition Hammer HM0871C me kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Çekiç Demolues HM0871C</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-2 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-lawn-mower-lxt-dlm432.png" alt="Makita Lawn Mower 18V LXT DLM432 pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Kositëse Bari LXT DLM432</p></div>
+          </div>
+          <div class="makita-item fade-up group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-pruning-shear-cxt-up100d.png" alt="Makita Pruning Shear CXT UP100D pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Gërshërë Krasitjeje CXT UP100D</p></div>
+          </div>
+          <div class="makita-item fade-up fade-up-delay-1 group bg-white rounded-2xl border border-zinc-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-zinc-50">
+              <img src="/assets/images/makita/makita-vacuum-cleaner-cxt-cl106fd.png" alt="Makita Vacuum Cleaner CXT CL106FD pa kabllo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" width="400" height="400" />
+            </div>
+            <div class="p-3"><p class="text-zinc-800 text-xs font-semibold">Aspirator CXT CL106FD</p></div>
+          </div>
+        </div>
+        <div class="text-center mt-8 md:mt-10">
+          <button type="button" @click="expanded = !expanded; if (!expanded) $root.scrollIntoView({ behavior: 'smooth' })" :aria-expanded="expanded" aria-label="Shfaq më shumë produkte Makita"
+            class="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-brand-600 font-bold rounded-xl border-2 border-brand-200 hover:border-brand-500 hover:bg-brand-50 transition-all text-sm uppercase tracking-wider shadow-sm">
+            <span x-text="expanded ? 'Shfaq më pak' : 'Shfaq më shumë'">Shfaq më shumë</span>
+            <svg class="w-4 h-4 transition-all duration-300" :class="{ 'rotate-180': expanded }" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </button>
         </div>
       </div>
     </section>
