@@ -24,9 +24,18 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v4
+      # Same as actions/upload-pages-artifact@v4, minus its `--exclude=".[^/]*"`,
+      # which silently drops dot-directories such as dist/.well-known/.
+      - name: Archive site
+        run: |
+          tar --dereference --hard-dereference --directory dist \
+            -cvf "$RUNNER_TEMP/artifact.tar" --exclude=.git --exclude=.github .
+      - uses: actions/upload-artifact@v4
         with:
-          path: dist
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
   deploy:
     needs: build

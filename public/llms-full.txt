@@ -2,7 +2,21 @@
 
 > Dyqan i specializuar për materiale ndërtimi, bojera profesionale dhe vegla pune në Tiranë, Shqipëri. Partneri juaj për çdo projekt ndërtimi e rinovimi.
 
-Përditësuar: 2026-06-26
+Përditësuar: 2026-10-06
+
+## Faqet
+
+- Kryefaqja: https://materialelulja.com/
+- Të gjitha produktet: https://materialelulja.com/produkte/
+- Bojëra: https://materialelulja.com/bojera/
+- Vegla pune: https://materialelulja.com/vegla-pune/
+- Materiale elektrike: https://materialelulja.com/materiale-elektrike/
+- Materiale hidraulike: https://materialelulja.com/materiale-hidraulike/
+- Ndriçim: https://materialelulja.com/ndricim/
+- Materiale ndërtimi: https://materialelulja.com/materiale-ndertimi/
+- Termoizolim & hidroizolim: https://materialelulja.com/termoizolim/
+- Makita: https://materialelulja.com/makita/
+- Wolfcraft: https://materialelulja.com/wolfcraft/
 
 ## Rreth Nesh
 
@@ -13,6 +27,7 @@ Shërbimet tona mbulojnë: ndërtim dhe rinovim, instalime elektrike, instalime 
 ## Kategori të detajuara
 
 ### Bojera Profesionale
+Faqja: https://materialelulja.com/bojera/
 Gamë e gjerë bojerash për brendshme dhe jashtme me mbulim të mirë, aplikim të lehtë dhe rezistencë ndaj lagështirës e diellit.
 - Akrilike për fasada
 - Plastike për brendshme
@@ -24,6 +39,7 @@ Gamë e gjerë bojerash për brendshme dhe jashtme me mbulim të mirë, aplikim 
 - Aksesorë lyerjeje: Rula, furça, kodar, spatula, plasmas, silikona
 
 ### Vegla Pune Profesionale
+Faqja: https://materialelulja.com/vegla-pune/
 Përzgjedhje e gjerë veglash për ndërtim, montim, instalime dhe punime teknike nga marka të njohura.
 Markat: Makita, Wolfcraft, Hoegert, Ingco, Tolsen, Total, Knipex
 - Vegla dore profesionale
@@ -34,6 +50,7 @@ Markat: Makita, Wolfcraft, Hoegert, Ingco, Tolsen, Total, Knipex
 - Vegla kopshtarie
 
 ### Instalime Elektrike
+Faqja: https://materialelulja.com/materiale-elektrike/
 Gamë e plotë produktesh për instalime elektrike rezidenciale, komerciale dhe industriale.
 Markat: Gewiss, ABB
 - Kabllo dhe tela
@@ -44,6 +61,7 @@ Markat: Gewiss, ABB
 - Tuba instalimi
 
 ### Instalime Hidraulike
+Faqja: https://materialelulja.com/materiale-hidraulike/
 Produkte cilësore për instalime hidraulike dhe sisteme furnizimi me ujë.
 Markat: Pestan, APE, Cher Bros
 - Tuba shkarkimi
@@ -54,6 +72,7 @@ Markat: Pestan, APE, Cher Bros
 - Grupe sanitarie
 
 ### Ndriçim Modern
+Faqja: https://materialelulja.com/ndricim/
 Produkte moderne për ndriçimin e ambienteve të brendshme dhe të jashtme.
 Markat: Horoz
 - Spoté për tavane
@@ -64,6 +83,7 @@ Markat: Horoz
 - Ndriçim tokësor
 
 ### Materiale Ndërtimi
+Faqja: https://materialelulja.com/materiale-ndertimi/
 Produkte bazë për ndërtim dhe përfundim punimesh për projekte ndërtimi, rinovimi dhe restaurimi.
 Markat: Dast
 - Koll për pllaka
@@ -74,6 +94,7 @@ Markat: Dast
 - Llaç mbushës
 
 ### Termoizolim
+Faqja: https://materialelulja.com/termoizolim/
 Produkte për mbrojtjen e ndërtesave nga temperaturat ekstreme dhe lagështirës, kursim energjie dhe komfort.
 - Komponent A+B
 - Bojëra termoizoluese
@@ -82,6 +103,8 @@ Produkte për mbrojtjen e ndërtesave nga temperaturat ekstreme dhe lagështirë
 - Termoizolues pluhur
 
 ## Makita - Vegla Profesionale
+
+Faqja: https://materialelulja.com/makita/
 
 Lulja 08 është një nga pikat kryesore të shitjes së produkteve Makita në Tiranë. Ofrojmë vegla me bateri (cordless), me kabllo (corded), pajisje për jashtë, aksesorë dhe bateri origjinale me sistemet LXT 18V, XGT 40V dhe CXT 12V.
 
@@ -130,6 +153,8 @@ Matëse dhe pastrim:
 
 ## Produkte Wolfcraft
 
+Faqja: https://materialelulja.com/wolfcraft/
+
 Vegla dhe aksesorë cilësore gjermane për çdo projekt:
 - Multivegel Pincë
 - Pistolë Mbërthimi
@@ -139,6 +164,11 @@ Vegla dhe aksesorë cilësore gjermane për çdo projekt:
 - Set Fugash Silikoni
 - Kaçavidë Fleksibël
 - Set Frezash Gdhëndjeje
+- Kapëse me sustë Microtip
+- Zmerilues për radiatorë
+- Mistri për kënde
+- Prerës silikoni
+- Punta menteshash 35 mm
 
 ## Të 14 Markat Partnere
 

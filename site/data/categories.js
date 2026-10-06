@@ -1,0 +1,673 @@
+// Product category pages. Each entry renders to /<slug>/ via site/templates/category.js.
+// Text is plain (escaped at render time) so it can be reused in JSON-LD.
+
+const IMG = "/assets/images";
+const CAT = "/assets/images/categories";
+
+export const CATEGORIES = [
+  // ───────────────────────────── BOJËRA ─────────────────────────────
+  {
+    slug: "bojera",
+    noun: "bojëra",
+    icon: "paint",
+    label: "Bojëra",
+    name: "Bojëra Profesionale",
+    short: "Brendshme, fasada, metal & dru, aksesorë",
+    title: "Bojëra në Tiranë – Brendshme, Fasada & Aksesorë | Lulja 08",
+    description:
+      "Bojëra në Tiranë: plastike e hidromat për brendshme, akrilike për fasada, kundër lagështirës, për metal e dru dhe aksesorë lyerjeje. Këshillim e dërgesë.",
+    keywords:
+      "bojera tirane, bojëra, bojra, bojë për mure, bojë fasade, bojë plastike, hidromat, bojë kundër lagështirës, bojë për metal, bojë për dru, bojë termoizoluese, rula, furça, Lulja 08",
+    eyebrow: "Bojëra & Lyerje",
+    h1: "Bojëra profesionale në Tiranë",
+    intro:
+      "Bojëra për çdo sipërfaqe — nga muret e brendshme te fasadat, metali dhe druri. Te Lulja 08 gjeni bojën e duhur dhe të gjithë aksesorët për një lyerje të pastër që zgjat.",
+    hero: { src: `${IMG}/bojra-mur.jpg`, alt: "Bojatisës duke lyer murin me rul – bojëra profesionale te Lulja 08 Tiranë", width: 736, height: 1104 },
+    chips: ["Brendshme", "Fasada", "Metal & dru", "Kundër lagështirës", "Aksesorë"],
+    stat: { icon: "paint", title: "Brendshme & fasada", text: "Bojë për çdo sipërfaqe" },
+    groupsTitle: "Llojet e bojërave që ofrojmë",
+    groups: [
+      {
+        icon: "home",
+        title: "Bojëra për brendshme",
+        text: "Bojë plastike dhe hidromat për mure dhe tavane — mbulim i mirë, aplikim i lehtë dhe sipërfaqe e pastër, mat ose satinë.",
+        items: ["Bojë plastike", "Hidromat", "Për tavane", "Mure të përditshme"],
+      },
+      {
+        icon: "sun",
+        title: "Bojëra për fasada",
+        text: "Bojë akrilike për jashtë, rezistente ndaj diellit, shiut dhe ndryshimeve të temperaturës — ngjyra që nuk zbehen shpejt.",
+        items: ["Akrilike", "Rezistente ndaj UV", "Për suva & kapotë"],
+      },
+      {
+        icon: "shield",
+        title: "Kundër lagështirës",
+        text: "Zgjidhje për banjo, kuzhina, bodrume dhe mure me lagështirë — bojëra që ndihmojnë të parandalohen njollat dhe myku.",
+        items: ["Banjo & kuzhina", "Bodrume", "Mure të lagura"],
+      },
+      {
+        icon: "tools",
+        title: "Për metal dhe dru",
+        text: "Bojëra mbrojtëse dhe dekorative për kangjella, porta, dyer, dritare, mobilie dhe konstruksione metalike.",
+        items: ["Kangjella & porta", "Dyer & dritare", "Mobilie druri"],
+      },
+      {
+        icon: "fire",
+        title: "Bojëra termoizoluese",
+        text: "Bojëra me veti termoizoluese që ndihmojnë kundër kondensimit dhe humbjes së nxehtësisë në mure.",
+        items: ["Kundër kondensimit", "Mure të ftohta"],
+        link: { href: "/termoizolim/", label: "Shiko termoizolimin" },
+      },
+      {
+        icon: "sparkles",
+        title: "Bojëra dekorative",
+        text: "Përfundime dekorative për ambiente që duan karakter — salla, dyqane, zyra dhe hapësira tregtare.",
+        items: ["Efekte dekorative", "Ambiente tregtare"],
+      },
+    ],
+    feature: {
+      eyebrow: "Aksesorë lyerjeje",
+      title: "Gjithçka për punën, në një vend",
+      text: "Një lyerje e mirë nuk varet vetëm nga boja. Ofrojmë rula, furça, kodar, spatula, plasmas mbrojtës dhe silikona — si dhe vegla Wolfcraft për kënde, fuga dhe zmerilim.",
+      items: ["Rula & furça", "Spatula", "Plasmas mbrojtës", "Silikona", "Vegla Wolfcraft për lyerje"],
+      image: { src: `${IMG}/vegla-bojatisje-penela.jpg`, alt: "Aksesorë lyerjeje – rula, furça, tavë boje dhe shkallë për bojatisje", width: 1024, height: 1024 },
+      cta: { href: "/wolfcraft/", label: "Shiko veglat Wolfcraft" },
+    },
+    gallery: [
+      { src: `${CAT}/bojera-vivechrom-vivecryl.jpg`, alt: "Bojëra profesionale Vivechrom Vivecryl", width: 570, height: 554 },
+      { src: `${IMG}/bojra-interior.jpg`, alt: "Mur i brendshëm i lyer në ngjyrë jeshile – bojë për brendshme", width: 736, height: 1104 },
+      { src: `${IMG}/bojra-fasadash-lyerje.jpg`, alt: "Lyerje fasade me bojë akrilike për jashtë", width: 398, height: 599 },
+      { src: `${CAT}/bojera-makineri-ngjyrosjeje.jpg`, alt: "Makineri ngjyrosjeje dhe përzierje bojërash", width: 900, height: 900 },
+      { src: `${IMG}/set-rrul-bojatisje.jpg`, alt: "Set rulash, furçash dhe katalog ngjyrash për bojatisje", width: 735, height: 610 },
+      { src: `${IMG}/bojra-kuti.jpg`, alt: "Kuti bojërash me ngjyra të ndryshme", width: 736, height: 1308 },
+    ],
+    guide: {
+      title: "Si të zgjidhni dhe aplikoni bojën e duhur",
+      intro: "Katër hapa që e bëjnë lyerjen më të shpejtë, më të pastër dhe më të qëndrueshme.",
+      steps: [
+        { title: "Njihni sipërfaqen", text: "Brendshme apo jashtme, mur i ri apo i lyer më parë, metal apo dru — çdo sipërfaqe kërkon bojën e vet. Për mjedise me lagështirë zgjidhni bojë kundër lagështirës." },
+        { title: "Përgatitni murin", text: "Pastroni pluhurin dhe yndyrën, mbushni të çarat dhe lëmoni. Në sipërfaqe të reja ose që thithin shumë, një shtresë astari e ndihmon bojën të ngjitet dhe të mbulojë njëtrajtësisht." },
+        { title: "Llogaritni sasinë", text: "Si orientim, një litër bojë mbulon rreth 8–12 m² për një shtresë, sipas produktit dhe sipërfaqes. Përdorni llogaritësin më poshtë dhe shtoni pak rezervë." },
+        { title: "Aplikoni dy shtresa", text: "Lyeni me rul nga lart poshtë dhe respektoni kohën e tharjes mes shtresave sipas etiketës. Dy shtresa japin ngjyrë të njëtrajtshme dhe qëndrueshmëri." },
+      ],
+    },
+    calculator: "paint",
+    brands: ["Wolfcraft"],
+    brandsNote: "Përveç bojërave, ofrojmë aksesorë dhe vegla lyerjeje Wolfcraft.",
+    faqs: [
+      { q: "Sa bojë më duhet për një dhomë?", a: "Llogaritni sipërfaqen e mureve (perimetri × lartësia, pa dyert dhe dritaret) dhe ndajeni me rendimentin e bojës — zakonisht 8–12 m² për litër për një shtresë. Për dy shtresa, dyfishojeni sasinë. Mund të përdorni llogaritësin në këtë faqe ose të na telefononi." },
+      { q: "Cila bojë është më e mira për banjo dhe kuzhinë?", a: "Për mjedise me lagështirë rekomandohen bojërat kundër lagështirës dhe mykut, që e lejojnë murin të marrë frymë dhe pastrohen lehtë. Stafi ynë ju këshillon sipas gjendjes së murit." },
+      { q: "Çfarë ndryshimi ka boja plastike nga hidromati?", a: "Hidromati është bojë ekonomike me bazë uji, e përshtatshme për tavane dhe sipërfaqe që nuk fshihen shpesh. Boja plastike ka mbulim dhe rezistencë më të mirë ndaj fshirjes, prandaj preferohet për mure që përdoren shumë." },
+      { q: "A mund të gjej një ngjyrë specifike?", a: "Po. Na tregoni kodin e ngjyrës nga katalogu ose sillni një mostër, dhe ju ndihmojmë të gjeni nuancën më të afërt." },
+      { q: "A keni edhe aksesorë lyerjeje?", a: "Po — rula, furça, kodar, spatula, plasmas mbrojtës, silikona dhe vegla Wolfcraft për kënde e fuga." },
+      { q: "A bëni dërgesë të bojërave në Tiranë?", a: "Po, bëjmë dërgesë në Tiranë. Na kontaktoni me telefon ose WhatsApp për të organizuar porosinë." },
+    ],
+    related: ["termoizolim", "materiale-ndertimi", "wolfcraft"],
+    waText: "Përshëndetje, jam i interesuar për bojëra. Mund të më jepni informacion?",
+  },
+
+  // ─────────────────────────── VEGLA PUNE ───────────────────────────
+  {
+    slug: "vegla-pune",
+    noun: "vegla pune",
+    icon: "tools",
+    label: "Vegla Pune",
+    name: "Vegla Pune Profesionale",
+    short: "Elektrike, dore, matëse, kopshtari",
+    title: "Vegla Pune Tiranë – Makita, Knipex, Ingco, Total | Lulja 08",
+    description:
+      "Vegla pune në Tiranë: vegla elektrike Makita, vegla dore Knipex, Hoegert, Ingco, Total e Tolsen, vegla matëse dhe kopshtarie. Këshillim dhe dërgesë.",
+    keywords:
+      "vegla pune tirane, vegla elektrike, vegla dore, trapano, smerigliatrice, Makita Tirana, Knipex, Ingco, Total tools, Tolsen, Hoegert, Wolfcraft, vegla kopshtarie, dyqan veglash Tiranë",
+    eyebrow: "Vegla Pune",
+    h1: "Vegla pune profesionale në Tiranë",
+    intro:
+      "Nga trapanot dhe smerigliatriçet te pincat, çelësat dhe veglat matëse — vegla nga marka të njohura për mjeshtër, kantiere dhe punë në shtëpi.",
+    hero: { src: `${CAT}/vegla-pune-makita-sharre-rrethore.jpg`, alt: "Sharrë rrethore Makita në punë – vegla pune profesionale Tiranë", width: 736, height: 705 },
+    chips: ["Makita", "Wolfcraft", "Knipex", "Hoegert", "Ingco", "Total", "Tolsen"],
+    stat: { icon: "badge", title: "7 marka veglash", text: "Nga Makita te Knipex" },
+    groupsTitle: "Çfarë gjeni në kategorinë e veglave",
+    groups: [
+      {
+        icon: "bolt",
+        title: "Vegla elektrike",
+        text: "Trapano, vidhosëse, smerigliatriçe, çekiçë dhe sharra — me bateri ose me kabllo, për punë të lehta dhe të rënda.",
+        items: ["Trapano & vidhosëse", "Smerigliatriçe", "Çekiçë rrotullues", "Sharra"],
+        link: { href: "/makita/", label: "Katalogu Makita" },
+      },
+      {
+        icon: "tools",
+        title: "Vegla dore",
+        text: "Pinca, çelësa, kaçavida, çekiçë dhe set-e veglash nga Knipex, Hoegert, Tolsen, Total dhe Ingco — për përdorim të përditshëm.",
+        items: ["Pinca & prerëse", "Çelësa & bokulla", "Kaçavida & bit-e", "Set-e veglash"],
+      },
+      {
+        icon: "expand",
+        title: "Vegla matëse",
+        text: "Metra, nivele dhe lazer nivelimi për matje dhe vendosje precize në çdo fazë të punës.",
+        items: ["Metra", "Nivele", "Lazer nivelimi"],
+      },
+      {
+        icon: "grid",
+        title: "Për laminat & drywall",
+        text: "Vegla të specializuara për montimin e dyshemeve laminat dhe punime me gips-karton.",
+        items: ["Laminat", "Gips-karton", "Prerje & montim"],
+      },
+      {
+        icon: "sun",
+        title: "Vegla kopshtarie",
+        text: "Kositëse bari, gërshërë krasitjeje dhe sharra me zinxhir për mirëmbajtjen e oborrit dhe kopshtit.",
+        items: ["Kositëse bari", "Gërshërë krasitjeje", "Sharra me zinxhir"],
+      },
+      {
+        icon: "archive",
+        title: "Ruajtje & organizim",
+        text: "Kabinete dhe kuti veglash që i mbajnë veglat të rregullta, të mbrojtura dhe gati për punë.",
+        items: ["Kabinete veglash", "Kuti veglash"],
+      },
+    ],
+    feature: {
+      eyebrow: "Makita",
+      title: "Vegla Makita — me bateri dhe me kabllo",
+      text: "Ofrojmë gamë të gjerë veglash Makita nga platformat LXT 18V, XGT 40Vmax dhe CXT 12Vmax, si dhe vegla me kabllo për punë të vazhdueshme — bashkë me bateri, karikues dhe aksesorë.",
+      items: ["Trapano & vidhosëse", "Smerigliatriçe", "Çekiçë rrotullues & demolues", "Bateri & karikues"],
+      image: { src: `${CAT}/vegla-pune-makita-trapano.jpg`, alt: "Trapano Makita në përdorim – vegla Makita në Tiranë", width: 736, height: 679 },
+      cta: { href: "/makita/", label: "Shiko katalogun Makita" },
+    },
+    gallery: [
+      { src: `${IMG}/vegla-dore-total.jpg`, alt: "Vegla dore Total – pinca, çelës tubash dhe metër", width: 736, height: 736 },
+      { src: `${CAT}/vegla-pune-hoegert-kabinet.jpg`, alt: "Kabinet veglash Hoegert me sirtarë", width: 736, height: 760 },
+      { src: `${IMG}/vegla-elektrike-ingco.jpg`, alt: "Trapano me bateri Ingco në përdorim", width: 736, height: 1103 },
+      { src: `${CAT}/vegla-pune-set-kacavida.jpg`, alt: "Set kaçavidash dhe bit-esh profesionale", width: 715, height: 1200 },
+      { src: `${IMG}/vegla-dore-ingco.jpg`, alt: "Pinca dhe disk prerës Ingco", width: 736, height: 1104 },
+      { src: `${IMG}/celsa-te-ndryshem-bullona.jpg`, alt: "Çelësa të ndryshëm për bulona dhe dado", width: 900, height: 1491 },
+      { src: `${CAT}/vegla-pune-makita-smerigliatrice.jpg`, alt: "Smerigliatriçe Makita – vegël elektrike", width: 563, height: 442 },
+      { src: `${IMG}/ventilator-ingco.jpg`, alt: "Gamë veglash elektrike dhe dore Ingco", width: 720, height: 534 },
+      { src: `${IMG}/trapano-elektrik.jpg`, alt: "Vegla elektrike dhe dore Hoegert, Ingco dhe Total", width: 1536, height: 1024 },
+    ],
+    guide: {
+      title: "Si të zgjidhni veglën e duhur",
+      intro: "Disa pyetje të thjeshta që ju kursejnë para dhe kohë në kantier.",
+      steps: [
+        { title: "Me bateri apo me kabllo?", text: "Veglat me bateri japin liri lëvizjeje në kantier dhe në lartësi; ato me kabllo janë ideale për punë të gjata e të vazhdueshme pa ndërprerje." },
+        { title: "Qëndroni në një platformë", text: "Nëse keni tashmë bateri Makita LXT 18V, zgjidhni vegla të së njëjtës platformë — e njëjta bateri punon në të gjitha veglat LXT." },
+        { title: "Brushless për punë të rënda", text: "Motorët pa karbona (brushless) janë më efikasë, nxehen më pak dhe zgjasin më shumë — vlejnë për përdorim profesional të përditshëm." },
+        { title: "Aksesori i duhur", text: "Disku, punta ose bit-i i duhur bën diferencën në shpejtësi dhe siguri. Pyesni stafin për aksesorin që i përshtatet materialit tuaj." },
+      ],
+    },
+    brands: ["Makita", "Wolfcraft", "Knipex", "Hoegert", "Ingco", "Total", "Tolsen"],
+    faqs: [
+      { q: "Cilat marka veglash ofroni?", a: "Makita, Wolfcraft, Knipex, Hoegert, Ingco, Tolsen dhe Total — nga veglat elektrike profesionale te veglat e dorës për përdorim të përditshëm." },
+      { q: "A keni vegla Makita me bateri?", a: "Po. Ofrojmë vegla Makita nga platformat LXT 18V, XGT 40Vmax dhe CXT 12Vmax, si dhe vegla me kabllo. Shikoni katalogun në faqen Makita.", link: { href: "/makita/", label: "Katalogu Makita" } },
+      { q: "A keni bateri dhe karikues?", a: "Po, për veglat Makita ofrojmë bateri dhe karikues të sistemit LXT 18V. Na kontaktoni për modelin që ju nevojitet." },
+      { q: "Më ndihmoni të zgjedh veglën e duhur?", a: "Sigurisht. Na tregoni çfarë pune do të bëni dhe me çfarë materiali, dhe stafi ynë ju rekomandon veglën dhe aksesorët e duhur." },
+      { q: "A mund të porosis një vegël që nuk e shoh në faqe?", a: "Po. Na shkruani modelin në WhatsApp ose na telefononi dhe ju konfirmojmë disponueshmërinë." },
+    ],
+    related: ["makita", "wolfcraft", "materiale-ndertimi"],
+    waText: "Përshëndetje, jam i interesuar për vegla pune. Mund të më jepni informacion?",
+  },
+
+  // ────────────────────────── ELEKTRIKE ──────────────────────────
+  {
+    slug: "materiale-elektrike",
+    noun: "materiale elektrike",
+    icon: "bolt",
+    label: "Elektrike",
+    name: "Materiale Elektrike",
+    short: "Kabllo, priza, automatë, kuti",
+    title: "Materiale Elektrike në Tiranë – Gewiss, ABB | Lulja 08",
+    description:
+      "Materiale elektrike në Tiranë nga Gewiss dhe ABB: kabllo, priza, çelësa, automatë, spina industriale, kuti dhe tuba instalimi. Për shtëpi dhe biznese.",
+    keywords:
+      "materiale elektrike tirane, kabllo elektrike, tela, priza, çelësa, automat, siguresa automatike, Gewiss, ABB, kuti elektrike, tub gufrato, spina industriale, instalime elektrike",
+    eyebrow: "Instalime Elektrike",
+    h1: "Materiale elektrike në Tiranë",
+    intro:
+      "Gjithçka për instalime elektrike rezidenciale, komerciale dhe industriale — nga kabllot dhe tubat te prizat, çelësat dhe automatët mbrojtës, me marka si Gewiss dhe ABB.",
+    hero: { src: `${IMG}/automat-elektrik.jpg`, alt: "Panel elektrik me automatë mbrojtës – materiale elektrike Gewiss dhe ABB në Tiranë", width: 1600, height: 1065 },
+    chips: ["Gewiss", "ABB", "Rezidenciale", "Komerciale", "Industriale"],
+    stat: { icon: "bolt", title: "Gewiss & ABB", text: "Marka evropiane" },
+    groupsTitle: "Materiale për çdo instalim",
+    groups: [
+      {
+        icon: "link",
+        title: "Kabllo dhe tela",
+        text: "Kabllo dhe tela për instalime të brendshme dhe të jashtme, në seksione të ndryshme sipas ngarkesës.",
+        items: ["Kabllo instalimi", "Tela", "Kabllo trefishe"],
+      },
+      {
+        icon: "grid",
+        title: "Priza dhe çelësa",
+        text: "Priza, çelësa dhe seri modulare për shtëpi dhe zyra — funksionale, të sigurta dhe me dizajn të pastër.",
+        items: ["Priza", "Çelësa", "Seri modulare"],
+      },
+      {
+        icon: "shield",
+        title: "Automatë mbrojtëse",
+        text: "Automatë për mbrojtjen e qarqeve nga mbingarkesa dhe qarku i shkurtër — zemra e sigurisë së çdo instalimi.",
+        items: ["Automatë", "Mbrojtje qarqesh", "Për panele"],
+      },
+      {
+        icon: "bolt",
+        title: "Spina dhe lidhëse",
+        text: "Spina, priza industriale dhe lidhëse për punishte, kantiere dhe ambiente teknike.",
+        items: ["Spina", "Priza industriale", "Lidhëse"],
+      },
+      {
+        icon: "archive",
+        title: "Kuti elektrike",
+        text: "Kuti shpërndarëse, kuti lidhjeje dhe kuti modulare për instalime të rregullta dhe të aksesueshme.",
+        items: ["Kuti shpërndarëse", "Kuti lidhjeje", "Kuti modulare"],
+      },
+      {
+        icon: "collection",
+        title: "Tuba instalimi",
+        text: "Tuba për kalimin dhe mbrojtjen e kabllove në mure, dysheme dhe tavane.",
+        items: ["Tuba fleksibël", "Për mure & dysheme"],
+      },
+    ],
+    feature: {
+      eyebrow: "Gewiss & ABB",
+      title: "Marka evropiane për instalime të sigurta",
+      text: "Gewiss dhe ABB janë emra të njohur në materialet elektrike në Evropë. Produktet e tyre janë të qëndrueshme, të sigurta dhe të përshtatshme si për banesa, ashtu edhe për biznese dhe ambiente industriale.",
+      items: ["Priza & çelësa", "Automatë mbrojtëse", "Spina industriale", "Kuti shpërndarëse"],
+      image: { src: `${CAT}/elektrike-tub-kabllo.jpg`, alt: "Tub dhe kabllo elektrike instalimi", width: 736, height: 552 },
+    },
+    gallery: [
+      { src: `${CAT}/elektrike-priza-spina-industriale.jpg`, alt: "Priza dhe spina industriale", width: 491, height: 500 },
+      { src: `${CAT}/elektrike-kabllo-trefishe.jpg`, alt: "Kabllo elektrike trefishe", width: 736, height: 736 },
+    ],
+    guide: {
+      title: "Këshilla për një instalim elektrik të sigurt",
+      intro: "Planifikimi i mirë sot ju kursen riparime dhe rreziqe nesër.",
+      steps: [
+        { title: "Planifikoni qarqet", text: "Ndani ndriçimin, prizat dhe pajisjet e fuqishme (bojler, kondicioner, sobë) në qarqe të veçanta, secili me automatin e vet." },
+        { title: "Seksioni i kabllos", text: "Seksioni varet nga ngarkesa dhe gjatësia e linjës. Si orientim, zakonisht përdoret 1.5 mm² për ndriçimin dhe 2.5 mm² për prizat — vendimin final e merr elektricisti." },
+        { title: "Mbroni kabllot", text: "Kalojini kabllot brenda tubave të instalimit dhe përdorni kuti lidhjeje — instalimi mbetet i sigurt dhe i lehtë për t'u riparuar." },
+        { title: "Punoni me profesionist", text: "Lidhjet në panel dhe testimi i instalimit duhet të bëhen nga elektricist i kualifikuar. Ne ju ndihmojmë me listën e materialeve." },
+      ],
+    },
+    brands: ["Gewiss", "ABB"],
+    faqs: [
+      { q: "Cilat marka materialesh elektrike keni?", a: "Punojmë me Gewiss dhe ABB, marka evropiane të njohura për priza, çelësa, automatë dhe aksesorë instalimi." },
+      { q: "A keni materiale për instalime industriale?", a: "Po — spina dhe priza industriale, kabllo, kuti dhe aksesorë për punishte, kantiere dhe ambiente teknike." },
+      { q: "Më ndihmoni me listën e materialeve për një apartament?", a: "Po. Na tregoni numrin e dhomave dhe pikave elektrike ose na sillni projektin, dhe ju ndihmojmë të përgatisni listën e materialeve." },
+      { q: "A bëni dërgesë të materialeve elektrike?", a: "Po, bëjmë dërgesë në Tiranë. Na dërgoni listën me telefon ose WhatsApp dhe organizojmë porosinë." },
+    ],
+    related: ["ndricim", "vegla-pune", "materiale-hidraulike"],
+    waText: "Përshëndetje, jam i interesuar për materiale elektrike. Mund të më jepni informacion?",
+  },
+
+  // ────────────────────────── HIDRAULIKE ──────────────────────────
+  {
+    slug: "materiale-hidraulike",
+    noun: "materiale hidraulike",
+    icon: "droplet",
+    label: "Hidraulike",
+    name: "Materiale Hidraulike",
+    short: "Tuba, rakorderi, valvula, sanitare",
+    title: "Materiale Hidraulike në Tiranë – Tuba & Rakorderi | Lulja 08",
+    description:
+      "Materiale hidraulike në Tiranë: tuba shkarkimi, presioni, multistrat e drenazhimi, rakorderi bronzi, valvula dhe grupe sanitarie. Pestan, APE, Cher Bros.",
+    keywords:
+      "materiale hidraulike tirane, tuba uji, tuba shkarkimi, tuba multistrat, tuba presioni, tuba drenazhimi, rakorderi, brryla, valvula, grupe sanitarie, Pestan, APE, Cher Bros, hidraulik Tiranë",
+    eyebrow: "Instalime Hidraulike",
+    h1: "Materiale hidraulike në Tiranë",
+    intro:
+      "Tuba, rakorderi dhe aksesorë për furnizim me ujë, shkarkime dhe drenazhim — për ndërtime të reja, rinovime dhe riparime, nga marka si Pestan, APE dhe Cher Bros.",
+    hero: { src: `${IMG}/planifikim-hidraulik.jpg`, alt: "Tuba bakri, rakorderi dhe çelës mbi projekt hidraulik – materiale hidraulike Tiranë", width: 600, height: 450 },
+    chips: ["Pestan", "APE", "Cher Bros", "Furnizim", "Shkarkim"],
+    stat: { icon: "droplet", title: "Furnizim & shkarkim", text: "Tuba për çdo sistem" },
+    groupsTitle: "Çfarë ofrojmë për hidraulikën",
+    groups: [
+      {
+        icon: "collection",
+        title: "Tuba shkarkimi",
+        text: "Tuba dhe brryla për shkarkimin e ujërave në banjo, kuzhina dhe kolona.",
+        items: ["Tuba shkarkimi", "Brryla & degëzime", "Banjo & kuzhina"],
+      },
+      {
+        icon: "droplet",
+        title: "Tuba presioni",
+        text: "Tuba për furnizim me ujë të ftohtë dhe të ngrohtë, të qëndrueshëm ndaj presionit dhe temperaturës.",
+        items: ["Ujë i ftohtë", "Ujë i ngrohtë"],
+      },
+      {
+        icon: "layers",
+        title: "Tuba multistrat",
+        text: "Tuba shumështresorë, fleksibël dhe të lehtë për t'u përkulur — zgjidhje e shpejtë për instalime uji dhe ngrohjeje.",
+        items: ["Multistrat", "Rakorderi multistrat"],
+      },
+      {
+        icon: "adjustments",
+        title: "Tuba drenazhimi",
+        text: "Tuba për drenazhim dhe largim të ujërave nga themelet, oborret dhe sipërfaqet e jashtme.",
+        items: ["Drenazhim", "Themele & oborre"],
+      },
+      {
+        icon: "tools",
+        title: "Rakorderi & valvula",
+        text: "Brryla, rakorderi bronzi dhe metalike, valvula dhe lidhëse për çdo kalim dhe degëzim.",
+        items: ["Rakorderi bronzi", "Valvula", "Brryla", "Lidhëse"],
+      },
+      {
+        icon: "home",
+        title: "Grupe sanitarie",
+        text: "Grupe sanitarie dhe aksesorë për banjo dhe kuzhina — për përfundim të pastër dhe funksional.",
+        items: ["Për banjo", "Për kuzhina"],
+      },
+    ],
+    feature: {
+      eyebrow: "Nga projekti te instalimi",
+      title: "Ju ndihmojmë me listën e plotë",
+      text: "Na sillni projektin ose listën e pikave të ujit dhe ju ndihmojmë të zgjidhni tubat, diametrat dhe rakorderinë e duhur — gjithçka në një vend, pa vajtje-ardhje të panevojshme.",
+      items: ["Furnizim me ujë", "Shkarkime", "Drenazhim", "Rakorderi & valvula"],
+      image: { src: `${IMG}/riparim-hidraulik.jpg`, alt: "Hidraulik duke montuar sifonin e lavamanit – materiale hidraulike", width: 540, height: 389 },
+    },
+    gallery: [
+      { src: `${CAT}/hidraulike-rakorderi-bronzi.jpg`, alt: "Rakorderi bronzi hidraulike", width: 600, height: 600 },
+      { src: `${CAT}/hidraulike-valvula-rakorderi.jpg`, alt: "Valvula dhe rakorderi hidraulike", width: 640, height: 420 },
+      { src: `${CAT}/hidraulike-tuba-gri.jpg`, alt: "Tuba gri për instalime hidraulike", width: 736, height: 552 },
+      { src: `${IMG}/tuba-hidraulike.jpg`, alt: "Rrotulla tubash polietileni për furnizim me ujë", width: 640, height: 480 },
+      { src: `${CAT}/hidraulike-tub-spirale.jpg`, alt: "Tub spiral fleksibël hidraulik", width: 735, height: 571 },
+      { src: `${CAT}/hidraulike-tuba-metalik.jpg`, alt: "Tuba dhe rakorderi metalike hidraulike", width: 554, height: 554 },
+    ],
+    guide: {
+      title: "Si të planifikoni një instalim hidraulik",
+      intro: "Rregulla të thjeshta që parandalojnë rrjedhjet dhe riparimet e kushtueshme.",
+      steps: [
+        { title: "Ndani furnizimin nga shkarkimi", text: "Furnizimi me ujë punon me presion dhe kërkon tuba presioni ose multistrat; shkarkimi punon me rrjedhje të lirë dhe kërkon tuba shkarkimi me pjerrësi të duhur." },
+        { title: "Diametrat e duhur", text: "Diametri varet nga numri i pikave të ujit dhe gjatësia e linjës. Na tregoni projektin dhe ju ndihmojmë me përzgjedhjen." },
+        { title: "Mos përzieni sisteme", text: "Përdorni rakorderi të përshtatshme për llojin e tubit — lidhjet e papërshtatshme janë shkaku më i shpeshtë i rrjedhjeve." },
+        { title: "Testoni para mbylljes", text: "Bëni provën e presionit përpara se të mbyllni muret dhe dyshemetë — riparimi më pas kushton shumë më tepër." },
+      ],
+    },
+    brands: ["Pestan", "APE", "Cher Bros"],
+    faqs: [
+      { q: "Cilat marka hidraulike ofroni?", a: "Pestan, APE dhe Cher Bros — për tuba, rakorderi, valvula dhe aksesorë hidraulikë." },
+      { q: "Multistrat apo tuba të tjerë për ujë?", a: "Multistrati është fleksibël dhe instalohet shpejt; tubat e ngurtë të presionit janë zgjidhje klasike dhe ekonomike. Zgjedhja varet nga projekti — stafi ynë ju këshillon." },
+      { q: "A keni rakorderi bronzi dhe valvula?", a: "Po, ofrojmë rakorderi bronzi dhe metalike, valvula, brryla dhe lidhëse të ndryshme." },
+      { q: "A mund të porosis me telefon dhe të ma sillni në kantier?", a: "Po. Na dërgoni listën me telefon ose WhatsApp dhe organizojmë dërgesën në Tiranë." },
+    ],
+    related: ["materiale-elektrike", "materiale-ndertimi", "termoizolim"],
+    waText: "Përshëndetje, jam i interesuar për materiale hidraulike. Mund të më jepni informacion?",
+  },
+
+  // ─────────────────────────── NDRIÇIM ───────────────────────────
+  {
+    slug: "ndricim",
+    noun: "ndriçim",
+    icon: "bulb",
+    label: "Ndriçim",
+    name: "Ndriçim Modern",
+    short: "Spote, shirita LED, llambadarë, mural",
+    title: "Ndriçim LED Tiranë – Spote, Shirita LED, Llambadarë | Lulja 08",
+    description:
+      "Ndriçim LED në Tiranë: spote tavani, shirita LED, ambazhure, platforma ndriçimi, ndriçim mural dhe tokësor nga Horoz. Për shtëpi, zyra dhe jashtë.",
+    keywords:
+      "ndricim tirane, ndriçim LED, spote tavani, spote inkaso, shirit LED, llamba LED, ambazhure, llambadar, ndriçim mural, aplikë, ndriçim i jashtëm, Horoz",
+    eyebrow: "Ndriçim",
+    h1: "Ndriçim modern dhe LED në Tiranë",
+    intro:
+      "Spote, shirita LED, ambazhure dhe ndriçim mural për shtëpi, zyra dhe ambiente të jashtme — dritë efikase që e ndryshon atmosferën e çdo hapësire.",
+    hero: { src: `${IMG}/llamba-ndricim-led.jpg`, alt: "Aplikë murale LED me dritë lart-poshtë – ndriçim modern Horoz në Tiranë", width: 600, height: 600 },
+    chips: ["Horoz", "LED", "Brendshme", "Jashtme"],
+    stat: { icon: "bulb", title: "Ndriçim LED", text: "Konsum i ulët energjie" },
+    groupsTitle: "Zgjidhje ndriçimi për çdo hapësirë",
+    groups: [
+      {
+        icon: "sun",
+        title: "Spote tavani",
+        text: "Spote inkaso dhe të rregullueshme për dritë të njëtrajtshme ose të fokusuar në tavane gipsi dhe betoni.",
+        items: ["Spote inkaso", "Të rregullueshme", "Tavane gipsi"],
+      },
+      {
+        icon: "sparkles",
+        title: "Shirita LED",
+        text: "Shirita LED për ndriçim indirekt në tavane, kuzhina, rafte dhe mobilie — efekt modern me konsum të ulët.",
+        items: ["Ndriçim indirekt", "Kuzhina & rafte", "Mobilie"],
+      },
+      {
+        icon: "bulb",
+        title: "Ambazhure & llambadarë",
+        text: "Ambazhure dhe llambadarë LED për salla, dhoma gjumi dhe ambiente pritjeje.",
+        items: ["Ambazhure", "Llambadarë LED"],
+      },
+      {
+        icon: "grid",
+        title: "Platforma ndriçimi",
+        text: "Platforma ndriçimi për zyra, dyqane dhe ambiente me tavan të varur — dritë e barabartë në gjithë hapësirën.",
+        items: ["Zyra", "Dyqane", "Tavan i varur"],
+      },
+      {
+        icon: "home",
+        title: "Ndriçim mural",
+        text: "Aplikë murale për brenda dhe jashtë — për korridore, shkallë, fasada dhe ballkone.",
+        items: ["Korridore & shkallë", "Fasada & ballkone"],
+      },
+      {
+        icon: "location",
+        title: "Ndriçim tokësor",
+        text: "Ndriçues tokësorë për shtigje, kopshte, oborre dhe hyrje.",
+        items: ["Shtigje", "Kopshte & oborre"],
+      },
+    ],
+    feature: {
+      eyebrow: "Horoz",
+      title: "Ndriçim LED efikas dhe jetëgjatë",
+      text: "Gama Horoz përfshin spote, platforma, shirita LED, ambazhure dhe ndriçim të jashtëm — produkte me konsum të ulët energjie, që zgjasin vite me radhë dhe përshtaten me çdo stil.",
+      items: ["Spote & platforma", "Shirita LED", "Ambazhure", "Ndriçim i jashtëm"],
+      image: { src: `${CAT}/ndricim-tavan-me-spote.jpg`, alt: "Tavan me spote ndriçimi LED", width: 736, height: 549 },
+    },
+    gallery: [
+      { src: `${CAT}/ndricim-llambadar-led-rrethor.jpg`, alt: "Llambadar LED rrethor modern", width: 736, height: 736 },
+      { src: `${CAT}/ndricim-spote-tavani.jpg`, alt: "Spote tavani të rregullueshme LED", width: 736, height: 736 },
+      { src: `${CAT}/ndricim-llamba-inkaso.jpg`, alt: "Llamba inkaso LED për tavan", width: 736, height: 736 },
+    ],
+    guide: {
+      title: "Si të zgjidhni ndriçimin e duhur",
+      intro: "Drita e duhur e bën një ambient të duket më i madh, më i ngrohtë dhe më funksional.",
+      steps: [
+        { title: "Temperatura e ngjyrës", text: "Dritë e ngrohtë (2700–3000K) për dhoma gjumi dhe ndenje; neutrale (rreth 4000K) për kuzhina, banjo dhe zyra; e ftohtë (6000K e lart) për garazhe dhe punishte." },
+        { title: "Lumen, jo vat", text: "Sasia e dritës matet në lumen. Me LED, një ndriçues me konsum shumë më të ulët jep të njëjtën dritë si llambat e vjetra." },
+        { title: "Mbrojtja IP", text: "Në banjo dhe jashtë zgjidhni ndriçues me shkallë më të lartë mbrojtjeje nga uji dhe pluhuri — p.sh. IP44 për banjo dhe IP65 për jashtë." },
+        { title: "Kombinoni shtresat", text: "Një dritë e përgjithshme (tavan), një e fokusuar (spote) dhe një dekorative (shirit LED ose aplikë) krijojnë ambient komod dhe funksional." },
+      ],
+    },
+    brands: ["Horoz"],
+    faqs: [
+      { q: "Çfarë marke ndriçimi ofroni?", a: "Horoz — spote, shirita LED, ambazhure, platforma ndriçimi, si dhe ndriçim mural dhe tokësor." },
+      { q: "Cila dritë është më e mirë për kuzhinën?", a: "Për kuzhinën rekomandohet dritë neutrale (rreth 4000K) nga tavani, e kombinuar me shirita LED nën dollapë për sipërfaqen e punës." },
+      { q: "A mund t'i montoj shiritat LED vetë?", a: "Shiritat LED montohen lehtë, por lidhja me rrjetin elektrik dhe me ushqyesin duhet të bëhet sipas udhëzimeve ose nga një elektricist." },
+      { q: "A keni ndriçim për jashtë?", a: "Po — aplikë murale për fasada dhe ballkone, si dhe ndriçues tokësorë për shtigje dhe kopshte." },
+    ],
+    related: ["materiale-elektrike", "bojera", "materiale-ndertimi"],
+    waText: "Përshëndetje, jam i interesuar për ndriçim. Mund të më jepni informacion?",
+  },
+
+  // ─────────────────────── MATERIALE NDËRTIMI ───────────────────────
+  {
+    slug: "materiale-ndertimi",
+    noun: "materiale ndërtimi",
+    icon: "building",
+    label: "Materiale Ndërtimi",
+    name: "Materiale Ndërtimi",
+    short: "Ngjitës, fino, çimento, rrjetë",
+    title: "Materiale Ndërtimi Tiranë – Ngjitës, Fino, Çimento | Lulja 08",
+    description:
+      "Materiale ndërtimi në Tiranë: koll për pllaka, teknofix, rrjetë fibre, fino, çimento e bardhë dhe llaç mbushës. Për ndërtim, rinovim dhe restaurim.",
+    keywords:
+      "materiale ndertimi tirane, materiale ndërtimi, koll pllakash, ngjitës pllakash, teknofix, rrjetë fibre, fino, çimento e bardhë, llaç mbushës, suvatim, Dast",
+    eyebrow: "Materiale Ndërtimi",
+    h1: "Materiale ndërtimi në Tiranë",
+    intro:
+      "Produktet bazë për ndërtim dhe përfundim punimesh — ngjitës pllakash, fino, rrjetë, çimento e bardhë dhe llaç mbushës për projekte ndërtimi, rinovimi dhe restaurimi.",
+    hero: { src: `${CAT}/materiale-ndertimi-llac-dysheme.jpg`, alt: "Shtrim llaçi dyshemeje – materiale ndërtimi në Tiranë", width: 736, height: 981 },
+    chips: ["Dast", "Ndërtim", "Rinovim", "Restaurim"],
+    stat: { icon: "building", title: "Ndërtim & rinovim", text: "Nga themeli te finitura" },
+    groupsTitle: "Materialet që gjeni te ne",
+    groups: [
+      {
+        icon: "grid",
+        title: "Koll për pllaka",
+        text: "Ngjitës çimentoje për pllaka qeramike dhe gres, për mure dhe dysheme, brenda dhe jashtë.",
+        items: ["Qeramikë & gres", "Mure & dysheme", "Brenda & jashtë"],
+      },
+      {
+        icon: "link",
+        title: "Teknofix",
+        text: "Ngjitës teknik për aplikime ku kërkohet ngjitje e fortë dhe e qëndrueshme.",
+        items: ["Ngjitës teknik", "Ngjitje e fortë"],
+      },
+      {
+        icon: "layers",
+        title: "Rrjetë fibre",
+        text: "Rrjetë fibre xhami për armimin e suvasë dhe sistemeve termoizoluese — parandalon krisjet.",
+        items: ["Fibër xhami", "Për suva", "Për kapotë"],
+      },
+      {
+        icon: "sparkles",
+        title: "Fino",
+        text: "Fino për lëmimin përfundimtar të mureve dhe tavaneve — sipërfaqe e lëmuar, gati për bojë.",
+        items: ["Përfundim i lëmuar", "Gati për bojë"],
+      },
+      {
+        icon: "cube",
+        title: "Çimento e bardhë",
+        text: "Çimento e bardhë për fuga, punime dekorative dhe riparime ku ngjyra ka rëndësi.",
+        items: ["Fuga", "Punime dekorative"],
+      },
+      {
+        icon: "tools",
+        title: "Llaç mbushës",
+        text: "Llaç për mbushjen e vrimave dhe të çarave, si dhe për riparime të shpejta në mure dhe dysheme.",
+        items: ["Mbushje të çarash", "Riparime"],
+      },
+    ],
+    feature: {
+      eyebrow: "Për mjeshtrit dhe kantieret",
+      title: "Nga kantieri te riparimet në shtëpi",
+      text: "Punojmë njëlloj me sipërmarrës, mjeshtër dhe familje që rinovojnë shtëpinë. Na dërgoni listën e materialeve dhe ju përgatisim porosinë; për bashkëpunime të vazhdueshme, na kontaktoni për kushtet.",
+      items: ["Porosi me listë", "Dërgesë në Tiranë", "Këshillim teknik"],
+      image: { src: `${IMG}/kantier-ndertimi.jpg`, alt: "Punëtor ndërtimi me smerigliatriçe në kantier", width: 1080, height: 1080 },
+    },
+    gallery: [
+      { src: `${CAT}/materiale-ndertimi-suvatim-muri.jpg`, alt: "Suvatim muri me mistri", width: 405, height: 720 },
+      { src: `${CAT}/materiale-ndertimi-rrjete-fibre.jpg`, alt: "Rrjetë fibre xhami për armim suvaje", width: 736, height: 525 },
+      { src: `${CAT}/materiale-ndertimi-ngjites-pllakash.jpg`, alt: "Aplikim ngjitësi për pllaka me mistri me dhëmbë", width: 640, height: 960 },
+    ],
+    guide: {
+      title: "Rendi i duhur i punimeve",
+      intro: "Çdo shtresë ka rolin e vet — kur respektohet rendi, rezultati zgjat.",
+      steps: [
+        { title: "Suvatimi", text: "Suvaja e mirë është baza: e drejtë, e ngjeshur dhe e tharë plotësisht përpara shtresave të tjera." },
+        { title: "Armimi me rrjetë", text: "Në qoshe, në bashkime materialesh dhe në sistemet kapotë, rrjeta fibre e shpërndan tensionin dhe parandalon krisjet." },
+        { title: "Fino dhe lëmimi", text: "Fino jep sipërfaqen e lëmuar përfundimtare. Pas tharjes, lëmoni lehtë me letër zmerile dhe pastroni pluhurin para bojës." },
+        { title: "Pllakat", text: "Zgjidhni ngjitësin sipas pllakës dhe sipërfaqes: për gres porcelanat, pllaka të mëdha ose jashtë, përdorni ngjitës me performancë më të lartë (klasa C2)." },
+      ],
+    },
+    brands: ["Dast"],
+    faqs: [
+      { q: "Çfarë ngjitësi më duhet për pllaka gres?", a: "Për gres porcelanat dhe pllaka të mëdha rekomandohet ngjitës me performancë të lartë (klasa C2), sidomos për jashtë ose mbi ngrohje dyshemeje. Stafi ynë ju këshillon sipas rastit." },
+      { q: "Për çfarë përdoret çimentoja e bardhë?", a: "Për fuga, punime dekorative dhe riparime ku ngjyra gri e çimentos së zakonshme do të binte në sy." },
+      { q: "A keni rrjetë për kapotë?", a: "Po — rrjetë fibre xhami për armimin e suvasë dhe të sistemeve termoizoluese (kapotë).", link: { href: "/termoizolim/", label: "Shiko termoizolimin" } },
+      { q: "A bëni dërgesë në kantier?", a: "Po, organizojmë dërgesë në Tiranë. Për porosi të mëdha ose bashkëpunime të vazhdueshme, na kontaktoni për kushtet." },
+    ],
+    related: ["termoizolim", "bojera", "vegla-pune"],
+    waText: "Përshëndetje, jam i interesuar për materiale ndërtimi. Mund të më jepni informacion?",
+  },
+
+  // ─────────────────────────── TERMOIZOLIM ───────────────────────────
+  {
+    slug: "termoizolim",
+    noun: "termoizolim",
+    icon: "home",
+    label: "Termoizolim",
+    name: "Termoizolim & Hidroizolim",
+    short: "Polisterol, A+B, bitum, kapotë",
+    title: "Termoizolim & Hidroizolim Tiranë – Polisterol, Bitum | Lulja 08",
+    description:
+      "Termoizolim e hidroizolim në Tiranë: polisterol 2–10 cm për kapotë, hidroizolim A+B, bitum, katrame dhe bojëra termoizoluese. Këshillim dhe dërgesë.",
+    keywords:
+      "termoizolim tirane, hidroizolim, kapotë, kapote, polisterol, sistem kapote, komponent A+B, bitum, katrame, bojë termoizoluese, izolim tarrace, izolim çatie, izolim fasade",
+    eyebrow: "Termoizolim & Hidroizolim",
+    h1: "Termoizolim dhe hidroizolim në Tiranë",
+    intro:
+      "Mbroni ndërtesën nga i ftohti, nxehtësia dhe lagështira. Polisterol për kapotë, hidroizolime A+B, bitum dhe bojëra termoizoluese — për kursim energjie dhe komfort gjatë gjithë vitit.",
+    hero: { src: `${CAT}/termoizolim-paneli-lesh-guri.jpg`, alt: "Panele termoizoluese për fasadë – termoizolim në Tiranë", width: 736, height: 1104 },
+    chips: ["Kapotë", "Polisterol 2–10 cm", "A+B", "Bitum"],
+    stat: { icon: "shield", title: "Izolim & mbrojtje", text: "Nga i ftohti dhe lagështira" },
+    groupsTitle: "Produkte për izolim dhe mbrojtje",
+    groups: [
+      {
+        icon: "layers",
+        title: "Polisterol (2–10 cm)",
+        text: "Pllaka polisterol në trashësi nga 2 deri në 10 cm për termoizolimin e fasadave (kapotë), tarracave dhe dyshemeve.",
+        items: ["2–10 cm", "Fasada (kapotë)", "Tarraca & dysheme"],
+      },
+      {
+        icon: "beaker",
+        title: "Komponent A+B",
+        text: "Hidroizolim dykomponent për banjo, ballkone, tarraca dhe themele — shtresë elastike që nuk e lë ujin të kalojë.",
+        items: ["Banjo & ballkone", "Tarraca", "Themele"],
+      },
+      {
+        icon: "shield",
+        title: "Bitum dhe katrame",
+        text: "Bitum dhe katrame për hidroizolimin e çative, tarracave dhe themeleve — mbrojtje e provuar ndaj ujit.",
+        items: ["Bitum", "Katrame", "Çati & themele"],
+      },
+      {
+        icon: "paint",
+        title: "Bojëra termoizoluese",
+        text: "Bojëra me veti termoizoluese për mure të brendshme dhe të jashtme — ndihmojnë kundër kondensimit dhe humbjes së nxehtësisë.",
+        items: ["Kundër kondensimit", "Brenda & jashtë"],
+        link: { href: "/bojera/", label: "Shiko bojërat" },
+      },
+      {
+        icon: "cube",
+        title: "Termoizolues pluhur",
+        text: "Termoizolues në formë pluhuri për shtresa izoluese në mure dhe dysheme — praktik dhe i lehtë për t'u aplikuar.",
+        items: ["Mure", "Dysheme"],
+      },
+      {
+        icon: "grid",
+        title: "Ngjitës & rrjetë për kapotë",
+        text: "Gjithçka tjetër që i duhet sistemit kapotë: ngjitës, rrjetë fibre xhami dhe fino përfundimtare.",
+        items: ["Ngjitës", "Rrjetë fibre", "Fino"],
+        link: { href: "/materiale-ndertimi/", label: "Materiale ndërtimi" },
+      },
+    ],
+    feature: {
+      eyebrow: "Kursim energjie",
+      title: "Ngrohtë në dimër, freskët në verë",
+      text: "Një ndërtesë e izoluar humbet më pak nxehtësi në dimër dhe nxehet më pak në verë — ngrohja dhe kondicioneri punojnë më pak, faturat ulen dhe muret mbrohen nga lagështira dhe myku.",
+      items: ["Fatura më të ulëta", "Më pak kondensim", "Mure të mbrojtura", "Komfort gjatë gjithë vitit"],
+      image: { src: `${CAT}/termoizolim-instalim-izolimi.jpg`, alt: "Instalim i paneleve termoizoluese në mur", width: 735, height: 490 },
+    },
+    gallery: [
+      { src: `${CAT}/termoizolim-hidroizolim-membrane.jpg`, alt: "Hidroizolim me membranë bitumi", width: 736, height: 511 },
+      { src: `${CAT}/termoizolim-veshje-catie.jpg`, alt: "Veshje hidroizoluese e çatisë me rul", width: 736, height: 736 },
+      { src: `${CAT}/termoizolim-llac-vetshtrirje.jpg`, alt: "Llaç vetështrirës për dysheme", width: 736, height: 1008 },
+    ],
+    guide: {
+      title: "Si realizohet sistemi kapotë",
+      intro: "Hapat kryesorë të termoizolimit të fasadës me polisterol.",
+      steps: [
+        { title: "Përgatitja e fasadës", text: "Fasada duhet të jetë e pastër, e thatë dhe e qëndrueshme. Riparoni pjesët e dëmtuara përpara se të filloni." },
+        { title: "Ngjitja e polisterolit", text: "Pllakat ngjiten me ngjitës të posaçëm, të vendosura të alternuara si tullat, dhe fiksohen me kunja plastike." },
+        { title: "Armimi me rrjetë", text: "Mbi polisterol aplikohet ngjitës me rrjetë fibre xhami të zhytur brenda — kjo shtresë parandalon krisjet." },
+        { title: "Përfundimi", text: "Pas tharjes, aplikohet astari dhe shtresa përfundimtare: fino dekorative ose bojë akrilike për fasada." },
+      ],
+    },
+    brands: [],
+    faqs: [
+      { q: "Çfarë trashësie polisterol më duhet?", a: "Varet nga ndërtesa dhe objektivi. Për fasada përdoren zakonisht 5–10 cm, ndërsa trashësitë më të vogla për izolime të brendshme ose hapësira të kufizuara. Ofrojmë polisterol nga 2 deri në 10 cm." },
+      { q: "Si e izoloj një tarracë nga uji?", a: "Për tarraca përdoren hidroizolime bitumi ose dykomponente (A+B), në varësi të sipërfaqes dhe përdorimit. Na tregoni gjendjen e tarracës dhe ju këshillojmë për sistemin e duhur." },
+      { q: "Çfarë është komponenti A+B?", a: "Është hidroizolim me dy përbërës që përzihen para aplikimit dhe krijojnë një shtresë elastike, të papërshkueshme nga uji — e përshtatshme për banjo, ballkone dhe tarraca." },
+      { q: "A i ul termoizolimi faturat e energjisë?", a: "Po. Një ndërtesë e izoluar humbet më pak nxehtësi në dimër dhe nxehet më pak në verë, kështu që ngrohja dhe kondicionimi punojnë më pak." },
+    ],
+    related: ["materiale-ndertimi", "bojera", "materiale-hidraulike"],
+    waText: "Përshëndetje, jam i interesuar për termoizolim/hidroizolim. Mund të më jepni informacion?",
+  },
+];

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Page templates live in site/ (build-time JS) — scan them for class names. */
+@source "../site";
+
 @theme {
   --color-brand-50:  #f4f5f1;
   --color-brand-100: #e6e9df;
@@ -47,6 +50,15 @@
 .fade-up-delay-2 { transition-delay: 0.2s; }
 .fade-up-delay-3 { transition-delay: 0.3s; }
 .fade-up-delay-4 { transition-delay: 0.4s; }
+
+/* Faint blueprint grid behind dark heroes / bands */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 20% 0%, black 30%, transparent 75%);
+}
 
 /* Hide scrollbar for tab navigation */
 .scrollbar-hide::-webkit-scrollbar {
