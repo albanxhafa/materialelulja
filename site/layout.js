@@ -23,6 +23,8 @@ const NAV = [
   { key: "makita", label: "Makita", href: "/makita/" },
   { key: "wolfcraft", label: "Wolfcraft", href: "/wolfcraft/", mobileOnly: true },
   { key: "markat", label: "Markat", href: "/#markat" },
+  { key: "projekte", label: "Projektet", href: "/projekte/" },
+  { key: "color-studio", label: "Provo ngjyrat", href: "/color-studio/" },
   { key: "kontakt", label: "Kontakt", href: "/#kontakt" },
 ];
 

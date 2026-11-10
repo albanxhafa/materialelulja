@@ -1,0 +1,12 @@
+import {renderDocument} from '../layout.js';
+export function renderColorStudio(){
+return renderDocument({active:'color-studio',head:{title:'Provo ngjyrat — Color Studio | LULJA 08',description:'Zgjidh ngjyrën dhe provoje në murin tënd.',path:'/color-studio/'},body:`
+<section id="colour-lab" class="max-w-7xl mx-auto px-5 py-10">
+<style>
+#colour-lab h1{font-size:clamp(2rem,5vw,4rem);font-weight:750}#colour-lab .panel{display:grid;grid-template-columns:minmax(210px,1fr) 3fr;gap:24px;margin-top:24px}#colour-lab input,#colour-lab select,#colour-lab button{padding:8px;border:1px solid #cacdc9;border-radius:6px}#colour-lab input[type=range]{width:100%}#colour-lab label,#colour-lab strong{display:block;margin:8px 0}#colour-lab .swatches{max-height:45vh;overflow:auto}#colour-lab .swatches button{display:flex;gap:8px;align-items:center;width:100%;text-align:left;margin:3px 0}#colour-lab .swatches i{width:28px;height:28px;flex:none;border:1px solid #ccc;border-radius:4px}#colour-lab [aria-pressed=true]{outline:2px solid #256147}#colour-lab canvas{width:100%;height:auto;display:block;cursor:crosshair;background:#eee}#colour-lab [role=status]{min-height:1.6em}#colour-lab .actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}@media(max-width:700px){#colour-lab .panel{grid-template-columns:1fr}#colour-lab .swatches{max-height:155px}}
+</style>
+<h1>Provo ngjyrat</h1><p>Zgjidh një ngjyrë nga katalogu, ngarko foton dhe kliko murin.</p>
+<div class="panel"><aside><label>Marka <select id="brand"><option value="">Të gjitha</option></select></label><label>Kërko kod, emër ose ngjyrë <input id="query" type="search" placeholder="P.sh. gri, kafe, AF-5"></label><p id="count"></p><div class="swatches" id="swatches"></div><button id="more" hidden>Shfaq më shumë</button><strong id="chosen"></strong></aside>
+<div><label>Ngarko fotografinë <input id="photo" type="file" accept="image/jpeg,image/png,image/webp"></label><p role="status" id="status" aria-live="polite">Po hapet ambienti…</p><canvas id="surface" aria-label="Parapamja e murit"></canvas>
+<label>Para / pas <input type="range" id="split" min="0" max="100" value="0"></label><div class="actions"><button id="exclude" aria-pressed="false" disabled>Përjashto objekt me klik</button><button id="reset">Rivendos</button><button id="save">Shkarko foton</button></div><small>Ngjyra në ekran është orientuese. Kontrollo mostrën fizike përpara lyerjes. Fotografia e shembullit: Benjamin Moore.</small></div></div></section><script type="module" src="/src/lulja-studio.js"></script>`});
+}
