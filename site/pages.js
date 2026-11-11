@@ -14,8 +14,8 @@ import { graph, businessNode, websiteNode, itemListNode } from "./schema.js";
 import {renderColorStudio} from "./templates/color-studio.js";
 import {renderProjects} from "./templates/projects.js";
 export const PAGES = [
-  {path:"/projekte/",render:renderProjects},
-  {path:"/color-studio/",render:renderColorStudio},
+  {path: "/projekte/", render: renderProjects, priority: 0.8, changefreq: "monthly"},
+  {path: "/color-studio/", render: renderColorStudio, priority: 0.8, changefreq: "monthly"},
   { path: "/produkte/", render: renderProdukte, priority: 0.9, changefreq: "weekly" },
   ...CATEGORIES.map((c) => ({ path: `/${c.slug}/`, render: () => renderCategory(c), priority: 0.8, changefreq: "weekly" })),
   { path: "/makita/", render: () => renderBrand(MAKITA), priority: 0.9, changefreq: "weekly" },
