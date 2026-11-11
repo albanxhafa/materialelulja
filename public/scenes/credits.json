@@ -1,0 +1,57 @@
+[
+  {
+    "scene": "kitchen",
+    "file": "/workspace/scratch/401298423e74/scene-research/kitchen.jpg",
+    "width": 640,
+    "height": 640,
+    "sourcePage": "https://www.benjaminmoore.com/en-us/project-ideas-inspiration/interiors/kitchen-ideas-inspiration",
+    "imageUrl": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/images/advice/interiors/kitchen/refresh/red-accent-wall-paint-kitchen-640x640.jpg",
+    "attribution": "Photography: Benjamin Moore & Co.",
+    "reuse": "Official public inspiration image; copyright Benjamin Moore & Co. No open reuse license established.",
+    "geometry": "Red accent wall in compact white kitchen. Main paintable region behind dining table: top and left of large window; narrow bottom sections. Mask window, radiator, table/chairs and cabinet edges."
+  },
+  {
+    "scene": "living",
+    "file": "/workspace/scratch/401298423e74/scene-research/living.jpg",
+    "width": 640,
+    "height": 640,
+    "sourcePage": "https://www.benjaminmoore.com/en-us/project-ideas-inspiration/interiors/living-room-ideas-inspiration",
+    "imageUrl": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/images/advice/interiors/living-room/refresh/blue-paint-wall-living-room-640x640.jpg",
+    "attribution": "Photography: Benjamin Moore & Co.",
+    "reuse": "Official public inspiration image; copyright Benjamin Moore & Co. No open reuse license established.",
+    "geometry": "Retro living room with caramel leather sofa and orange tables. Broad blue-gray wall: top-right almost entirely empty, bottom boundary tracks sofa/table silhouettes; mask upper-left window and white baseboard."
+  },
+  {
+    "scene": "bedroom",
+    "file": "/workspace/scratch/401298423e74/scene-research/bedroom-wide.jpg",
+    "width": 1400,
+    "height": 807,
+    "sourcePage": "https://www.benjaminmoore.com/en-us/project-ideas-inspiration/interiors/bedroom-ideas-inspiration",
+    "imageUrl": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/images/advice/interiors/bedroom/sept2020_bedrminspired_herodsktop_1400x807_fk00106_regional_mt_masterbedrooml_h.jpg",
+    "attribution": "Photography: Benjamin Moore & Co.",
+    "reuse": "Official public inspiration image; copyright Benjamin Moore & Co. No open reuse license established.",
+    "geometry": "Airy vaulted bedroom. Paintable right wall x\u22481225\u20131400,y\u22480\u2013720; center-left wall x\u2248350\u2013495 below sloping ceiling and above bed; headboard wall x\u22480\u2013350 below roof. Exclude curtains, white ceiling/beams, small window, lamp, bed and baseboard. Right rectangle gives simplest precise mask."
+  },
+  {
+    "scene": "veranda",
+    "file": "/workspace/scratch/401298423e74/scene-research/veranda.jpg",
+    "width": 640,
+    "height": 640,
+    "sourcePage": "https://www.benjaminmoore.com/en-us/project-ideas-inspiration/exteriors/porch-patio-deck-colors",
+    "imageUrl": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/images/advice/exteriors/outdoor-spaces/seo-refresh/article/porch-pink-walls-paint-gray-door-640x640.jpg",
+    "attribution": "Photography: Benjamin Moore & Co.",
+    "reuse": "Official public inspiration image; copyright Benjamin Moore & Co. No open reuse license established.",
+    "geometry": "Pink corner veranda with sofa, tropical plants and patterned terracotta floor. Wall planes are large and clear above sofa and around door; mask black-grid window, gray door, sofa and plants. Paint separate left/front and right planes to preserve corner shading."
+  },
+  {
+    "scene": "exterior",
+    "file": "/workspace/scratch/401298423e74/scene-research/exterior-blue.jpg",
+    "width": 640,
+    "height": 640,
+    "sourcePage": "https://www.benjaminmoore.com/en-us/project-ideas-inspiration/exteriors/home-exterior-ideas-inspiration",
+    "imageUrl": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/images/advice/exteriors/home-exteriors/2023-refresh/article/sky-blue-exterior-wall-paint-white-window-grate-640x650.jpg",
+    "attribution": "Photography: Benjamin Moore & Co.",
+    "reuse": "Official public inspiration image; copyright Benjamin Moore & Co. No open reuse license established.",
+    "geometry": "Mediterranean pale blue facade. Very broad flat wall from top cornice to white lower plinth, with door at right and narrow barred window central-left. Exclude door/trim, window/grill/vine, light fitting, and potted plant. Upper empty wall and left vertical strip make easy polygon masks."
+  }
+]

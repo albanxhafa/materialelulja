@@ -1,4 +1,4 @@
-
+import {renderAssistant} from './assistant.js';
 import { renderDocument, esc } from '../layout.js';
 import { icon } from '../icons.js';
 import { PROJECTS } from '../data/projects.js';
@@ -9,7 +9,7 @@ return renderDocument({head:{title:'Projektet & materialet — LULJA',descriptio
 <link rel="stylesheet" href="/src/projects/projects.css">
 <link rel="stylesheet" href="/src/projects/filters.css">
 <section class="pc-hero"><div class="pc-wrap"><p class="pc-kicker">LULJA / PLANIFIKO PUNIMIN</p><h1>Çdo punim fillon<br>me listën e duhur.</h1><p>Zgjidh projektin. Kupto çfarë të duhet. Shiko materialet, veglat dhe përdorimin e secilit artikull.</p><span class="pc-badge">${PROJECTS.length} udhëzues praktikë · ${CATEGORIES.length} fusha</span></div></section>
-
+${renderAssistant('materials')}
 <div class="pc-wrap pc-content"><div class="pc-heading"><div><p class="pc-kicker">PROJEKTET & MATERIALET</p><h2>Çfarë do të realizosh?</h2></div><p>Materialet dhe veglat, të shpjeguara për çdo punim.</p></div>
 <div class="pc-filters"><label>Kërko projekt ose material<input id="pc-search" type="search" placeholder="P.sh. kuzhinë, kabllo, polisterol…"></label><label>Fusha e punimit<select id="pc-category"><option value="">Të gjitha fushat</option>${CATEGORIES.map(c=>`<option value="/${c.slug}/">${esc(c.label)}</option>`).join('')}</select></label><button id="pc-clear" class="pc-reset" type="button">Hiq filtrat</button></div>
 <p id="pc-results" class="pc-results" role="status" aria-live="polite">${PROJECTS.length} projekte</p><p id="pc-empty" class="pc-note" hidden>Nuk u gjet projekt. Provo një material tjetër ose hiq filtrat.</p>

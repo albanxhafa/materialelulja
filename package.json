@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm --prefix studio-pages ci --no-audit --no-fund && npm --prefix studio-pages run build",
     "preview": "vite preview"
   },
   "devDependencies": {

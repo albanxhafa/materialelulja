@@ -1,0 +1,164 @@
+[
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Affinity",
+    "expected": 144,
+    "imported": 144,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_affinity_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Benjamin Moore Classics",
+    "expected": 1680,
+    "imported": 1680,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_classiccolors_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Color Trends 2026",
+    "expected": 8,
+    "imported": 8,
+    "status": "complete_published_file",
+    "source_url": "https://media.benjaminmoore.com/WebServices/prod/ColorTrends/2026/PaletteDownloads/BenjaminMoore_ColorTrends2026_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Color Stories",
+    "expected": 240,
+    "imported": 240,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_colorstories_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Color Preview",
+    "expected": 1232,
+    "imported": 1232,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_colorpreview_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Historical Colors",
+    "expected": 191,
+    "imported": 191,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_historicalcolors_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Off White Collection",
+    "expected": 152,
+    "imported": 152,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_off-whitecolors_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Williamsburg Color Collection",
+    "expected": 144,
+    "imported": 144,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_williamsburgcolorcollection_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "America’s Colors",
+    "expected": 42,
+    "imported": 42,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_americascolors_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Designer Classics",
+    "expected": 231,
+    "imported": 231,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_designerclassics_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "BENJAMIN MOORE",
+    "collection": "Colors for Vinyl",
+    "expected": 75,
+    "imported": 75,
+    "status": "complete_published_file",
+    "source_url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/palettedownloads/ase/en-us/benjaminmoore_colorsforvinylsiding_en-us.ase",
+    "note": "All entries from the official downloadable ASE file. Same code may belong to multiple collections."
+  },
+  {
+    "brand": "VITEX",
+    "collection": "Global Collection",
+    "imported": 1320,
+    "expected": 1320,
+    "status": "complete_published_collection",
+    "source_url": "https://global-collection.vitex.gr/",
+    "note": "All 1,320 published records."
+  },
+  {
+    "brand": "VITEX",
+    "collection": "Global Exterior",
+    "imported": 160,
+    "expected": 160,
+    "status": "complete_published_collection",
+    "source_url": "https://global-collection.vitex.gr/",
+    "note": "All 160 records explicitly marked exterior in the official Global Collection dataset."
+  },
+  {
+    "brand": "VITEX",
+    "collection": "Colorfull Collection",
+    "imported": 696,
+    "expected": 696,
+    "status": "complete_regional_source",
+    "source_url": "https://vitex.pro/colours/palitra/?section=5&group=11",
+    "note": "All seven regional distributor category pages. Manufacturer master edition not independently confirmed."
+  },
+  {
+    "brand": "NCS",
+    "collection": "NCS Standard colours",
+    "imported": 2050,
+    "expected": 2050,
+    "status": "complete_published_collection",
+    "source_url": "https://ncscolour.com/collections/colour-samples",
+    "note": "All 2,050 actual published Standard colours, each with official product HEX; no generated combinations."
+  },
+  {
+    "brand": "VIVECHROM",
+    "collection": "Website Colour Wall",
+    "imported": 384,
+    "expected": null,
+    "status": "partial_brand",
+    "source_url": "https://www.vivechrom.gr/en/colour-listing",
+    "note": "All 384 entries embedded in this colour wall; not the full manufacturer catalogue."
+  },
+  {
+    "brand": "DULUX",
+    "collection": "UK Website Named Colours",
+    "imported": 264,
+    "expected": null,
+    "status": "partial_brand",
+    "source_url": "https://www.dulux.co.uk/en/colour-listing",
+    "note": "264 official UK named references; numeric website identifiers are not paint formulation codes. Full collection acquisition pending."
+  },
+  {
+    "brand": "DULUX",
+    "collection": "Dulux Trade Full Digital Palette",
+    "imported": 2065,
+    "expected": 2065,
+    "status": "complete_published_file",
+    "source_url": "https://www.duluxtradepaintexpert.co.uk/content/dam/akzonobel-painters/duluxtrade/gb/en/bim-plugin/fullpalette-autocad.zip",
+    "note": "All 2,065 unique codes in the official fullpalette.acb; 539 identical duplicate entries consolidated. Worldwide consumer collections are separate."
+  }
+]
