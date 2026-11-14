@@ -82,8 +82,9 @@ export function renderHead({ title, description, keywords, path, image, robots =
   <meta name="twitter:image" content="${imgUrl}" />
   <meta name="twitter:image:alt" content="${esc(img.alt)}" />
 
-  <link rel="icon" type="image/png" href="/assets/logo_square.png" />
-  <link rel="apple-touch-icon" href="/assets/logo_circle.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-08.png" />
+  <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#f97316" />
   <meta name="msapplication-TileColor" content="#f97316" />
